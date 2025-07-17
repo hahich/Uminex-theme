@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{ 'slideshow.css' | asset_url }}" media="print" onload="this.media='all'">
 {% liquid
   assign section_st = section.settings
-  assign theme_st  = settings
+  assign theme_st = settings
   assign section_width = section_st.section_width
   assign slide_height = section_st.slide_height
   assign color_scheme = section_st.color_scheme
@@ -25,9 +25,19 @@
   --height: {{ section_st.mobile_height }}px;--height-desktop: {{ section_st.desktop_height }}px;
   {% endif %}
 {%- endcapture -%}
+<style>
+  .swiper-button-customize {
+    color: {{section_st.color_swiper}};
+    background-color: {{section_st.bg_swiper}};
+  }
+  .swiper-button-customize:hover {
+    color: {{section_st.color_hover_swiper}};
+    background-color: {{section_st.bg_hover_swiper}};
+  }
+</style>
 <div
   id="{{ section.id }}"
-  class="section{% if section_st.padding_top < 30 %} pt-min{% endif %}{% if section_st.padding_bottom < 30 %} pb-min{% endif %} gradient slideshow {{ slide_effect }} color-{{ color_scheme }}{{ reset_spacing }}"
+  class="bg-light-gray section{% if section_st.padding_top < 30 %} pt-min{% endif %}{% if section_st.padding_bottom < 30 %} pb-min{% endif %} gradient slideshow {{ slide_effect }} color-{{ color_scheme }}{{ reset_spacing }}"
   style="{{ style | strip | strip_newlines }}"
   data-id="{{ section.id }}"
 >
@@ -121,15 +131,15 @@
                           assign image_alt = block.settings.image.alt
                         endif
                       -%}
-                        {% render 'responsive-image',
-                          type: 'banner',
-                          container: section_width,
-                          image: image,
-                          image_mobile: image_mobile,
-                          image_alt: image_alt,
-                          lazy_load: lazy_load,
-                          first: forloop.first
-                        %}
+                      {% render 'responsive-image',
+                        type: 'banner',
+                        container: section_width,
+                        image: image,
+                        image_mobile: image_mobile,
+                        image_alt: image_alt,
+                        lazy_load: lazy_load,
+                        first: forloop.first
+                      %}
                     {% endif %}
                   {%- else -%}
                     {%- render 'placeholder-render', class: 'absolute inset-0 w-full h-full object-fit-cover' -%}
@@ -151,26 +161,25 @@
                     >
                       {% if block_st.subheading != blank %}
                         <motion-element
-                          data-motion="fade-up-lg"                   
-                              hold                                     
+                          data-motion="fade-up-lg"
+                          hold
                           data-motion-delay="100"
-                          class="sec__content-subheading  {% if block_st.slider_effect == 'effect_fadeinup' %} opacity-0  {{ slider_effect }}  {% endif %}  block heading{% if section_st.subheading_spacing_bottom > 41 %} mb-big{% elsif section_st.subheading_spacing_bottom > 30 %} mb-medium {% else %} mb-custom{% endif %} fs-custom {{ section_st.subheading_font_weight }}"
-                          style="--font-size: {{ section_st.subheading_font_size }};--space-bottom: {{ section_st.subheading_spacing_bottom }}"
+                          class="sec__content-subheading cl-subheading mt-custom {% if block_st.slider_effect == 'effect_fadeinup' %} opacity-0  {{ slider_effect }}  {% endif %}  block heading{% if section_st.subheading_spacing_bottom > 41 %} mb-big{% elsif section_st.subheading_spacing_bottom > 30 %} mb-medium {% else %} mb-custom{% endif %} fs-custom"
+                          style="--color-subheading: {{ section_st.color_subheading }};--font-size: {{ section_st.subheading_font_size }}; font-weight:{{ section_st.subheading_font_weight }}; --space-bottom: {{ section_st.subheading_spacing_bottom }}; --space-top: {{ section_st.subheading_spacing_top }}px;"
                         >
-                          
                           {{ block_st.subheading | escape }}
                         </motion-element>
                       {% endif %}
                       {% if block_st.heading != blank %}
                         <motion-element
                           data-motion="fade-up-lg"
-                            hold
+                          hold
                           data-motion-delay="200"
-                          class="block  {% if block_st.slider_effect == 'effect_fadeinup' %} opacity-0 {{ slider_effect }} {% endif %}"
+                          class="block {% if block_st.slider_effect == 'effect_fadeinup' %} opacity-0 {{ slider_effect }} {% endif %}"
                         >
                           <h2
-                            class="sec__content-heading   heading-letter-spacing mt-0{% if section_st.heading_spacing_bottom > 41 %} mb-big{% elsif section_st.heading_spacing_bottom > 30 %} mb-medium {% else %} mb-custom{% endif %}{% if section_st.heading_uppercase %} uppercase{% endif %}{% if section_st.heading_font_size > 41 %} fs-big{% elsif section_st.heading_font_size > 24 %} fs-medium{% else %} fs-custom{% endif %} {{ section_st.heading_font_weight }}"
-                            style="--font-size: {{ section_st.heading_font_size }};--space-bottom: {{ section_st.heading_spacing_bottom }}"
+                            class="sec__content-heading heading-letter-spacing lh-customize mt-0{% if section_st.heading_spacing_bottom > 41 %} mb-big{% elsif section_st.heading_spacing_bottom > 30 %} mb-medium {% else %} mb-custom{% endif %}{% if section_st.heading_uppercase %} uppercase{% endif %}{% if section_st.heading_font_size > 41 %} fs-big{% elsif section_st.heading_font_size > 24 %} fs-medium{% else %} fs-custom{% endif %}"
+                            style="--font-size: {{ section_st.heading_font_size }}; --lh-customize: {{ section_st.heading_line_height }};--space-bottom: {{ section_st.heading_spacing_bottom }}; font-weight: {{ section_st.heading_font_weight }}"
                             {{ block.shopify_attributes }}
                           >
                             {{ block_st.heading }}
@@ -179,8 +188,8 @@
                       {% endif %}
                       {% if block_st.description != blank %}
                         <motion-element
-                          data-motion="fade-up-lg"                     
-                            hold                 
+                          data-motion="fade-up-lg"
+                          hold
                           data-motion-delay="300"
                           class="sec__content-des {% if block_st.slider_effect == 'effect_fadeinup' %} opacity-0  {{ slider_effect }}  {% endif %} block rich__text-m0 {% if section_st.des_spacing_bottom > 41 %} mb-big{% elsif section_st.des_spacing_bottom > 30 %} mb-medium {% else %} mb-custom{% endif %}{% if section_st.des_font_size > 24 %} fs-medium{% else %} fs-custom{% endif %} {{ section_st.des_font_weight }}"
                           style="--font-size: {{ section_st.des_font_size }};--space-bottom: {{ section_st.des_spacing_bottom }}"
@@ -191,10 +200,11 @@
                       {% endif %}
                       {% if block_st.first_button_label != blank or block_st.second_button_label != blank %}
                         <motion-element
-                          data-motion="fade-up-lg"                    
-                            hold                   
+                          data-motion="fade-up-lg"
+                          hold
                           data-motion-delay="400"
-                          class="sec__content-btn {% if block_st.slider_effect == 'effect_fadeinup' %} opacity-0  {{ slider_effect }}  {% endif %} align-center flex flex-wrap gap-15 justify-content-{{ block_st.content_alignment_mobile }} justify-content-md-{{ block_st.content_alignment }}"
+                          class="sec__content-btn mb-custom {% if block_st.slider_effect == 'effect_fadeinup' %} opacity-0  {{ slider_effect }} {% endif %} align-center flex flex-wrap gap-15 justify-content-{{ block_st.content_alignment_mobile }} justify-content-md-{{ block_st.content_alignment }}"
+                          style="--space-bottom: {{ section_st.btn_spacing_bottom }}"
                         >
                           {% if block_st.first_button_label != blank %}
                             <a
@@ -204,7 +214,8 @@
                                 href="{{ block_st.first_button_link | default: "#" }}"
                               {% endif %}
                               aria-label="{{ block_st.first_button_label }}"
-                              class="inline-flex no-underline{% if block_st.first_button_style %} btn-outline{% else %} btn-primary{% endif %}"
+                              class="inline-flex no-underline{% if block_st.first_button_style %} btn-outline btn-outline-slideshow{% else %} btn-primary btn-primary-slideshow{% endif %}"
+                              style="--py-btn-slideshow: {{ section_st.py_btn_slideshow }}; --px-btn-slideshow: {{ section_st.px_btn_slideshow }}; --fs-btn-slideshow: {{ section_st.fs_btn_slideshow }}; --fw-btn-slideshow: {{ section_st.fw_btn_slideshow }};"
                             >
                               {{ block_st.first_button_label }}
                             </a>
@@ -217,7 +228,8 @@
                                 href="{{ block_st.second_button_link | default: "#" }}"
                               {% endif %}
                               aria-label="{{ block_st.second_button_label }}"
-                              class="inline-flex no-underline{% if block_st.second_button_style %} btn-outline{% else %} btn-primary{% endif %}"
+                              class="inline-flex no-underline{% if block_st.second_button_style %} btn-outline btn-outline-slideshow{% else %} btn-primary btn-primary-slideshow{% endif %}"
+                              style="--py-btn-slideshow: {{ section_st.py_btn_slideshow }}; --px-btn-slideshow: {{ section_st.px_btn_slideshow }}; --fs-btn-slideshow: {{ section_st.fs_btn_slideshow }}; --fw-btn-slideshow: {{ section_st.fw_btn_slideshow }};"
                             >
                               {{ block_st.second_button_label }}
                             </a>
@@ -232,7 +244,7 @@
           {% endfor %}
         </div>
         {% if show_arrow %}
-          {%- render 'swiper-navigation', class: 'original-style' -%}
+          {%- render 'swiper-navigation', class: 'original-style swiper-button-customize' -%}
         {% endif %}
         {%- if carousel_pagination == 'show_dots' or carousel_pagination == 'show_dots_on_mobile' -%}
           <div
@@ -339,6 +351,12 @@
       "content": "t:sections.all.content_settings.subheading.label"
     },
     {
+      "type": "color",
+      "id": "color_subheading",
+      "label": "Color",
+      "default": "#fff"
+    },
+    {
       "type": "range",
       "id": "subheading_font_size",
       "label": "t:sections.all.content_settings.font_size.label",
@@ -352,21 +370,43 @@
       "type": "select",
       "id": "subheading_font_weight",
       "label": "t:sections.all.content_settings.font_weight.label",
-      "default": "body_weight",
+      "default": "200",
       "options": [
         {
-          "value": "body_weight",
-          "label": "t:sections.all.content_settings.font_weight.body_weight.label"
+          "value": "200",
+          "label": "200"
         },
         {
-          "value": "subheading_weight",
-          "label": "t:sections.all.content_settings.font_weight.subheading_weight.label"
+          "value": "300",
+          "label": "300"
         },
         {
-          "value": "heading_weight",
-          "label": "t:sections.all.content_settings.font_weight.heading_weight.label"
+          "value": "400",
+          "label": "400"
+        },
+        {
+          "value": "500",
+          "label": "500"
+        },
+        {
+          "value": "600",
+          "label": "600"
+        },
+        {
+          "value": "700",
+          "label": "700"
         }
       ]
+    },
+    {
+      "type": "range",
+      "id": "subheading_spacing_top",
+      "label": "Spacing top",
+      "default": 0,
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px"
     },
     {
       "type": "range",
@@ -393,22 +433,44 @@
       "unit": "px"
     },
     {
+      "type": "range",
+      "id": "heading_line_height",
+      "label": "Line Height",
+      "default": 1,
+      "min": 1,
+      "max": 2,
+      "step": 0.1,
+      "unit": "px"
+    },
+    {
       "type": "select",
       "id": "heading_font_weight",
       "label": "t:sections.all.content_settings.font_weight.label",
-      "default": "heading_weight",
+      "default": "200",
       "options": [
         {
-          "value": "body_weight",
-          "label": "t:sections.all.content_settings.font_weight.body_weight.label"
+          "value": "200",
+          "label": "200"
         },
         {
-          "value": "subheading_weight",
-          "label": "t:sections.all.content_settings.font_weight.subheading_weight.label"
+          "value": "300",
+          "label": "300"
         },
         {
-          "value": "heading_weight",
-          "label": "t:sections.all.content_settings.font_weight.heading_weight.label"
+          "value": "400",
+          "label": "400"
+        },
+        {
+          "value": "500",
+          "label": "500"
+        },
+        {
+          "value": "600",
+          "label": "600"
+        },
+        {
+          "value": "700",
+          "label": "700"
         }
       ]
     },
@@ -470,6 +532,110 @@
       "max": 60,
       "step": 1,
       "unit": "px"
+    },
+    {
+      "type": "paragraph",
+      "content": "=== Button ==="
+    },
+    {
+      "type": "range",
+      "id": "btn_spacing_bottom",
+      "label": "t:sections.all.content_settings.spacing.spacing_bottom.label",
+      "default": 0,
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "py_btn_slideshow",
+      "label": "Padding Y",
+      "default": 10,
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "px_btn_slideshow",
+      "label": "Padding X",
+      "default": 20,
+      "min": 15,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "fs_btn_slideshow",
+      "label": "Font Size",
+      "default": 15,
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "fw_btn_slideshow",
+      "label": "Font Weight",
+      "default": "200",
+      "options": [
+        {
+          "value": "200",
+          "label": "200"
+        },
+        {
+          "value": "300",
+          "label": "300"
+        },
+        {
+          "value": "400",
+          "label": "400"
+        },
+        {
+          "value": "500",
+          "label": "500"
+        },
+        {
+          "value": "600",
+          "label": "600"
+        },
+        {
+          "value": "700",
+          "label": "700"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Prev/Next"
+    },
+    {
+      "type": "color_background",
+      "id": "color_swiper",
+      "label": "Color",
+      "default": "#111"
+    },
+    {
+      "type": "color_background",
+      "id": "bg_swiper",
+      "label": "Background",
+      "default": "#fff"
+    },
+    {
+      "type": "color_background",
+      "id": "color_hover_swiper",
+      "label": "Hover Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color_background",
+      "id": "bg_hover_swiper",
+      "label": "Hover Background",
+      "default": "#111"
     },
     {
       "type": "header",
@@ -825,7 +991,7 @@
           "type": "range",
           "id": "content_padding_inline",
           "min": 0,
-          "max": 120,
+          "max": 200,
           "step": 5,
           "unit": "px",
           "default": 30,
