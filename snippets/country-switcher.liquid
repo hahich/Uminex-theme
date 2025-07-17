@@ -19,13 +19,13 @@
             {% if type == 'mobile-navigation' %}
               <span class="block fs-small heading-style">
                 {{ localization.country.currency.iso_code }}
-                {{ localization.country.currency.symbol }}
+                {% comment %} {{ localization.country.currency.symbol }} {% endcomment %}
               </span>
             {% else %}
               <span>
                 {% comment %} {{ localization.country.name }} {% endcomment %}
                 {{ localization.country.currency.iso_code }}
-                {{ localization.country.currency.symbol }}
+                {% comment %} {{ localization.country.currency.symbol }} {% endcomment %}
               </span>
             {% endif %}
           </span>
