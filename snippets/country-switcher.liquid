@@ -7,14 +7,14 @@
         <div class="button-localization pointer disclosure__button show-overlay flex align-center gap-10 {% if type == 'mobile-navigation' %}mobile-navigation__button{% endif %}">
           <span class="flex align-center {% if type == 'mobile-navigation' %}flex-column gap-4{% else %}gap-10{% endif %}">
             <span class="rounded-50 border localization-flags {% if type == 'mobile-navigation' %}mobile-navigation__flag{% endif %}">
-              {{-
+              {% comment %} {{-
                 localization.country
                 | image_url: width: localization.country.width
                 | image_tag:
                   width: localization.country.width,
                   height: localization.country.height,
                   alt: localization.country.name
-              -}}
+              -}} {% endcomment %}
             </span>
             {% if type == 'mobile-navigation' %}
               <span class="block fs-small heading-style">
