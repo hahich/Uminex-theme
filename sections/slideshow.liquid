@@ -165,7 +165,7 @@
                           hold
                           data-motion-delay="100"
                           class="sec__content-subheading cl-subheading mt-custom {% if block_st.slider_effect == 'effect_fadeinup' %} opacity-0  {{ slider_effect }}  {% endif %}  block heading{% if section_st.subheading_spacing_bottom > 41 %} mb-big{% elsif section_st.subheading_spacing_bottom > 30 %} mb-medium {% else %} mb-custom{% endif %} fs-custom"
-                          style="--color-subheading: {{ section_st.color_subheading }}; color: #FDE50B;--font-size: {{ section_st.subheading_font_size }}; font-weight:{{ section_st.subheading_font_weight }}; --space-bottom: {{ section_st.subheading_spacing_bottom }}; --space-top: {{ section_st.subheading_spacing_top }}px;"
+                          style="--color-subheading: {{ section_st.color_subheading }};--font-size: {{ section_st.subheading_font_size }}; font-weight:{{ section_st.subheading_font_weight }}; --space-bottom: {{ section_st.subheading_spacing_bottom }}; --space-top: {{ section_st.subheading_spacing_top }}px;"
                         >
                           {{ block_st.subheading | escape }}
                         </motion-element>
