@@ -60,7 +60,7 @@
   style="{{ style | strip | strip_newlines }}"
   data-id="{{ section.id }}"
 >
-  <div class="{{ section_width }} py-30">
+  <div class="{{ section_width }}">
     <div class="section-slide-with-banner" style="--slide-width: {{ section_st.slide_width }}%;--coloumn-gap: {{  section_st.column_gap }}px;">
       {% if has_slideshow_parent and slideshow_child_blocks.size > 0 %}
         <div class="slide__wrapper">
@@ -306,11 +306,11 @@
                 assign color_scheme = block_st.color_scheme
               %}
               <div
-                class="hover-effect section__block-inner gradient color-{{ color_scheme }} flex relative"
+                class="hover-effect {% if block.settings.image_behavior == 'fixed' %} animate-fixed-parent {% endif %} section__block-inner gradient color-{{ color_scheme }} flex relative"
                 style="{%- if block_st.image != blank -%}--aspect-ratio: {{ block_st.image.aspect_ratio }};{%- else -%}--aspect-ratio: 5/2;{% endif %}{%- if block_st.mobile_image -%}--aspect-ratio-mb: {{ block_st.mobile_image.aspect_ratio }};{% endif %}"
               >
                 <div
-                  class="banner__media w-full overlay-bg rounded absolute inset-0"
+                  class="banner__media w-full {% if block.settings.image_behavior != 'none' %} animate--{{ block.settings.image_behavior }} {% endif %} overlay-bg rounded absolute inset-0"
                   style="{%- if block_st.image != blank -%}--aspect-ratio: {{ block_st.image.aspect_ratio }};{%- else -%}--aspect-ratio: 5/2; {% endif %}--overlay-opacity: {{ block_st.image_overlay_opacity }}%; {%- if block_st.mobile_image -%} --aspect-ratio-mb: {{ block_st.mobile_image.aspect_ratio }};{% endif %}"
                 >
                   {% liquid
@@ -1082,6 +1082,26 @@
           "type": "image_picker",
           "id": "mobile_image",
           "label": "t:sections.all.image.mobile_image.label"
+        },
+        {
+          "type": "select",
+          "id": "image_behavior",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.all.animation.image_behavior.options__1.label"
+            },
+            {
+              "value": "ambient",
+              "label": "t:sections.all.animation.image_behavior.options__2.label"
+            },
+            {
+              "value": "zoom-in",
+              "label": "t:sections.all.animation.image_behavior.options__4.label"
+            }
+          ],
+          "default": "none",
+          "label": "t:sections.all.animation.image_behavior.label"
         },
         {
           "type": "url",
