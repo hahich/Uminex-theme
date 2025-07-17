@@ -30,11 +30,13 @@
       {%- endif -%}
     {%- endif -%}
     {%- if customer -%}
-      <a class="header-color lh-1" href="{{ routes.account_url }}" aria-label="{{ 'customer.account.title' | t }}">
+      <a class="header-color lh-1 flex gap-10" href="{{ routes.account_url }}" aria-label="{{ 'customer.account.title' | t }}">
     {%- endif -%}
     <svg width="16" height="16" fill="none">
       <use href="#icon-account" />
     </svg>
+    <span>Login</span>
+    <span>Account</span>
     {%- if customer -%}
       </a>
     {%- endif -%}
