@@ -196,11 +196,11 @@
                     {% endif %}
                   </a>
                 {% endif %}
-                {%- if block_st.show_currency -%}
-                  {%- render 'country-switcher' -%}
-                {% endif %}
                 {%- if block_st.show_language -%}
                   {%- render 'language-switcher' -%}
+                {% endif %}
+                {%- if block_st.show_currency -%}
+                  {%- render 'country-switcher' -%}
                 {% endif %}
               </div>
           {%- endcase -%}
