@@ -60,7 +60,7 @@
   style="{{ style | strip | strip_newlines }}"
   data-id="{{ section.id }}"
 >
-  <div class="{{ section_width }}">
+  <div class="{{ section_width }} py-30">
     <div class="section-slide-with-banner" style="--slide-width: {{ section_st.slide_width }}%;--coloumn-gap: {{  section_st.column_gap }}px;">
       {% if has_slideshow_parent and slideshow_child_blocks.size > 0 %}
         <div class="slide__wrapper">
