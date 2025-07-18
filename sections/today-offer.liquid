@@ -189,7 +189,7 @@
               {%- assign price_color = '#2B38D1' -%}
               {%- if product.compare_at_price < product.price -%}
                 {%- assign price_color = '#DC323C' -%}
-              {%- elsif product.inventory_quantity < 10 -%}
+              {%- elsif product.variants.inventory_quantity < 10 -%}
                 {%- assign price_color = '#EF262C' -%}
               {%- endif -%}
               <span
