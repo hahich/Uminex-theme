@@ -1,0 +1,130 @@
+{{ 'countdown.css' | asset_url | stylesheet_tag }}
+<div class="todays-offer-section container py-40">
+  <div class="todays-offer-grid flex flex-wrap gap-20">
+    <!-- Sản phẩm phụ bên trái -->
+    <div class="todays-offer-side flex flex-column gap-20 flex-1">
+      {% for product in section.settings.side_products_left %}
+        {% render 'product-item', card_product: product %}
+      {% endfor %}
+    </div>
+    <!-- Sản phẩm nổi bật ở giữa -->
+    <div class="todays-offer-main border rounded-10 p-30 flex-2" style="max-width: 420px;">
+      <div class="todays-offer-badge mb-10">
+        {% if section.settings.main_badge != blank %}
+          <span class="badge badge-danger">{{ section.settings.main_badge }}</span>
+        {% endif %}
+      </div>
+      <div class="todays-offer-title mb-10 fs-18 fw-700">{{ section.settings.main_title }}</div>
+      <div class="todays-offer-image mb-20">
+        <a href="{{ section.settings.main_product.url }}">
+          <img
+            src="{{ section.settings.main_product.featured_image | img_url: '400x' }}"
+            alt="{{ section.settings.main_product.title }}" width="400px" height="400px"
+          >
+        </a>
+      </div>
+      <div class="todays-offer-product-title mb-5 fw-600">
+        <a href="{{ section.settings.main_product.url }}">{{ section.settings.main_product.title }}</a>
+      </div>
+      <div class="todays-offer-rating mb-5">
+        {% render 'review', product: section.settings.main_product %}
+      </div>
+      <div class="todays-offer-price mb-10">
+        <span class="text-danger fs-20 fw-700">{{ section.settings.main_product.price | money }}</span>
+        {% if section.settings.main_product.compare_at_price > section.settings.main_product.price %}
+          <span class="text-muted text-line-through ms-2">
+            {{- section.settings.main_product.compare_at_price | money -}}
+          </span>
+        {% endif %}
+      </div>
+      <div class="todays-offer-countdown mb-10">
+        <countdown-timer
+          data-endtime="{{ section.settings.countdown_endtime }}"
+          data-format="dd:hh:mm:ss"
+          data-days="Days"
+          data-hours="Hours"
+          data-mins="Min"
+          data-secs="Sec"
+        ></countdown-timer>
+      </div>
+      <div class="todays-offer-progress mb-10">
+        <div class="progress-bar" style="height: 8px; background: #eee;">
+          <div style="width: {{ section.settings.progress_percent }}%; background: #e53935; height: 100%;"></div>
+        </div>
+        <div class="fs-12 mt-2 text-center">Sold: {{ section.settings.sold }}/{{ section.settings.total }}</div>
+      </div>
+      <div class="todays-offer-buy mt-20">
+        <a href="{{ section.settings.main_product.url }}" class="btn btn-primary w-full">Buy Now</a>
+      </div>
+    </div>
+    <!-- Sản phẩm phụ bên phải -->
+    <div class="todays-offer-side flex flex-column gap-20 flex-1">
+      {% for product in section.settings.side_products_right %}
+        {% render 'product-item', card_product: product %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Today's Offer",
+  "settings": [
+    {
+      "type": "product",
+      "id": "main_product",
+      "label": "Sản phẩm nổi bật"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Tiêu đề khuyến mãi",
+      "default": "TODAY'S OFFER"
+    },
+    {
+      "type": "text",
+      "id": "main_badge",
+      "label": "Badge giảm giá",
+      "default": "-20%"
+    },
+    {
+      "type": "text",
+      "id": "countdown_endtime",
+      "label": "Thời gian kết thúc (YYYY-MM-DD HH:MM:SS)"
+    },
+    {
+      "type": "number",
+      "id": "progress_percent",
+      "label": "Phần trăm đã bán (progress bar)",
+      "default": 60
+    },
+    {
+      "type": "number",
+      "id": "sold",
+      "label": "Số lượng đã bán",
+      "default": 620
+    },
+    {
+      "type": "number",
+      "id": "total",
+      "label": "Tổng số lượng",
+      "default": 998
+    },
+    {
+      "type": "product_list",
+      "id": "side_products_left",
+      "label": "Sản phẩm phụ bên trái"
+    },
+    {
+      "type": "product_list",
+      "id": "side_products_right",
+      "label": "Sản phẩm phụ bên phải"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Today's Offer"
+    }
+  ]
+}
+{% endschema %}
