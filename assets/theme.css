@@ -3,6 +3,10 @@ body::-webkit-scrollbar {
   display: none;           
 }
 
+.bg-gray {
+  background-color: #F1F5F6 !important;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

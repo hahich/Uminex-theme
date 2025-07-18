@@ -38,7 +38,7 @@
 {%- endcapture -%}
 <div
   class="section{% if section_st.padding_top < 30 %} pt-min{% endif %}{% if section_st.padding_bottom < 30 %} pb-min{% endif %} sec__multi-content gradient {{ reset_spacing }}"
-  style="{{ style | strip | strip_newlines }};  background-color: {{ section.settings.background_color }}"
+  style="{{ style | strip | strip_newlines }};  background-color: section.settings.background_color"
 >
   <div class="{{ section_width }}">
     {%- if heading != blank or description != blank -%}
@@ -3012,7 +3012,7 @@
           "type": "color",
           "id": "background_color",
           "label": "Section background color",
-          "default": "#fff"
+          "default": "#F1F5F6"
         }
       ]
     }

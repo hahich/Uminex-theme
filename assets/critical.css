@@ -891,7 +891,6 @@ picture {
 }
 #MainContent {
   flex-grow: 1;
-  background-color: #F1F5F6 !important;
 }
 #MainContent section:not(:last-child) .section:not(.remove_spacing) {
   margin-bottom: calc(var(--section-spacing) - var(--gutter-x, 0px));
