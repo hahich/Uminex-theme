@@ -134,19 +134,25 @@
         <div class="todays-offer-countdown mb-10 text-center" style="padding-bottom: 10px;">
           {% if section.settings.countdown_endtime and section.settings.countdown_endtime != '' %}
             <countdown-timer
-              class="countdown-styled"
+              class="countdown-styled countdown-flex"
               data-endtime="{{ section.settings.countdown_endtime }}"
               data-format="dd:hh:mm:ss"
               data-days="Days"
               data-hours="Hours"
               data-mins="Min"
               data-secs="Sec"
-            ></countdown-timer>
+            >
+            </countdown-timer>
           {% else %}
-            <span class="countdown-static countdown-styled">000:00:00:00</span>
+            <div class="countdown-flex">
+              <div class="countdown-box">000</div><span class="countdown-sep">:</span>
+              <div class="countdown-box">00</div><span class="countdown-sep">:</span>
+              <div class="countdown-box">00</div><span class="countdown-sep">:</span>
+              <div class="countdown-box">00</div>
+            </div>
           {% endif %}
         </div>
-        <div class="todays-offer-progress mb-10" style="padding-bottom: 10px; display: flex; justify-content: center;">
+        <div class="todays-offer-progress mb-10" style="padding-bottom: 10px;">
           <div class="progress-bar main-progress-bar">
             <div
               style="width: {{ section.settings.progress_percent }}%; background: #e53935; height: 100%; border-radius: 10px;"
@@ -523,6 +529,32 @@
     text-align: center;
     min-width: 220px;
     margin: 0 auto;
+  }
+  .countdown-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .countdown-box {
+    background: #e53935;
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    min-width: 36px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .countdown-sep {
+    color: #e53935;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0 2px;
   }
 </style>
 
