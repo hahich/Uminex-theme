@@ -38,7 +38,7 @@
 {%- endcapture -%}
 <div
   class="section{% if section_st.padding_top < 30 %} pt-min{% endif %}{% if section_st.padding_bottom < 30 %} pb-min{% endif %} sec__multi-content gradient {{ reset_spacing }}"
-  style="{{ style | strip | strip_newlines }}"
+  style="{{ style | strip | strip_newlines }}; background-color: {{ section.color_scheme }}"
 >
   <div class="{{ section_width }}">
     {%- if heading != blank or description != blank -%}
