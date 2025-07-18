@@ -44,7 +44,7 @@
               {%- assign price_color = '#2B38D1' -%}
               {%- if product.compare_at_price < product.price -%}
                 {%- assign price_color = '#DC323C' -%}
-              {%- elsif product.inventory_quantity < 10 -%}
+              {%- elsif product.variants.inventory_quantity < 10 -%}
                 {%- assign price_color = '#EF262C' -%}
               {%- endif -%}
               <span
@@ -224,18 +224,6 @@
           </div>
         {% endfor %}
       </div>
-
-      {% comment %} stock {% endcomment %}
-      {% for variant in product.variants %}
-        <div>
-          Variant {{ variant.title }}: {{ variant.inventory_quantity }}
-          {% if variant.inventory_management %}
-            → Tracked by: {{ variant.inventory_management }}
-          {% else %}
-            → Not tracked
-          {% endif %}
-        </div>
-      {% endfor %}
     </div>
   </div>
 </div>
@@ -512,3 +500,23 @@
     }
   }
 </style>
+
+{% if section.settings.side_products_left.size > 0
+  or section.settings.side_products_right.size > 0
+  or section.settings.main_product
+%}
+  <script>
+    // Log stock for left side products
+    {% for product in section.settings.side_products_left %}
+      console.log('Left product: {{ product.title }} - Stock:', {{ product.inventory_quantity | default: 0 }});
+    {% endfor %}
+    // Log stock for right side products
+    {% for product in section.settings.side_products_right %}
+      console.log('Right product: {{ product.title }} - Stock:', {{ product.inventory_quantity | default: 0 }});
+    {% endfor %}
+    // Log stock for main product
+    {% if section.settings.main_product %}
+      console.log('Main product: {{ section.settings.main_product.title }} - Stock:', {{ section.settings.main_product.inventory_quantity | default: 0 }});
+    {% endif %}
+  </script>
+{% endif %}
