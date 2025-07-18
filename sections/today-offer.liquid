@@ -2,9 +2,9 @@
 
 {{ 'countdown.css' | asset_url | stylesheet_tag }}
 <div class="todays-offer-section container-fluid">
-  <div class="todays-offer-grid flex flex-wrap gap-40 justify-center align-items-stretch" style="column-gap: 40px;">
+  <div class="todays-offer-grid flex flex-wrap justify-center align-items-stretch">
     <!-- Left side products -->
-    <div class="todays-offer-side grid grid-cols-2 flex-1" style="max-width: 400px; min-width: 320px; column-gap: 24px; row-gap: 24px;">
+    <div class="todays-offer-side grid grid-cols-2 flex-1">
       {% for product in section.settings.side_products_left limit: 4 %}
         <div
           class="todays-offer-side-item bg-white rounded-8 p-16 flex flex-col justify-between shadow-sm"
@@ -144,7 +144,7 @@
       </div>
     </div>
     <!-- Right side products -->
-    <div class="todays-offer-side grid grid-cols-2 flex-1" style="max-width: 400px; min-width: 320px;">
+    <div class="todays-offer-side grid grid-cols-2 flex-1">
       {% for product in section.settings.side_products_right limit: 4 %}
         <div
           class="todays-offer-side-item bg-white rounded-8 p-16 flex flex-col justify-between shadow-sm"
@@ -243,21 +243,30 @@
     },
     {
       "type": "range",
-      "id": "column_gap",
-      "label": "Column gap (px)",
+      "id": "grid_gap",
+      "label": "Khoảng cách giữa các cột (todays-offer-grid gap, px)",
       "min": 0,
       "max": 80,
       "step": 1,
-      "default": 40
+      "default": 5
     },
     {
       "type": "range",
-      "id": "row_gap",
-      "label": "Row gap (px)",
+      "id": "side_column_gap",
+      "label": "Left/Right side column gap (px)",
       "min": 0,
       "max": 80,
       "step": 1,
-      "default": 24
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "side_row_gap",
+      "label": "Left/Right side row gap (px)",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "default": 5
     },
     {
       "type": "range",
@@ -364,14 +373,15 @@
   }
   .todays-offer-grid {
     width: 100%;
-    gap: 5px;
+    gap: {{ section.settings.grid_gap }}px;
     align-items: stretch;
-    column-gap: 40px;
+    column-gap: {{ section.settings.grid_gap }}px;
   }
   .todays-offer-side {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
+    column-gap: {{ section.settings.side_column_gap }}px;
+    row-gap: {{ section.settings.side_row_gap }}px;
     max-width: 400px;
     min-width: 320px;
   }
