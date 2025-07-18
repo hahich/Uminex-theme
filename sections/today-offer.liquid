@@ -322,9 +322,9 @@
       "default": 6
     },
     {
-      "type": "product",
-      "id": "main_product",
-      "label": "Featured product"
+      "type": "collection",
+      "id": "main_collection",
+      "label": "Main product collection"
     },
     {
       "type": "text",
@@ -362,14 +362,14 @@
       "default": 998
     },
     {
-      "type": "product_list",
-      "id": "side_products_left",
-      "label": "Left side products"
+      "type": "collection",
+      "id": "side_collection_left",
+      "label": "Left side collection"
     },
     {
-      "type": "product_list",
-      "id": "side_products_right",
-      "label": "Right side products"
+      "type": "collection",
+      "id": "side_collection_right",
+      "label": "Right side collection"
     },
     {
       "type": "range",
@@ -577,3 +577,21 @@
     {% endif %}
   </script>
 {% endif %}
+
+<slide-section
+  class="swiper"
+  data-section-id="{{ section.id }}"
+  data-mobile="1"
+  data-desktop="1"
+  data-pagination-progressbar="false"
+  data-arrow-centerimage="1"
+>
+  <div class="swiper-wrapper">
+    {% for product in collections[section.settings.main_collection].products limit: 10 %}
+      <div class="swiper-slide">
+        {% render 'product-item', card_product: product, section_id: section.id %}
+      </div>
+    {% endfor %}
+  </div>
+  {%- render 'swiper-navigation' -%}
+</slide-section>

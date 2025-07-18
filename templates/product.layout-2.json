@@ -230,17 +230,12 @@
             "content_rich": "<p>abd</p>",
             "page": ""
           }
-        },
-        "judge_me_reviews_review_widget_bKBYcL": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
         }
       },
       "block_order": [
         "description_4CKHTP",
         "custom_tab_kHFeKa",
-        "custom_tab_K7qCiw",
-        "judge_me_reviews_review_widget_bKBYcL"
+        "custom_tab_K7qCiw"
       ],
       "settings": {
         "section_width": "fluid_container",
@@ -249,15 +244,6 @@
     },
     "1716793714ce89e457": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_KFVR47": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_KFVR47"
-      ],
       "settings": {}
     },
     "divider_TKLM6L": {
