@@ -134,6 +134,7 @@
         <div class="todays-offer-countdown mb-10 text-center" style="padding-bottom: 10px;">
           {% if section.settings.countdown_endtime and section.settings.countdown_endtime != '' %}
             <countdown-timer
+              class="countdown-styled"
               data-endtime="{{ section.settings.countdown_endtime }}"
               data-format="dd:hh:mm:ss"
               data-days="Days"
@@ -142,16 +143,16 @@
               data-secs="Sec"
             ></countdown-timer>
           {% else %}
-            <span class="countdown-static">000:00:00:00</span>
+            <span class="countdown-static countdown-styled">000:00:00:00</span>
           {% endif %}
         </div>
-        <div class="todays-offer-progress mb-10" style="padding-bottom: 10px;">
-          <div class="progress-bar" style="height: 10px; background: #eee; border-radius: 10px; width: 100%;">
+        <div class="todays-offer-progress mb-10" style="padding-bottom: 10px; display: flex; justify-content: center;">
+          <div class="progress-bar main-progress-bar">
             <div
               style="width: {{ section.settings.progress_percent }}%; background: #e53935; height: 100%; border-radius: 10px;"
             ></div>
           </div>
-          <div class="fs-13 mt-2 text-center">Sold: {{ section.settings.sold }}/{{ section.settings.total }}</div>
+          <div class="fs-13 mt-2 text-center" style="width: 100%;">Sold: {{ section.settings.sold }}/{{ section.settings.total }}</div>
         </div>
       </div>
       <!-- Right side products -->
@@ -499,6 +500,29 @@
       margin-left: 0;
       margin-right: 0;
     }
+  }
+  .main-progress-bar {
+    height: 10px;
+    background: #eee;
+    border-radius: 10px;
+    width: 420px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .countdown-styled {
+    display: inline-block;
+    background: #e53935;
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px 18px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    min-width: 220px;
+    margin: 0 auto;
   }
 </style>
 
