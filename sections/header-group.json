@@ -51,33 +51,15 @@
         "padding_bottom": 10
       }
     },
-    "header": {
-      "type": "header",
+    "header_mega_store_GpwaBd": {
+      "type": "header-mega-store",
       "blocks": {
-        "menu_promotion_EeqGGC": {
+        "menu_promotion_4egzEx": {
           "type": "menu_promotion",
           "settings": {
-            "text": "Home",
+            "text": "",
             "open-link-newtab": true,
             "item_label": "unset",
-            "promotion_menu_column": 2,
-            "mega_custom_width": 860,
-            "center_submenu": true,
-            "full_width": false,
-            "promotion_position": "right",
-            "promotion_image_width": 41,
-            "promotion_link_1": "https://themeforest.net/item/glozin-multipurpose-shopify-theme-os-20/53006461?s_rank=1",
-            "promotion_link_newtab_1": true,
-            "promotion_link_2": "",
-            "promotion_link_newtab_2": true
-          }
-        },
-        "menu_promotion_xJdpmk": {
-          "type": "menu_promotion",
-          "settings": {
-            "text": "Sale",
-            "open-link-newtab": true,
-            "item_label": "hot",
             "promotion_menu_column": 4,
             "mega_custom_width": 1030,
             "center_submenu": true,
@@ -89,101 +71,53 @@
             "promotion_link_2": "",
             "promotion_link_newtab_2": true
           }
-        },
-        "menu_collection_EkdGyG": {
-          "type": "menu_collection",
-          "settings": {
-            "text": "Shop",
-            "open-link-newtab": true,
-            "item_label": "unset",
-            "collection_menu_column": 2,
-            "mega_custom_width": 1030,
-            "center_submenu": true,
-            "full_width": false,
-            "collection_width": 52,
-            "collection_1": "sweaters",
-            "collection_2": "handbags",
-            "collection_3": ""
-          }
-        },
-        "menu_promotion_rWzQL6": {
-          "type": "menu_promotion",
-          "settings": {
-            "text": "Products",
-            "open-link-newtab": true,
-            "item_label": "unset",
-            "promotion_menu_column": 4,
-            "mega_custom_width": 1030,
-            "center_submenu": true,
-            "full_width": true,
-            "promotion_position": "right",
-            "promotion_image_width": 34,
-            "promotion_link_1": "shopify://collections/activewear",
-            "promotion_link_newtab_1": true,
-            "promotion_link_2": "",
-            "promotion_link_newtab_2": true
-          }
         }
       },
       "block_order": [
-        "menu_promotion_EeqGGC",
-        "menu_promotion_xJdpmk",
-        "menu_collection_EkdGyG",
-        "menu_promotion_rWzQL6"
+        "menu_promotion_4egzEx"
       ],
+      "name": "t:sections.header.header_mega_store",
       "settings": {
-        "section_width": "stretch_width",
+        "section_width": "fluid_container",
         "color_scheme": "",
-        "logo_position": "left",
-        "separator_line": "inner_page",
+        "show_email": true,
+        "show_phone": true,
         "enable_login_popup": true,
-        "sticky_header_type": "always",
+        "separator_line": "unset",
+        "sticky_header_type": "on-scroll-up",
         "sticky_header_mobile": true,
-        "transparent_header": false,
-        "transparent_mobile": false,
-        "transparent_text_icon_color": "#ffffff",
-        "mega_menu": "main-menu",
+        "mega_menu": "header-menu",
         "dropdowns_animation": "down-to-up",
         "uppercase_first": false,
         "hot": "Hot",
-        "label_color_hot": "#ffffff",
-        "label_background_hot": "#d0473e",
+        "label_color_hot": "#fff",
+        "label_background_hot": "#D0473E",
         "new": "New",
-        "label_color_new": "#ffffff",
+        "label_color_new": "#fff",
         "label_background_new": "#516cf4",
         "sale": "Sale",
-        "label_color_sale": "#ffffff",
-        "label_background_sale": "#d0473e",
+        "label_color_sale": "#fff",
+        "label_background_sale": "#D0473E",
         "popular": "Popular",
-        "label_color_popular": "#ffffff",
-        "label_background_popular": "#14854e",
-        "redirect_to_link": false,
-        "menu_tab": "custom-collections",
-        "collection_list": [
-          "hot-deals",
-          "best-seller",
-          "sweaters",
-          "t-shirts",
-          "dress",
-          "blazers",
-          "activewear"
-        ],
-        "menu_mobile_color": "#ffffff",
-        "menu_mobile_background": "#d0473e",
+        "label_color_popular": "#fff",
+        "label_background_popular": "#14854E",
+        "redirect_to_link": true,
+        "menu_mobile_color": "#fff",
+        "menu_mobile_background": "#D0473E",
         "show_search": true,
         "show_account_icon": true,
         "show_wishlist_icon": true,
         "show_shopping_cart": true,
-        "show_currency": false,
-        "show_language": false,
-        "show_recently_viewed": false,
-        "padding_top": 10,
-        "padding_bottom": 10
+        "show_currency": true,
+        "show_language": true,
+        "show_recently_viewed": true,
+        "padding_top": 25,
+        "padding_bottom": 25
       }
     }
   },
   "order": [
     "top_bar_CbXNYj",
-    "header"
+    "header_mega_store_GpwaBd"
   ]
 }

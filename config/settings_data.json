@@ -11,8 +11,8 @@
   "current": {
     "purchase_code": "vNHNnZGa-FsDm-nTlX-Gv88L-Q5etTjr6KIzh",
     "favicon": "shopify://shop_images/Favicon.png",
-    "logo": "shopify://shop_images/logo.svg",
-    "desktop_logo_width": 82,
+    "logo": "shopify://shop_images/Logo_1.png",
+    "desktop_logo_width": 142,
     "page_width": 1200,
     "fluid_container_width": 1410,
     "spacing_desktop": 90,
@@ -169,18 +169,6 @@
       }
     },
     "content_for_index": [],
-    "blocks": {
-      "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      },
-      "16555213172727936593": {
-        "type": "shopify://apps/ns-discount-in-cart/blocks/discount_block/0cbbbcdd-bf54-49df-885c-9ca3fd52a671",
-        "disabled": true,
-        "settings": {}
-      }
-    },
     "color_schemes": {
       "default": {
         "settings": {
