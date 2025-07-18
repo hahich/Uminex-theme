@@ -17,9 +17,9 @@
         "text_slider_LFaC38": {
           "type": "text_slider",
           "settings": {
-            "text1": "Sign up for 10% off your first order. <a href=\"/account/\" title=\"/account/\"><strong>Sign Up</strong></a>",
-            "text2": "Summer sale discount off 50%. <a href=\"/collections/activewear\" title=\"Activewear\"><strong>Shop Sale</strong></a>",
-            "text3": "Coats—every friday 75% Off . <a href=\"/collections/blazers\" title=\"Blazers\"><strong>Shop Sale</strong></a>",
+            "text1": "You are a student and students get 20% discount.<a href=\"#\" title=\"#\"><strong> Learn More</strong></a>",
+            "text2": "",
+            "text3": "",
             "change_every": 3,
             "hidden_on_mobile": false
           }
@@ -27,9 +27,9 @@
         "cur_lang_aPwfT9": {
           "type": "cur_lang",
           "settings": {
-            "menu_link": "menu-topbar",
+            "menu_link": "topbar-menu",
             "show_currency": true,
-            "show_language": false,
+            "show_language": true,
             "show_our_store": true,
             "hidden_on_mobile": true
           }
@@ -40,13 +40,13 @@
         "cur_lang_aPwfT9"
       ],
       "settings": {
-        "section_width": "stretch_width",
-        "color_scheme": "scheme-4faf0e4d-27f4-4d02-bc51-617383bab1a9",
+        "section_width": "fluid_container",
+        "color_scheme": "default",
         "show_mobile": true,
         "show_separator_line": false,
         "uppercase": false,
         "font_size": 13,
-        "font_weight": "body_weight",
+        "font_weight": "subheading_weight",
         "padding_top": 10,
         "padding_bottom": 10
       }
@@ -66,7 +66,6 @@
             "full_width": false,
             "promotion_position": "right",
             "promotion_image_width": 41,
-            "promotion_image_1": "shopify://shop_images/banner-menu1.jpg",
             "promotion_link_1": "https://themeforest.net/item/glozin-multipurpose-shopify-theme-os-20/53006461?s_rank=1",
             "promotion_link_newtab_1": true,
             "promotion_link_2": "",
@@ -119,7 +118,6 @@
             "full_width": true,
             "promotion_position": "right",
             "promotion_image_width": 34,
-            "promotion_image_1": "shopify://shop_images/fashion_1_58a22a64-af35-4c05-b131-55c66d56522d.jpg",
             "promotion_link_1": "shopify://collections/activewear",
             "promotion_link_newtab_1": true,
             "promotion_link_2": "",
