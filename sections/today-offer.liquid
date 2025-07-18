@@ -3,17 +3,17 @@
 {{ 'countdown.css' | asset_url | stylesheet_tag }}
 <div
   class="todays-offer-section container-fluid py-40"
-  style="max-width: 100vw; background: {{ section.settings.background_color | default: '#fff' }}; color: {{ section.settings.text_color | default: '#222' }};"
+  style="max-width: 100vw; background: {{ settings.color_background | default: section.settings.background_color | default: '#fff' }}; color: {{ settings.color_text | default: section.settings.text_color | default: '#222' }};"
 >
-  <div class="todays-offer-grid flex flex-wrap gap-32 justify-center align-items-stretch">
+  <div class="todays-offer-grid flex flex-wrap gap-40 justify-center align-items-stretch" style="column-gap: 40px;">
     <!-- Left side products -->
-    <div class="todays-offer-side grid grid-cols-2 gap-16 flex-1" style="max-width: 400px; min-width: 320px;">
+    <div class="todays-offer-side grid grid-cols-2 flex-1" style="max-width: 400px; min-width: 320px; column-gap: 24px; row-gap: 24px;">
       {% for product in section.settings.side_products_left limit: 4 %}
         <div
-          class="todays-offer-side-item bg-white rounded-8 p-12 flex flex-col justify-between shadow-sm"
-          style="color: {{ section.settings.text_color | default: '#222' }};"
+          class="todays-offer-side-item bg-white rounded-8 p-16 flex flex-col justify-between shadow-sm"
+          style="color: {{ settings.color_text | default: section.settings.text_color | default: '#222' }};"
         >
-          <div class="relative mb-8">
+          <div class="relative mb-10">
             <a href="{{ product.url }}" class="block">
               <img
                 src="{{ product.featured_image | img_url: '240x' }}"
@@ -23,27 +23,21 @@
                 width="240px"
                 height="240px"
               >
-              {% if product.compare_at_price < product.price %}
-                <span class="offer-badge badge badge-danger" style="position:absolute;top:8px;left:8px;z-index:2;"
-                  >-
-                  {{- 100 | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round -}}
-                  %</span
-                >
-              {% endif %}
+              <span class="offer-badge badge badge-danger" style="position:absolute;top:8px;left:8px;z-index:2;background:{{ settings.color_badge | default: '#e53935' }};">-20%</span>
             </a>
           </div>
-          <div class="fw-600 fs-15 mb-2 line-clamp-2">{{ product.title }}</div>
-          <div class="flex align-center gap-6 mb-2">
+          <div class="fw-600 fs-15 mb-2 line-clamp-2" style="padding-bottom: 6px;">{{ product.title }}</div>
+          <div class="flex align-center gap-6 mb-2" style="padding-bottom: 6px;">
             {% render 'review', product: product %}
             <span class="fs-13 text-muted">({{ product.metafields.reviews.rating_count | default: 0 }})</span>
             {% if product.metafields.reviews.rating != blank %}
               <span class="fs-13 text-warning ms-1">{{ product.metafields.reviews.rating | round: 1 }}/5</span>
             {% endif %}
           </div>
-          <div class="flex align-center gap-6 mb-2">
+          <div class="flex align-center gap-6 mb-2" style="padding-bottom: 6px;">
             <span
               class="fw-700 fs-16"
-              style="background: {{ section.settings.price_bg_color | default: '#fff' }}; padding: 2px 8px; border-radius: 4px; color: {% if product.compare_at_price < product.price %}#e53935{% else %}#008A00{% endif %};"
+              style="background: {{ settings.color_price_bg | default: section.settings.price_bg_color | default: '#fff' }}; padding: 2px 8px; border-radius: 4px; color: {% if product.compare_at_price < product.price %}#e53935{% else %}#008A00{% endif %};"
             >
               {{- product.price | money -}}
             </span>
@@ -51,7 +45,7 @@
               <span class="text-muted text-line-through fs-14">{{ product.compare_at_price | money }}</span>
             {% endif %}
           </div>
-          <div class="flex align-center gap-6">
+          <div class="flex align-center gap-6" style="padding-bottom: 2px;">
             <span class="fs-13 text-muted">In stock: {{ product.inventory_quantity | default: 0 }}</span>
             {% if product.inventory_quantity > 10 %}
               <span class="stock-check-icon" title="In stock">
@@ -73,30 +67,13 @@
     <!-- Main featured product -->
     <div
       class="todays-offer-main border rounded-10 p-40 flex-2 bg-white shadow-md"
-      style="max-width: 520px; min-width: 340px; color: {{ section.settings.text_color | default: '#222' }};"
+      style="max-width: 520px; min-width: 340px; color: {{ settings.color_text | default: section.settings.text_color | default: '#222' }}; margin-left: 24px; margin-right: 24px;"
     >
       <div class="todays-offer-badge mb-10">
-        {% if section.settings.main_badge != blank
-          or section.settings.main_product.compare_at_price > section.settings.main_product.price
-        %}
-          <span class="badge badge-danger">
-            {% if section.settings.main_badge != blank %}{{ section.settings.main_badge }}{% endif %}
-            {% if section.settings.main_product.compare_at_price > section.settings.main_product.price -%}
-              -
-              {{-
-                100
-                | minus: section.settings.main_product.price
-                | times: 100.0
-                | divided_by: section.settings.main_product.compare_at_price
-                | round
-              -}}
-              %
-            {%- endif %}
-          </span>
-        {% endif %}
+        <span class="badge badge-danger" style="background:{{ settings.color_badge | default: '#e53935' }};">-20%</span>
       </div>
-      <div class="todays-offer-title mb-10 fs-22 fw-700">{{ section.settings.main_title }}</div>
-      <div class="todays-offer-image mb-20 text-center">
+      <div class="todays-offer-title mb-10 fs-22 fw-700" style="padding-bottom: 10px;">{{ section.settings.main_title }}</div>
+      <div class="todays-offer-image mb-20 text-center" style="padding-bottom: 10px;">
         <a href="{{ section.settings.main_product.url }}">
           <img
             src="{{ section.settings.main_product.featured_image | img_url: '480x' }}"
@@ -107,10 +84,10 @@
           >
         </a>
       </div>
-      <div class="todays-offer-product-title mb-5 fw-600 fs-18 text-center">
+      <div class="todays-offer-product-title mb-5 fw-600 fs-18 text-center" style="padding-bottom: 6px;">
         <a href="{{ section.settings.main_product.url }}">{{ section.settings.main_product.title }}</a>
       </div>
-      <div class="todays-offer-rating mb-5 flex align-center justify-center gap-6">
+      <div class="todays-offer-rating mb-5 flex align-center justify-center gap-6" style="padding-bottom: 6px;">
         {% render 'review', product: section.settings.main_product %}
         <span class="fs-14 text-muted"
           >({{ section.settings.main_product.metafields.reviews.rating_count | default: 0 }})</span
@@ -121,20 +98,20 @@
           >
         {% endif %}
       </div>
-      <div class="todays-offer-price mb-10 text-center">
+      <div class="todays-offer-price mb-10 text-center" style="padding-bottom: 10px;">
         <span
           class="fs-24 fw-700"
-          style="background: {{ section.settings.price_bg_color | default: '#fff' }}; padding: 2px 12px; border-radius: 4px; color: {% if section.settings.main_product.compare_at_price < section.settings.main_product.price %}#e53935{% else %}#008A00{% endif %};"
+          style="background: {{ settings.color_price_bg | default: section.settings.price_bg_color | default: '#fff' }}; padding: 2px 12px; border-radius: 4px; color: {% if section.settings.main_product.compare_at_price < section.settings.main_product.price %}#e53935{% else %}#008A00{% endif %};"
         >
           {{- section.settings.main_product.price | money -}}
         </span>
-        {% if section.settings.main_product.compare_at_price > section.settings.main_product.price %}
+        {% if section.settings.main_product.compare_at_price < section.settings.main_product.price %}
           <span class="text-muted text-line-through ms-2 fs-16">
             {{- section.settings.main_product.compare_at_price | money -}}
           </span>
         {% endif %}
       </div>
-      <div class="todays-offer-countdown mb-10 text-center">
+      <div class="todays-offer-countdown mb-10 text-center" style="padding-bottom: 10px;">
         <countdown-timer
           data-endtime="{{ section.settings.countdown_endtime }}"
           data-format="dd:hh:mm:ss"
@@ -144,7 +121,7 @@
           data-secs="Sec"
         ></countdown-timer>
       </div>
-      <div class="todays-offer-progress mb-10">
+      <div class="todays-offer-progress mb-10" style="padding-bottom: 10px;">
         <div class="progress-bar" style="height: 10px; background: #eee; border-radius: 10px;">
           <div
             style="width: {{ section.settings.progress_percent }}%; background: #e53935; height: 100%; border-radius: 10px;"
@@ -154,13 +131,13 @@
       </div>
     </div>
     <!-- Right side products -->
-    <div class="todays-offer-side grid grid-cols-2 gap-16 flex-1" style="max-width: 400px; min-width: 320px;">
+    <div class="todays-offer-side grid grid-cols-2 flex-1" style="max-width: 400px; min-width: 320px; column-gap: 24px; row-gap: 24px;">
       {% for product in section.settings.side_products_right limit: 4 %}
         <div
-          class="todays-offer-side-item bg-white rounded-8 p-12 flex flex-col justify-between shadow-sm"
-          style="color: {{ section.settings.text_color | default: '#222' }};"
+          class="todays-offer-side-item bg-white rounded-8 p-16 flex flex-col justify-between shadow-sm"
+          style="color: {{ settings.color_text | default: section.settings.text_color | default: '#222' }};"
         >
-          <div class="relative mb-8">
+          <div class="relative mb-10">
             <a href="{{ product.url }}" class="block">
               <img
                 src="{{ product.featured_image | img_url: '240x' }}"
@@ -170,27 +147,21 @@
                 width="240px"
                 height="240px"
               >
-              {% if product.compare_at_price < product.price %}
-                <span class="offer-badge badge badge-danger" style="position:absolute;top:8px;left:8px;z-index:2;"
-                  >-
-                  {{- 100 | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round -}}
-                  %</span
-                >
-              {% endif %}
+              <span class="offer-badge badge badge-danger" style="position:absolute;top:8px;left:8px;z-index:2;background:{{ settings.color_badge | default: '#e53935' }};">-20%</span>
             </a>
           </div>
-          <div class="fw-600 fs-15 mb-2 line-clamp-2">{{ product.title }}</div>
-          <div class="flex align-center gap-6 mb-2">
+          <div class="fw-600 fs-15 mb-2 line-clamp-2" style="padding-bottom: 6px;">{{ product.title }}</div>
+          <div class="flex align-center gap-6 mb-2" style="padding-bottom: 6px;">
             {% render 'review', product: product %}
             <span class="fs-13 text-muted">({{ product.metafields.reviews.rating_count | default: 0 }})</span>
             {% if product.metafields.reviews.rating != blank %}
               <span class="fs-13 text-warning ms-1">{{ product.metafields.reviews.rating | round: 1 }}/5</span>
             {% endif %}
           </div>
-          <div class="flex align-center gap-6 mb-2">
+          <div class="flex align-center gap-6 mb-2" style="padding-bottom: 6px;">
             <span
               class="fw-700 fs-16"
-              style="background: {{ section.settings.price_bg_color | default: '#fff' }}; padding: 2px 8px; border-radius: 4px; color: {% if product.compare_at_price < product.price %}#e53935{% else %}#008A00{% endif %};"
+              style="background: {{ settings.color_price_bg | default: section.settings.price_bg_color | default: '#fff' }}; padding: 2px 8px; border-radius: 4px; color: {% if product.compare_at_price < product.price %}#e53935{% else %}#008A00{% endif %};"
             >
               {{- product.price | money -}}
             </span>
@@ -198,7 +169,7 @@
               <span class="text-muted text-line-through fs-14">{{ product.compare_at_price | money }}</span>
             {% endif %}
           </div>
-          <div class="flex align-center gap-6">
+          <div class="flex align-center gap-6" style="padding-bottom: 2px;">
             <span class="fs-13 text-muted">In stock: {{ product.inventory_quantity | default: 0 }}</span>
             {% if product.inventory_quantity > 10 %}
               <span class="stock-check-icon" title="In stock">
@@ -309,20 +280,22 @@
   }
   .todays-offer-grid {
     width: 100%;
-    gap: 32px;
+    gap: 40px;
     align-items: stretch;
+    column-gap: 40px;
   }
   .todays-offer-side {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    column-gap: 24px;
+    row-gap: 24px;
     max-width: 400px;
     min-width: 320px;
   }
   .todays-offer-side-item {
     background: #fff;
     border-radius: 8px;
-    padding: 12px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -352,6 +325,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-left: 24px;
+    margin-right: 24px;
   }
   .todays-offer-image img {
     max-width: 100%;
@@ -377,11 +352,14 @@
       flex-direction: column;
       align-items: center;
       gap: 24px;
+      column-gap: 0;
     }
     .todays-offer-side {
       max-width: 100%;
       min-width: 0;
       grid-template-columns: 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 16px;
     }
     .todays-offer-main {
       margin: 20px 0;
@@ -394,9 +372,13 @@
     .todays-offer-side {
       grid-template-columns: 1fr;
       gap: 12px;
+      column-gap: 0;
+      row-gap: 12px;
     }
     .todays-offer-main {
       padding: 10px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 </style>
