@@ -23,7 +23,7 @@
                 width="240px"
                 height="240px"
               >
-              {% if product.compare_at_price > product.price %}
+              {% if product.compare_at_price < product.price %}
                 <span class="offer-badge badge badge-danger" style="position:absolute;top:8px;left:8px;z-index:2;"
                   >-
                   {{- 100 | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round -}}
@@ -47,7 +47,7 @@
             >
               {{- product.price | money -}}
             </span>
-            {% if product.compare_at_price > product.price %}
+            {% if product.compare_at_price < product.price %}
               <span class="text-muted text-line-through fs-14">{{ product.compare_at_price | money }}</span>
             {% endif %}
           </div>
@@ -152,9 +152,6 @@
         </div>
         <div class="fs-13 mt-2 text-center">Sold: {{ section.settings.sold }}/{{ section.settings.total }}</div>
       </div>
-      <div class="todays-offer-buy mt-20 text-center">
-        <a href="{{ section.settings.main_product.url }}" class="btn btn-primary w-full">Buy Now</a>
-      </div>
     </div>
     <!-- Right side products -->
     <div class="todays-offer-side grid grid-cols-2 gap-16 flex-1" style="max-width: 400px; min-width: 320px;">
@@ -173,7 +170,7 @@
                 width="240px"
                 height="240px"
               >
-              {% if product.compare_at_price > product.price %}
+              {% if product.compare_at_price < product.price %}
                 <span class="offer-badge badge badge-danger" style="position:absolute;top:8px;left:8px;z-index:2;"
                   >-
                   {{- 100 | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round -}}
@@ -197,7 +194,7 @@
             >
               {{- product.price | money -}}
             </span>
-            {% if product.compare_at_price > product.price %}
+            {% if product.compare_at_price < product.price %}
               <span class="text-muted text-line-through fs-14">{{ product.compare_at_price | money }}</span>
             {% endif %}
           </div>
