@@ -28,16 +28,25 @@
           </div>
           <div class="fw-600 fs-15 mb-2 line-clamp-2" style="padding-bottom: 6px;">{{ product.title }}</div>
           <div class="flex align-center gap-6 mb-2" style="padding-bottom: 6px;">
-            {% render 'review', product: product %}
-            <span class="fs-13 text-muted">({{ product.metafields.reviews.rating_count | default: 0 }})</span>
-            {% if product.metafields.reviews.rating != blank %}
-              <span class="fs-13 text-warning ms-1">{{ product.metafields.reviews.rating | round: 1 }}/5</span>
-            {% endif %}
+            <!-- SVG 5 sao vàng -->
+            <span class="fake-rating-stars" style="display:inline-block;vertical-align:middle;">
+              <!-- Dán SVG bạn gửi ở đây -->
+              <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M64 0L42.6667 10.3333L32 0L21.3333 10.3333L0 0H64Z" fill="#FFD700"/>
+              </svg>
+            </span>
+            <span class="fs-13 text-muted">(68)</span>
           </div>
           <div class="flex align-center gap-6 mb-2" style="padding-bottom: 6px;">
+            {%- assign price_color = "#2B38D1" -%}
+            {%- if product.compare_at_price < product.price -%}
+              {%- assign price_color = "#DC323C" -%}
+            {%- elsif product.inventory_quantity < 10 -%}
+              {%- assign price_color = "#EF262C" -%}
+            {%- endif -%}
             <span
               class="fw-700 fs-16"
-              style="background: {{ settings.color_price_bg | default: section.settings.price_bg_color | default: '#fff' }}; padding: 2px 8px; border-radius: 4px; color: {% if product.compare_at_price < product.price %}#e53935{% else %}#008A00{% endif %};"
+              style="background: {{ settings.color_price_bg | default: section.settings.price_bg_color | default: '#fff' }}; padding: 2px 8px; border-radius: 4px; color: {{ price_color }};"
             >
               {{- product.price | money -}}
             </span>
@@ -88,20 +97,27 @@
         <a href="{{ section.settings.main_product.url }}">{{ section.settings.main_product.title }}</a>
       </div>
       <div class="todays-offer-rating mb-5 flex align-center justify-center gap-6" style="padding-bottom: 6px;">
-        {% render 'review', product: section.settings.main_product %}
+        <!-- SVG 5 sao vàng -->
+        <span class="fake-rating-stars" style="display:inline-block;vertical-align:middle;">
+          <!-- Dán SVG bạn gửi ở đây -->
+          <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M64 0L42.6667 10.3333L32 0L21.3333 10.3333L0 0H64Z" fill="#FFD700"/>
+          </svg>
+        </span>
         <span class="fs-14 text-muted"
           >({{ section.settings.main_product.metafields.reviews.rating_count | default: 0 }})</span
         >
-        {% if section.settings.main_product.metafields.reviews.rating != blank %}
-          <span class="fs-14 text-warning ms-1">
-            {{- section.settings.main_product.metafields.reviews.rating | round: 1 }}/5</span
-          >
-        {% endif %}
       </div>
       <div class="todays-offer-price mb-10 text-center" style="padding-bottom: 10px;">
+        {%- assign price_color = "#2B38D1" -%}
+        {%- if section.settings.main_product.compare_at_price < section.settings.main_product.price -%}
+          {%- assign price_color = "#DC323C" -%}
+        {%- elsif section.settings.main_product.inventory_quantity < 10 -%}
+          {%- assign price_color = "#EF262C" -%}
+        {%- endif -%}
         <span
           class="fs-24 fw-700"
-          style="background: {{ settings.color_price_bg | default: section.settings.price_bg_color | default: '#fff' }}; padding: 2px 12px; border-radius: 4px; color: {% if section.settings.main_product.compare_at_price < section.settings.main_product.price %}#e53935{% else %}#008A00{% endif %};"
+          style="background: {{ settings.color_price_bg | default: section.settings.price_bg_color | default: '#fff' }}; padding: 2px 12px; border-radius: 4px; color: {{ price_color }};"
         >
           {{- section.settings.main_product.price | money -}}
         </span>
@@ -152,16 +168,25 @@
           </div>
           <div class="fw-600 fs-15 mb-2 line-clamp-2" style="padding-bottom: 6px;">{{ product.title }}</div>
           <div class="flex align-center gap-6 mb-2" style="padding-bottom: 6px;">
-            {% render 'review', product: product %}
-            <span class="fs-13 text-muted">({{ product.metafields.reviews.rating_count | default: 0 }})</span>
-            {% if product.metafields.reviews.rating != blank %}
-              <span class="fs-13 text-warning ms-1">{{ product.metafields.reviews.rating | round: 1 }}/5</span>
-            {% endif %}
+            <!-- SVG 5 sao vàng -->
+            <span class="fake-rating-stars" style="display:inline-block;vertical-align:middle;">
+              <!-- Dán SVG bạn gửi ở đây -->
+              <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M64 0L42.6667 10.3333L32 0L21.3333 10.3333L0 0H64Z" fill="#FFD700"/>
+              </svg>
+            </span>
+            <span class="fs-13 text-muted">(68)</span>
           </div>
           <div class="flex align-center gap-6 mb-2" style="padding-bottom: 6px;">
+            {%- assign price_color = "#2B38D1" -%}
+            {%- if product.compare_at_price < product.price -%}
+              {%- assign price_color = "#DC323C" -%}
+            {%- elsif product.inventory_quantity < 10 -%}
+              {%- assign price_color = "#EF262C" -%}
+            {%- endif -%}
             <span
               class="fw-700 fs-16"
-              style="background: {{ settings.color_price_bg | default: section.settings.price_bg_color | default: '#fff' }}; padding: 2px 8px; border-radius: 4px; color: {% if product.compare_at_price < product.price %}#e53935{% else %}#008A00{% endif %};"
+              style="background: {{ settings.color_price_bg | default: section.settings.price_bg_color | default: '#fff' }}; padding: 2px 8px; border-radius: 4px; color: {{ price_color }};"
             >
               {{- product.price | money -}}
             </span>
