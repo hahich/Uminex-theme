@@ -51,10 +51,10 @@
         "padding_bottom": 10
       }
     },
-    "header_mega_store_dFEzUt": {
+    "header_mega_store_GpwaBd": {
       "type": "header-mega-store",
       "blocks": {
-        "menu_promotion_PzHgxe": {
+        "menu_promotion_4egzEx": {
           "type": "menu_promotion",
           "settings": {
             "text": "",
@@ -74,7 +74,7 @@
         }
       },
       "block_order": [
-        "menu_promotion_PzHgxe"
+        "menu_promotion_4egzEx"
       ],
       "name": "t:sections.header.header_mega_store",
       "settings": {
@@ -87,23 +87,23 @@
         "sticky_header_type": "on-scroll-up",
         "sticky_header_mobile": true,
         "mega_menu": "header-menu",
-        "dropdowns_animation": "fade-in-down",
+        "dropdowns_animation": "down-to-up",
         "uppercase_first": false,
         "hot": "Hot",
-        "label_color_hot": "#ffffff",
-        "label_background_hot": "#d0473e",
+        "label_color_hot": "#fff",
+        "label_background_hot": "#D0473E",
         "new": "New",
-        "label_color_new": "#ffffff",
+        "label_color_new": "#fff",
         "label_background_new": "#516cf4",
         "sale": "Sale",
-        "label_color_sale": "#ffffff",
-        "label_background_sale": "#d0473e",
+        "label_color_sale": "#fff",
+        "label_background_sale": "#D0473E",
         "popular": "Popular",
-        "label_color_popular": "#ffffff",
-        "label_background_popular": "#14854e",
+        "label_color_popular": "#fff",
+        "label_background_popular": "#14854E",
         "redirect_to_link": true,
-        "menu_mobile_color": "#ffffff",
-        "menu_mobile_background": "#d0473e",
+        "menu_mobile_color": "#fff",
+        "menu_mobile_background": "#D0473E",
         "show_search": true,
         "show_account_icon": true,
         "show_wishlist_icon": true,
@@ -118,6 +118,6 @@
   },
   "order": [
     "top_bar_CbXNYj",
-    "header_mega_store_dFEzUt"
+    "header_mega_store_GpwaBd"
   ]
 }
