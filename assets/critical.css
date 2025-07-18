@@ -33,6 +33,7 @@ body {
   overflow-wrap: break-word;
   display: flex;
   flex-direction: column;
+  background-color: #F1F5F6;
 }
 .preload-page {
   background-color: #fff;
