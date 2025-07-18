@@ -15,65 +15,14 @@
         "slider_item_YipJd4": {
           "type": "slider_item",
           "settings": {
+            "image": "shopify://shop_images/c413a9e34bbaf774781f5af27b874e3b36322afe_1.png",
             "overlay_opacity": 0,
             "slider_effect": "effect_fadeinup",
-            "subheading": "Sweater Collection",
-            "heading": "Online Exclusive",
+            "subheading": "GAMEPAD CONSOLE",
+            "heading": "Today’s Offer <br>\nSkin <span style=\"color: #17F084;\">Gamepad</span> 2022",
             "description": "",
-            "first_button_label": "Shop Collection",
+            "first_button_label": "SHOP NOW",
             "first_button_link": "shopify://collections/sweaters",
-            "first_button_style": false,
-            "second_button_label": "",
-            "second_button_link": "",
-            "second_button_style": false,
-            "content_alignment": "left",
-            "content_position": "bottom-left",
-            "content_width": "full_width",
-            "content_max_width": 100,
-            "content_padding_block": 60,
-            "content_padding_inline": 60,
-            "show_content_background": false,
-            "content_background": "#ffffff",
-            "content_box_opacity": 100,
-            "content_alignment_mobile": "center"
-          }
-        },
-        "slider_item_jiLA39": {
-          "type": "slider_item",
-          "settings": {
-            "overlay_opacity": 0,
-            "slider_effect": "effect_fadeinup",
-            "subheading": "Season Collection",
-            "heading": "Super Comfort",
-            "description": "",
-            "first_button_label": "Shop Collection",
-            "first_button_link": "shopify://collections/best-seller",
-            "first_button_style": false,
-            "second_button_label": "",
-            "second_button_link": "",
-            "second_button_style": false,
-            "content_alignment": "left",
-            "content_position": "bottom-left",
-            "content_width": "full_width",
-            "content_max_width": 100,
-            "content_padding_block": 60,
-            "content_padding_inline": 60,
-            "show_content_background": false,
-            "content_background": "#ffffff",
-            "content_box_opacity": 100,
-            "content_alignment_mobile": "center"
-          }
-        },
-        "slider_item_iAiXpe": {
-          "type": "slider_item",
-          "settings": {
-            "overlay_opacity": 0,
-            "slider_effect": "effect_fadeinup",
-            "subheading": "Look Exclusive",
-            "heading": "High-Top Design",
-            "description": "",
-            "first_button_label": "Shop Collection",
-            "first_button_link": "shopify://collections/crop-top",
             "first_button_style": false,
             "second_button_label": "",
             "second_button_link": "",
@@ -92,9 +41,7 @@
         }
       },
       "block_order": [
-        "slider_item_YipJd4",
-        "slider_item_jiLA39",
-        "slider_item_iAiXpe"
+        "slider_item_YipJd4"
       ],
       "custom_css": [
         ".h-full_screen {--height-topbar: 41px;}"
