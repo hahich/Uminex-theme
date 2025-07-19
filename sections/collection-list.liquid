@@ -661,25 +661,35 @@
   ],
   "blocks": [
     {
-      "type": "collection",
-      "name": "t:sections.collection-list.blocks.name",
+      "type": "left_collection",
+      "name": "Left Collection",
       "settings": [
         {
           "type": "collection",
           "id": "collection",
-          "label": "t:sections.collection-list.blocks.collection"
-        },
+          "label": "Select left collection"
+        }
+      ]
+    },
+    {
+      "type": "main_collection",
+      "name": "Main Collection",
+      "settings": [
         {
-          "type": "image_picker",
-          "id": "collection_image",
-          "label": "t:sections.collection-list.blocks.collection_image.label",
-          "info": "t:sections.collection-list.blocks.collection_image.info"
-        },
+          "type": "collection",
+          "id": "collection",
+          "label": "Select main collection"
+        }
+      ]
+    },
+    {
+      "type": "right_collection",
+      "name": "Right Collection",
+      "settings": [
         {
-          "type": "text",
-          "id": "collection_title",
-          "label": "t:sections.collection-list.blocks.collection_title.label",
-          "info": "t:sections.collection-list.blocks.collection_title.info"
+          "type": "collection",
+          "id": "collection",
+          "label": "Select right collection"
         }
       ]
     }
