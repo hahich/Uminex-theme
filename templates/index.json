@@ -290,16 +290,21 @@
         "grid_gap": 5,
         "main_product": "apple-iphone-13-pro-max-128gb-gold-fully-unlocked",
         "main_title": "TODAY'S OFFER",
-        "main_badge": true,
         "countdown_endtime": "",
-        "section_padding_top": 40,
+        "section_padding_top": 42,
         "section_padding_bottom": 40,
         "enable_main_slide": false,
         "main_slide_autoplay": 5,
         "show_badge_new": true,
         "show_badge_sale": true,
         "side_collection_left": "collection-1",
-        "side_collection_right": "collection-right"
+        "side_collection_right": "collection-right",
+        "price_font_size": 16,
+        "price_font_weight": "700",
+        "price_alignment": "left",
+        "stock_font_size": 13,
+        "stock_font_weight": "500",
+        "stock_alignment": "left"
       }
     }
   },
