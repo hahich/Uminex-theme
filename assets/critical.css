@@ -1183,6 +1183,10 @@ picture {
   padding-right: 3rem;
   padding-left: 3rem;
 }
+.px-40 {
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
 .py-5 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
