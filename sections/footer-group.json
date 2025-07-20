@@ -70,6 +70,7 @@
         "enable_follow_on_shop": true,
         "show_social": true,
         "payment_enable": true,
+        "payment_image": "shopify://shop_images/payment.png",
         "payment_width": 340,
         "policy_menu": false,
         "copyright_text": "Copyright © <strong style=\"color: #2B38D1;\">Uminex</strong> all rights reserved. Powered by <strong style=\"color: #2B38D1;\">Blueskytechco.</strong>",
