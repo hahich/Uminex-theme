@@ -18,7 +18,7 @@
           "type": "store_info",
           "settings": {
             "image_width": 70,
-            "store_heading": "About the store",
+            "store_heading": "ABOUT THE STORE",
             "store_description": "",
             "store_address": true,
             "store_phone": true,
@@ -29,7 +29,7 @@
         "link_list_JTq77M": {
           "type": "link_list",
           "settings": {
-            "heading": "Footer Information",
+            "heading": "INFORMATION",
             "menu": "footer-information",
             "content_width": "16%"
           }
@@ -45,7 +45,7 @@
         "newsletter_Rk8BD6": {
           "type": "newsletter",
           "settings": {
-            "heading": "Sign Up to Newsletter",
+            "heading": "SIGN UP TO NEWSLETTER",
             "description": "Join 20.000+ subscribers and get a new discount coupon on every Saturday. Updates information on Sales and Offers.",
             "email_placeholder": "Enter your email...",
             "button_label": "Sign Up",
