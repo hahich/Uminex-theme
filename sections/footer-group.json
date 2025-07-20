@@ -60,6 +60,9 @@
         "link_list_x4zwRH",
         "newsletter_Rk8BD6"
       ],
+      "custom_css": [
+        "a:hover {color: #111111;}"
+      ],
       "settings": {
         "section_width": "fluid_container",
         "color_scheme": "",
