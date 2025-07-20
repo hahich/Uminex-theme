@@ -2308,8 +2308,8 @@
             "image": "Image",
             "description": "Description",
             "image_width": "Image width",
-            "store_address": "Show address",
             "store_phone": "Show phone",
+            "store_address": "Show address",
             "store_email": "Show email"
           }
         },
