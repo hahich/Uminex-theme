@@ -291,7 +291,7 @@
         "grid_gap": 5,
         "side_column_gap": 5,
         "side_row_gap": 5,
-        "card_inner_padding": 16,
+        "card_inner_padding": 0,
         "element_spacing": 6,
         "main_product": "apple-iphone-13-pro-max-128gb-gold-fully-unlocked",
         "main_title": "TODAY'S OFFER",
