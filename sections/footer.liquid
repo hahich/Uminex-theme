@@ -276,16 +276,16 @@
                     {% endif %}
                     {%- if block_st.store_address != blank or block_st.store_address or block_st.store_email %}
                       <div class="footer_store-infor">
-                        {%- if block_st.store_address != blank -%}
-                          <div class="footer__block-info">
-                            {{ theme_st.store_address }}
-                          </div>
-                        {% endif %}
                         {%- if block_st.store_phone != blank and theme_st.store_phone != blank -%}
                           <div class="footer__store-info">
                             <a href="tel:{{ settings.store_phone }}" class="heading-color no-underline">
                               {{ theme_st.store_phone }}
                             </a>
+                          </div>
+                        {% endif %}
+                        {%- if block_st.store_address != blank -%}
+                          <div class="footer__block-info">
+                            {{ theme_st.store_address }}
                           </div>
                         {% endif %}
                         {%- if block_st.store_email != blank and theme_st.store_email != blank -%}
@@ -358,7 +358,7 @@
               <div class="footer_payment_image fs-0 max-w-100" style="width: {{ section_st.payment_width }}px;">
                 {%- assign sizes = section_st.payment_width | append: 'px' -%}
                 {%- assign image_alt = section_st.payment_image.image.alt | default: 'Payment-image' -%}
-
+              <span>Payment method: </span>
                 {% render 'responsive-image',
                   type: 'other',
                   image: section_st.payment_image,
