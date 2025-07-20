@@ -82,7 +82,7 @@
                 {% else %}
                   <span
                     class="fs-13"
-                    style="color: #FF4F03; font-size: {{ section.settings.stock_font_size | default: '13px' }}; font-weight: {{ section.settings.stock_font_weight | default: '600' }}; text-align: {{ section.settings.stock_alignment | default: 'left' }};"
+                    style="color: #EF262C; font-size: {{ section.settings.stock_font_size | default: '13px' }}; font-weight: {{ section.settings.stock_font_weight | default: '600' }}; text-align: {{ section.settings.stock_alignment | default: 'left' }};"
                     >Only {{ first_variant.inventory_quantity }} left in stock</span
                   >
                 {% endif %}
@@ -367,6 +367,17 @@
   "settings": [
     {
       "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "light", "label": "Light" },
+        { "value": "dark", "label": "Dark" }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "select",
       "id": "section_width",
       "label": "Section width",
       "default": "container",
@@ -398,11 +409,47 @@
     {
       "type": "range",
       "id": "grid_gap",
-      "label": "Column gap",
+      "label": "Grid gap (px)",
       "min": 0,
       "max": 80,
       "step": 1,
       "default": 5
+    },
+    {
+      "type": "range",
+      "id": "side_column_gap",
+      "label": "Side column gap (px)",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "side_row_gap",
+      "label": "Side row gap (px)",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "card_inner_padding",
+      "label": "Product card inner padding (px)",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "element_spacing",
+      "label": "Element spacing in card (px)",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "default": 6
     },
     {
       "type": "product",
@@ -417,8 +464,14 @@
     },
     {
       "type": "text",
+      "id": "main_badge",
+      "label": "Discount badge (fixed -20%)",
+      "default": "-20%"
+    },
+    {
+      "type": "text",
       "id": "countdown_endtime",
-      "label": "Countdown end time (YYYY-MM-DDTHH:MM:SSZ)"
+      "label": "Countdown end time (YYYY-MM-DDTHH:MM:SS)"
     },
     {
       "type": "range",
@@ -462,7 +515,7 @@
     {
       "type": "checkbox",
       "id": "show_badge_sale",
-      "label": "Show 'Sale' badge",
+      "label": "Show 'Sale' badge (-20%)",
       "default": true
     },
     {
@@ -538,6 +591,24 @@
         { "value": "right", "label": "Right" }
       ],
       "default": "left"
+    },
+    {
+      "type": "number",
+      "id": "progress_percent",
+      "label": "Sold percent (progress bar)",
+      "default": 60
+    },
+    {
+      "type": "number",
+      "id": "sold",
+      "label": "Sold quantity",
+      "default": 620
+    },
+    {
+      "type": "number",
+      "id": "total",
+      "label": "Total quantity",
+      "default": 998
     }
   ],
   "presets": [
