@@ -284,26 +284,40 @@
       "name": "Today's Offer",
       "settings": {
         "section_width": "container",
-        "background_color": "#fff",
-        "text_color": "#222",
-        "price_bg_color": "#fff",
+        "background_color": "#ffffff",
+        "text_color": "#222222",
+        "price_bg_color": "#ffffff",
         "badge_color": "#e53935",
         "grid_gap": 5,
         "side_column_gap": 5,
         "side_row_gap": 5,
         "card_inner_padding": 16,
         "element_spacing": 6,
-        "main_collection": "",
+        "main_product": "apple-iphone-13-pro-max-128gb-gold-fully-unlocked",
         "main_title": "TODAY'S OFFER",
         "main_badge": "-20%",
         "countdown_endtime": "",
         "progress_percent": 60,
         "sold": 620,
         "total": 998,
-        "side_collection_left": "collection-1",
-        "side_collection_right": "",
+        "side_products_left": [
+          "apple-iphone-12-pro-max-128gb-unlocked",
+          "apple-watch-aluminum-case-pride-edition",
+          "apple-iphone-12-pro-max-128gb-unlocked-1",
+          "apple-watch-aluminum-case-pride-edition-1"
+        ],
+        "side_products_right": [
+          "apple-iphone-12-pro-max-128gb-unlocked-2",
+          "apple-watch-aluminum-case-pride-edition-2",
+          "apple-iphone-12-pro-max-128gb-unlocked-3",
+          "apple-watch-aluminum-case-pride-edition-3"
+        ],
         "section_padding_top": 40,
-        "section_padding_bottom": 40
+        "section_padding_bottom": 40,
+        "enable_main_slide": false,
+        "main_slide_autoplay": 5,
+        "show_badge_new": true,
+        "show_badge_sale": true
       }
     }
   },
