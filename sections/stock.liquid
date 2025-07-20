@@ -2,6 +2,10 @@
   {% if section.settings.product %}
     {% assign product = section.settings.product %}
     {% assign first_variant = product.variants.first %}
+    <script>
+      console.log('Product object:', {{ product | json }});
+      console.log('First variant object:', {{ first_variant | json }});
+    </script>
     <div
       class="stock-product-card"
       style="display:inline-block; text-align:left; border:1px solid #eee; border-radius:8px; padding:24px; max-width:340px;"
