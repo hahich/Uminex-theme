@@ -608,6 +608,166 @@
   </div>
 </div>
 
+<style>
+  .todays-offer-section.container-fluid {
+    max-width: 100vw;
+    background: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};
+    padding-top: {{ section.settings.section_padding_top }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom }}px;
+  }
+  .todays-offer-grid {
+    width: 100%;
+    gap: 5px;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  .todays-offer-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: {{ section.settings.side_column_gap }}px;
+    row-gap: {{ section.settings.side_row_gap }}px;
+    max-width: 480px;
+    min-width: 320px;
+  }
+  .todays-offer-side-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    position: relative;
+  }
+  .offer-badge {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #e53935;
+    color: #fff;
+    letter-spacing: 0.5px;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(229, 57, 53, 0.08);
+  }
+  .todays-offer-main {
+    background: #fff;
+    border: 2px solid #DC323C;
+    box-shadow: none;
+    max-width: 520px;
+    min-width: 340px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .todays-offer-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .stock-check-icon {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 4px;
+  }
+  @media (max-width: 1200px) {
+    .todays-offer-side {
+      max-width: 320px;
+    }
+    .todays-offer-main {
+      max-width: 400px;
+      padding: 24px;
+    }
+  }
+  @media (max-width: 900px) {
+    .todays-offer-grid {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      column-gap: 0;
+    }
+    .todays-offer-side {
+      max-width: 100%;
+      min-width: 0;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 16px;
+    }
+    .todays-offer-main {
+      margin: 20px 0;
+      min-width: 0;
+      max-width: 100%;
+      padding: 20px;
+    }
+  }
+  @media (max-width: 600px) {
+    .todays-offer-side {
+      grid-template-columns: 1fr;
+      gap: 12px;
+      column-gap: 0;
+      row-gap: 12px;
+    }
+    .todays-offer-main {
+      padding: 10px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .main-progress-bar {
+    height: 10px;
+    background: #eee;
+    border-radius: 10px;
+    width: 420px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .countdown-styled {
+    display: inline-block;
+    background: #e53935;
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px 18px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    min-width: 220px;
+    margin: 0 auto;
+  }
+  .countdown-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .countdown-box {
+    background: #e53935;
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    min-width: 36px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .countdown-sep {
+    color: #e53935;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0 2px;
+  }
+</style>
+
 {% schema %}
 {
   "name": "Collection List",
