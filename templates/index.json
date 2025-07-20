@@ -284,8 +284,8 @@
       "name": "Today's Offer",
       "settings": {
         "section_width": "fluid_container",
-        "background_color": "#ffffff",
-        "text_color": "#222222",
+        "background_color": "#f1f5f6",
+        "text_color": "#111111",
         "price_bg_color": "#ffffff",
         "badge_color": "#e53935",
         "grid_gap": 5,
