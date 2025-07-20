@@ -107,7 +107,7 @@
             {% for product in section.settings.side_products_left limit: 1 %}
               <div class="swiper-slide">
                 <div
-                  class="todays-offer-main p-40 flex-2 bg-white"
+                  class="todays-offer-main px-40 flex-2 bg-white"
                   style="max-width: 520px; min-width: 340px; color: {{ settings.color_text | default: section.settings.text_color | default: '#222' }};"
                 >
                   <div class="todays-offer-title mb-10 fs-22 fw-700" style="padding-bottom: 10px;">
@@ -578,8 +578,7 @@
   .todays-offer-side {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: {{ section.settings.side_column_gap }}px;
-    row-gap: {{ section.settings.side_row_gap }}px;
+    column-gap: {{ section.settings.grid_gap }}px;
     max-width: 480px;
     min-width: 320px;
   }
