@@ -201,14 +201,15 @@
           class="todays-offer-main p-40 flex-2 bg-white"
           style="max-width: 520px; min-width: 340px; color: {{ settings.color_text | default: section.settings.text_color | default: '#222' }};"
         >
+          <div class="todays-offer-title mb-10 fs-22 fw-700" style="padding-bottom: 10px;">
+            {{ section.settings.main_title }}
+          </div>
           <div class="todays-offer-badge mb-10">
             <span class="badge badge-danger" style="background:{{ settings.color_badge | default: '#e53935' }};"
               >-20%</span
             >
           </div>
-          <div class="todays-offer-title mb-10 fs-22 fw-700" style="padding-bottom: 10px;">
-            {{ section.settings.main_title }}
-          </div>
+
           <div class="todays-offer-image mb-20 text-center" style="padding-bottom: 10px;">
             <a href="{{ section.settings.main_product.url }}">
               <img
