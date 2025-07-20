@@ -38,7 +38,7 @@
           "type": "link_list",
           "settings": {
             "heading": "",
-            "menu": "",
+            "menu": "quick-links",
             "content_width": "16%"
           }
         },
