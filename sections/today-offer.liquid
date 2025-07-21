@@ -59,7 +59,7 @@
                   class="semibold fs-18"
                   style="color: {{ price_color }}; font-size: {{ section.settings.price_font_size | default: '16px' }}; font-weight: {{ section.settings.price_font_weight | default: '700' }}; text-align: {{ section.settings.price_alignment | default: 'left' }};"
                 >
-                  {{- product.price | money -}}
+                  {{- product.price | money }}
                 </span>
                 {% if product.compare_at_price < product.price %}
                   <span
@@ -173,14 +173,14 @@
                       class="fs-18 semibold"
                       style="background: {{ settings.color_price_bg | default: section.settings.price_bg_color | default: '#fff' }}; color: {{ price_color }};"
                     >
-                      {{- section.settings.main_product.price | money -}}
+                      {{- section.settings.main_product.price | money }}
                     </span>
                     {% if section.settings.main_product.compare_at_price < section.settings.main_product.price %}
                       <span
                         class="text-muted text-line-through ms-2 fs-16 text-line-through"
                         style="text-decoration: line-through;"
                       >
-                        {{- section.settings.main_product.compare_at_price | money -}}
+                        {{ section.settings.main_product.compare_at_price | money -}}
                       </span>
                     {% endif %}
                   </div>
@@ -264,14 +264,14 @@
               class="fs-18 semibold"
               style="background: {{ settings.color_price_bg | default: section.settings.price_bg_color | default: '#fff' }}; border-radius: 4px; color: {{ price_color }};"
             >
-              {{- section.settings.main_product.price | money -}}
+              {{- section.settings.main_product.price | money }}
             </span>
             {% if section.settings.main_product.compare_at_price < section.settings.main_product.price %}
               <span
                 class="text-muted text-line-through ms-2 fs-16 text-line-through"
                 style="text-decoration: line-through;"
               >
-                {{- section.settings.main_product.compare_at_price | money -}}
+                {{ section.settings.main_product.compare_at_price | money -}}
               </span>
             {% endif %}
           </div>
