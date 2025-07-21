@@ -32,7 +32,7 @@
                   {% if section.settings.show_badge_sale and product.tags contains 'sale' %}
                     <span
                       class="offer-badge badge badge-danger"
-                      style="position:absolute;top:8px;left:8px;z-index:2;background:{{ settings.badge_color | default: '#e53935' }};"
+                      style="position:absolute;top:8px;left:8px;z-index:2;background:{{ section.settings.badge_color | default: '#e53935' }};"
                       >-20%</span
                     >
                   {% endif %}
@@ -112,7 +112,7 @@
                     {{ section.settings.main_title }}
                   </div>
                   <div class="todays-offer-badge mb-10 flex align-center justify-between border-top w-full">
-                    <span class="badge badge-danger" style="background:{{ settings.badge_color | default: '#e53935' }}; color: {{ settings.badge_text_color |  default: #fff}}"
+                    <span class="badge badge-danger" style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: #fff}}"
                       >-20%</span
                     >
                     <span class="border rounded-50">
@@ -307,7 +307,7 @@
                   {% if section.settings.show_badge_sale and product.tags contains 'sale' %}
                     <span
                       class="offer-badge badge badge-danger"
-                      style="position:absolute;top:8px;left:8px;z-index:2;background:{{ settings.badge_color | default: '#e53935' }};"
+                      style="position:absolute;top:8px;left:8px;z-index:2;background:{{ section.settings.badge_color | default: '#e53935' }};"
                       >-20%</span
                     >
                   {% endif %}
