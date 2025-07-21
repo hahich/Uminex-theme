@@ -123,19 +123,7 @@
                   <div class="todays-offer-title pb-10 fs-16 bold border-bottom">
                     {{ section.settings.main_title }}
                   </div>
-                  <div class="todays-offer-badge pt-20 flex align-center justify-between w-full">
-                    <span
-                      class="offer-badge badge badge-danger fs-12 semibold"
-                      style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
-                      >-20%</span
-                    >
-                    <span class="border rounded-50 td-gift">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.53125 8.53125C1.22921 8.53125 0.984375 8.77609 0.984375 9.07812V11.2656C0.984375 12.7734 2.21102 14 3.71875 14H10.2812C11.789 14 13.0156 12.7734 13.0156 11.2656V9.07812C13.0156 8.77609 12.7708 8.53125 12.4688 8.53125C12.1667 8.53125 11.9219 8.77609 11.9219 9.07812V11.2656C11.9219 12.1703 11.1859 12.9062 10.2812 12.9062H3.71875C2.81411 12.9062 2.07812 12.1703 2.07812 11.2656V9.07812C2.07812 8.77609 1.83329 8.53125 1.53125 8.53125Z" fill="#1AB4D1"/>
-                        <path d="M1.64062 7.65625H12.3594C13.264 7.65625 14 6.92027 14 6.01562V4.92188C14 4.01723 13.264 3.28125 12.3594 3.28125H10.5338C10.7206 2.95922 10.8281 2.58579 10.8281 2.1875C10.8281 0.981313 9.84681 0 8.64062 0C7.98774 0 7.40116 0.287875 7 0.742902C6.59884 0.287875 6.01226 0 5.35938 0C4.15319 0 3.17188 0.981313 3.17188 2.1875C3.17188 2.58579 3.27939 2.95922 3.46618 3.28125H1.64062C0.735984 3.28125 0 4.01723 0 4.92188V6.01562C0 6.92027 0.735984 7.65625 1.64062 7.65625ZM8.64062 1.09375C9.24372 1.09375 9.73438 1.58441 9.73438 2.1875C9.73438 2.79059 9.24372 3.28125 8.64062 3.28125H7.54688V2.1875C7.54688 1.58441 8.03753 1.09375 8.64062 1.09375ZM4.26562 2.1875C4.26562 1.58441 4.75628 1.09375 5.35938 1.09375C5.96247 1.09375 6.45312 1.58441 6.45312 2.1875V3.28125H5.35938C4.75628 3.28125 4.26562 2.79059 4.26562 2.1875ZM1.09375 4.92188C1.09375 4.62033 1.33908 4.375 1.64062 4.375H6.45312V4.92188C6.45312 5.22391 6.69796 5.46875 7 5.46875C7.30204 5.46875 7.54688 5.22391 7.54688 4.92188V4.375H12.3594C12.6609 4.375 12.9062 4.62033 12.9062 4.92188V6.01562C12.9062 6.31717 12.6609 6.5625 12.3594 6.5625H1.64062C1.33908 6.5625 1.09375 6.31717 1.09375 6.01562V4.92188Z" fill="#1AB4D1"/>
-                      </svg>
-                    </span>
-                  </div>
+
                   <div class="todays-offer-image mb-20" style="padding-bottom: 10px;">
                     <a href="{{ section.settings.main_product.url }}">
                       <img
@@ -146,6 +134,19 @@
                         class="rounded-8 mx-auto"
                       >
                     </a>
+                    <div class="todays-offer-badge pt-20 flex align-center justify-between w-full">
+                      <span
+                        class="offer-badge badge badge-danger fs-12 semibold"
+                        style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
+                        >-20%</span
+                      >
+                      <span class="border rounded-50 td-gift">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.53125 8.53125C1.22921 8.53125 0.984375 8.77609 0.984375 9.07812V11.2656C0.984375 12.7734 2.21102 14 3.71875 14H10.2812C11.789 14 13.0156 12.7734 13.0156 11.2656V9.07812C13.0156 8.77609 12.7708 8.53125 12.4688 8.53125C12.1667 8.53125 11.9219 8.77609 11.9219 9.07812V11.2656C11.9219 12.1703 11.1859 12.9062 10.2812 12.9062H3.71875C2.81411 12.9062 2.07812 12.1703 2.07812 11.2656V9.07812C2.07812 8.77609 1.83329 8.53125 1.53125 8.53125Z" fill="#1AB4D1"/>
+                          <path d="M1.64062 7.65625H12.3594C13.264 7.65625 14 6.92027 14 6.01562V4.92188C14 4.01723 13.264 3.28125 12.3594 3.28125H10.5338C10.7206 2.95922 10.8281 2.58579 10.8281 2.1875C10.8281 0.981313 9.84681 0 8.64062 0C7.98774 0 7.40116 0.287875 7 0.742902C6.59884 0.287875 6.01226 0 5.35938 0C4.15319 0 3.17188 0.981313 3.17188 2.1875C3.17188 2.58579 3.27939 2.95922 3.46618 3.28125H1.64062C0.735984 3.28125 0 4.01723 0 4.92188V6.01562C0 6.92027 0.735984 7.65625 1.64062 7.65625ZM8.64062 1.09375C9.24372 1.09375 9.73438 1.58441 9.73438 2.1875C9.73438 2.79059 9.24372 3.28125 8.64062 3.28125H7.54688V2.1875C7.54688 1.58441 8.03753 1.09375 8.64062 1.09375ZM4.26562 2.1875C4.26562 1.58441 4.75628 1.09375 5.35938 1.09375C5.96247 1.09375 6.45312 1.58441 6.45312 2.1875V3.28125H5.35938C4.75628 3.28125 4.26562 2.79059 4.26562 2.1875ZM1.09375 4.92188C1.09375 4.62033 1.33908 4.375 1.64062 4.375H6.45312V4.92188C6.45312 5.22391 6.69796 5.46875 7 5.46875C7.30204 5.46875 7.54688 5.22391 7.54688 4.92188V4.375H12.3594C12.6609 4.375 12.9062 4.62033 12.9062 4.92188V6.01562C12.9062 6.31717 12.6609 6.5625 12.3594 6.5625H1.64062C1.33908 6.5625 1.09375 6.31717 1.09375 6.01562V4.92188Z" fill="#1AB4D1"/>
+                        </svg>
+                      </span>
+                    </div>
                   </div>
                   <div class="todays-offer-product-title mb-5 semibold fs-14" style="padding-bottom: 6px;">
                     <a class="no-underline" href="{{ section.settings.main_product.url }}">
@@ -215,20 +216,6 @@
           <div class="todays-offer-title fs-16 bold pb-10 border-bottm">
             {{ section.settings.main_title }}
           </div>
-          <div class="todays-offer-badge pt-20 flex align-center justify-between w-full">
-            <span
-              class="offer-badge badge badge-danger fs-12 semibold rounded-2"
-              style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
-              >-20%</span
-            >
-            <span class="border rounded-50">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.53125 8.53125C1.22921 8.53125 0.984375 8.77609 0.984375 9.07812V11.2656C0.984375 12.7734 2.21102 14 3.71875 14H10.2812C11.789 14 13.0156 12.7734 13.0156 11.2656V9.07812C13.0156 8.77609 12.7708 8.53125 12.4688 8.53125C12.1667 8.53125 11.9219 8.77609 11.9219 9.07812V11.2656C11.9219 12.1703 11.1859 12.9062 10.2812 12.9062H3.71875C2.81411 12.9062 2.07812 12.1703 2.07812 11.2656V9.07812C2.07812 8.77609 1.83329 8.53125 1.53125 8.53125Z" fill="#1AB4D1"/>
-                <path d="M1.64062 7.65625H12.3594C13.264 7.65625 14 6.92027 14 6.01562V4.92188C14 4.01723 13.264 3.28125 12.3594 3.28125H10.5338C10.7206 2.95922 10.8281 2.58579 10.8281 2.1875C10.8281 0.981313 9.84681 0 8.64062 0C7.98774 0 7.40116 0.287875 7 0.742902C6.59884 0.287875 6.01226 0 5.35938 0C4.15319 0 3.17188 0.981313 3.17188 2.1875C3.17188 2.58579 3.27939 2.95922 3.46618 3.28125H1.64062C0.735984 3.28125 0 4.01723 0 4.92188V6.01562C0 6.92027 0.735984 7.65625 1.64062 7.65625ZM8.64062 1.09375C9.24372 1.09375 9.73438 1.58441 9.73438 2.1875C9.73438 2.79059 9.24372 3.28125 8.64062 3.28125H7.54688V2.1875C7.54688 1.58441 8.03753 1.09375 8.64062 1.09375ZM4.26562 2.1875C4.26562 1.58441 4.75628 1.09375 5.35938 1.09375C5.96247 1.09375 6.45312 1.58441 6.45312 2.1875V3.28125H5.35938C4.75628 3.28125 4.26562 2.79059 4.26562 2.1875ZM1.09375 4.92188C1.09375 4.62033 1.33908 4.375 1.64062 4.375H6.45312V4.92188C6.45312 5.22391 6.69796 5.46875 7 5.46875C7.30204 5.46875 7.54688 5.22391 7.54688 4.92188V4.375H12.3594C12.6609 4.375 12.9062 4.62033 12.9062 4.92188V6.01562C12.9062 6.31717 12.6609 6.5625 12.3594 6.5625H1.64062C1.33908 6.5625 1.09375 6.31717 1.09375 6.01562V4.92188Z" fill="#1AB4D1"/>
-              </svg>
-            </span>
-          </div>
-
           <div class="todays-offer-image mb-20 text-center" style="padding-bottom: 10px;">
             <a href="{{ section.settings.main_product.url }}">
               <img
@@ -239,6 +226,19 @@
                 class="rounded-8 mx-auto"
               >
             </a>
+            <div class="todays-offer-badge pt-20 flex align-center justify-between w-full">
+              <span
+                class="offer-badge badge badge-danger fs-12 semibold rounded-2"
+                style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
+                >-20%</span
+              >
+              <span class="border rounded-50">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.53125 8.53125C1.22921 8.53125 0.984375 8.77609 0.984375 9.07812V11.2656C0.984375 12.7734 2.21102 14 3.71875 14H10.2812C11.789 14 13.0156 12.7734 13.0156 11.2656V9.07812C13.0156 8.77609 12.7708 8.53125 12.4688 8.53125C12.1667 8.53125 11.9219 8.77609 11.9219 9.07812V11.2656C11.9219 12.1703 11.1859 12.9062 10.2812 12.9062H3.71875C2.81411 12.9062 2.07812 12.1703 2.07812 11.2656V9.07812C2.07812 8.77609 1.83329 8.53125 1.53125 8.53125Z" fill="#1AB4D1"/>
+                  <path d="M1.64062 7.65625H12.3594C13.264 7.65625 14 6.92027 14 6.01562V4.92188C14 4.01723 13.264 3.28125 12.3594 3.28125H10.5338C10.7206 2.95922 10.8281 2.58579 10.8281 2.1875C10.8281 0.981313 9.84681 0 8.64062 0C7.98774 0 7.40116 0.287875 7 0.742902C6.59884 0.287875 6.01226 0 5.35938 0C4.15319 0 3.17188 0.981313 3.17188 2.1875C3.17188 2.58579 3.27939 2.95922 3.46618 3.28125H1.64062C0.735984 3.28125 0 4.01723 0 4.92188V6.01562C0 6.92027 0.735984 7.65625 1.64062 7.65625ZM8.64062 1.09375C9.24372 1.09375 9.73438 1.58441 9.73438 2.1875C9.73438 2.79059 9.24372 3.28125 8.64062 3.28125H7.54688V2.1875C7.54688 1.58441 8.03753 1.09375 8.64062 1.09375ZM4.26562 2.1875C4.26562 1.58441 4.75628 1.09375 5.35938 1.09375C5.96247 1.09375 6.45312 1.58441 6.45312 2.1875V3.28125H5.35938C4.75628 3.28125 4.26562 2.79059 4.26562 2.1875ZM1.09375 4.92188C1.09375 4.62033 1.33908 4.375 1.64062 4.375H6.45312V4.92188C6.45312 5.22391 6.69796 5.46875 7 5.46875C7.30204 5.46875 7.54688 5.22391 7.54688 4.92188V4.375H12.3594C12.6609 4.375 12.9062 4.62033 12.9062 4.92188V6.01562C12.9062 6.31717 12.6609 6.5625 12.3594 6.5625H1.64062C1.33908 6.5625 1.09375 6.31717 1.09375 6.01562V4.92188Z" fill="#1AB4D1"/>
+                </svg>
+              </span>
+            </div>
           </div>
           <div class="todays-offer-product-title fw-600 fs-14 w-full" style="padding-bottom: 6px;">
             <a class="no-underline" href="{{ section.settings.main_product.url }}">
@@ -588,159 +588,167 @@
 {% endschema %}
 
 <style>
-    .todays-offer-section.container-fluid {
-      max-width: 100vw;
-      background: {{ section.settings.background_color }};
-      color: {{ section.settings.text_color }};
-      padding-top: {{ section.settings.section_padding_top }}px;
-      padding-bottom: {{ section.settings.section_padding_bottom }}px;
-    }
-    .todays-offer-grid {
-      width: 100%;
-      gap: 5px;
-      align-items: stretch;
-      justify-content: space-between;
-    }
-    .todays-offer-side {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: {{ section.settings.grid_gap }}px;
-      max-width: 480px;
-      min-width: 320px;
-    }
-    .todays-offer-side-item {
-      background: #fff;
-      border-radius: 8px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-      position: relative;
-    }
-    .offer-badge {
-      font-size: 13px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 4px;
-      background: #e53935;
-      color: #fff;
-      letter-spacing: 0.5px;
-      z-index: 2;
-      box-shadow: 0 2px 8px rgba(229, 57, 53, 0.08);
-    }
-    .todays-offer-main {
-      background: #fff;
-      border: 2px solid #DC323C;
-      box-shadow: none;
-      max-width: 520px;
-      min-width: 340px;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-    }
-    .todays-offer-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    .stock-check-icon {
-      display: inline-flex;
-      align-items: center;
-      margin-left: 4px;
-    }
-    @media (max-width: 1200px) {
-      .todays-offer-side {
-        max-width: 320px;
+      .todays-offer-section.container-fluid {
+        max-width: 100vw;
+        background: {{ section.settings.background_color }};
+        color: {{ section.settings.text_color }};
+        padding-top: {{ section.settings.section_padding_top }}px;
+        padding-bottom: {{ section.settings.section_padding_bottom }}px;
       }
-      .todays-offer-main {
-        max-width: 400px;
-        padding: 24px;
-      }
-    }
-    @media (max-width: 900px) {
       .todays-offer-grid {
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
         gap: 5px;
-        column-gap: 0;
+        align-items: stretch;
+        justify-content: space-between;
       }
       .todays-offer-side {
-        max-width: 100%;
-        min-width: 0;
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        column-gap: 16px;
-        row-gap: 16px;
+        gap: {{ section.settings.grid_gap }}px;
+        max-width: 480px;
+        min-width: 320px;
+      }
+      .todays-offer-side-item {
+        background: #fff;
+        border-radius: 8px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        position: relative;
+      }
+      .offer-badge {
+        font-size: 13px;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 4px;
+        background: #e53935;
+        color: #fff;
+        letter-spacing: 0.5px;
+        z-index: 2;
+        box-shadow: 0 2px 8px rgba(229, 57, 53, 0.08);
       }
       .todays-offer-main {
-        margin: 20px 0;
-        min-width: 0;
+        background: #fff;
+        border: 2px solid #DC323C;
+        box-shadow: none;
+        max-width: 520px;
+        min-width: 340px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+      }
+      .todays-offer-image img {
         max-width: 100%;
-        padding: 20px;
+        height: auto;
+        border-radius: 8px;
       }
+      .stock-check-icon {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 4px;
+      }
+      @media (max-width: 1200px) {
+        .todays-offer-side {
+          max-width: 320px;
+        }
+        .todays-offer-main {
+          max-width: 400px;
+          padding: 24px;
+        }
+      }
+      @media (max-width: 900px) {
+        .todays-offer-grid {
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          column-gap: 0;
+        }
+        .todays-offer-side {
+          max-width: 100%;
+          min-width: 0;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 16px;
+          row-gap: 16px;
+        }
+        .todays-offer-main {
+          margin: 20px 0;
+          min-width: 0;
+          max-width: 100%;
+          padding: 20px;
+        }
+      }
+      @media (max-width: 600px) {
+        .todays-offer-side {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          column-gap: 0;
+          row-gap: 12px;
+        }
+        .todays-offer-main {
+          padding: 10px;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+      .main-progress-bar {
+        height: 10px;
+        background: #eee;
+        border-radius: 10px;
+        width: 420px;
+        max-width: 100%;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
     }
-    @media (max-width: 600px) {
-      .todays-offer-side {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        column-gap: 0;
-        row-gap: 12px;
+      .countdown-flex {
+        display: flex;
+        align-items: center;
+        gap: 6px;
       }
-      .todays-offer-main {
-        padding: 10px;
-        margin-left: 0;
-        margin-right: 0;
+      .countdown-box {
+        background: #e53935;
+        color: #fff;
+        border-radius: 8px;
+        padding: 6px 14px;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        min-width: 36px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-    }
-    .main-progress-bar {
-      height: 10px;
-      background: #eee;
-      border-radius: 10px;
-      width: 420px;
-      max-width: 100%;
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
+      .countdown-sep {
+        color: #e53935;
+        font-size: 22px;
+        font-weight: 700;
+        padding: 0 2px;
+      }
+
+      .td-gift {
+        width: 32px;
+        height: 32px;
+      }
+
+      .countdown--container {
+        background-color: #DC323C;
+        font-size: 1.4rem;
+        font-weight: 700;
+        padding: 1.6rem;
+        border-radius: 3px;
+        color: #fff;
+      }
+
+    .countdown--container:not(:last-child) .count-timer::after {
+    content: ":";
+    color: #111111;
+    margin: 0 4px;
+    font-size: 22px;
+    font-weight: 700;
   }
-    .countdown-flex {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .countdown-box {
-      background: #e53935;
-      color: #fff;
-      border-radius: 8px;
-      padding: 6px 14px;
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      min-width: 36px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .countdown-sep {
-      color: #e53935;
-      font-size: 22px;
-      font-weight: 700;
-      padding: 0 2px;
-    }
-
-    .td-gift {
-      width: 32px;
-      height: 32px;
-    }
-
-    .countdown--container {
-      background-color: #DC323C;
-      font-size: 1.4rem;
-      font-weight: 700;
-      padding: 1.6rem;
-      border-radius: 3px;
-      color: #fff;
-    }
 </style>
