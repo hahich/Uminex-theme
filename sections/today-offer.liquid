@@ -198,10 +198,10 @@
           class="todays-offer-main px-40 flex-2 bg-white px-40"
           style="max-width: 520px; min-width: 340px; color: {{ section.settings.color_text | default: section.settings.text_color | default: '#222' }};"
         >
-          <div class="todays-offer-title mb-10 fs-22 fw-700" style="padding-bottom: 10px;">
+          <div class="todays-offer-title fs-16 fw-700">
             {{ section.settings.main_title }}
           </div>
-          <div class="todays-offer-badge mb-10 flex align-center justify-between border-top w-full">
+          <div class="todays-offer-badge mb-10 flex align-center justify-between border-top">
             <span class="badge badge-danger rounded-2" style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: #fff}}"
               >-20%</span
             >
@@ -672,20 +672,7 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-  }
-  .countdown-styled {
-    display: inline-block;
-    background: #e53935;
-    color: #fff;
-    border-radius: 8px;
-    padding: 6px 18px;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-align: center;
-    min-width: 220px;
-    margin: 0 auto;
-  }
+}
   .countdown-flex {
     display: flex;
     align-items: center;
