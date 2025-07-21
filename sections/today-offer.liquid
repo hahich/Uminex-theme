@@ -108,11 +108,11 @@
                   class="todays-offer-main px-40 flex-2 bg-white"
                   style="max-width: 466px; min-width: 340px; color: {{ settings.color_text | default: section.settings.text_color | default: '#222' }};"
                 >
-                  <div class="todays-offer-title mb-10 fs-22 fw-700" style="padding-bottom: 10px;">
+                  <div class="todays-offer-title pb-10 fs-16 bold">
                     {{ section.settings.main_title }}
                   </div>
-                  <div class="todays-offer-badge mb-10 flex align-center justify-between border-top w-full">
-                    <span class="badge badge-danger" style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
+                  <div class="todays-offer-badge pt-20 flex align-center justify-between border-top w-full">
+                    <span class="badge badge-danger fs-12 semibold" style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
                       >-20%</span
                     >
                     <span class="border rounded-50">
@@ -198,11 +198,11 @@
           class="todays-offer-main px-40 flex-2 bg-white px-40"
           style="max-width: 520px; min-width: 340px; color: {{ section.settings.color_text | default: section.settings.text_color | default: '#222' }};"
         >
-          <div class="todays-offer-title fs-16 fw-700">
+          <div class="todays-offer-title fs-16 bold pb-10">
             {{ section.settings.main_title }}
           </div>
-          <div class="todays-offer-badge mb-10 flex align-center justify-between border-top w-full">
-            <span class="badge badge-danger rounded-2" style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
+          <div class="todays-offer-badge pt-20 flex align-center justify-between border-top w-full">
+            <span class="badge badge-danger fs-12 semibold rounded-2" style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
               >-20%</span
             >
             <span class="border rounded-50">
