@@ -32,8 +32,7 @@
                   >
                   {% if section.settings.show_badge_sale and product.tags contains 'sale' %}
                     <span
-                      class="offer-badge badge badge-danger"
-                      style="position:absolute;top:8px;left:8px;z-index:2;background:{{ section.settings.badge_color | default: '#e53935' }};"
+                      class="offer-badge fs-12 semibold border rounded-2 badge badge-danger header__layout-3 absolute top-0 left-0"
                       >-20%</span
                     >
                   {% endif %}
@@ -616,7 +615,7 @@
     .todays-offer-side-item {
       background: #fff;
       border-radius: 8px;
-      padding: 16px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -626,15 +625,11 @@
     .offer-badge {
       width: 55px;
       height: 25px;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 4px;
-      background: #e53935;
-      color: #fff;
-      letter-spacing: 0.5px;
+      position:absolute;
+      top: 20px;
+      left: 20px;
       z-index: 2;
-      box-shadow: 0 2px 8px rgba(229, 57, 53, 0.08);
+      background:{{ section.settings.badge_color | default: '#DC323C' }};
     }
     .todays-offer-main {
       background: #fff;
