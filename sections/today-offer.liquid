@@ -28,6 +28,7 @@
                     loading="lazy"
                     width="240px"
                     height="240px"
+                    style="{{ settings.product_hover_effect }}"
                   >
                   {% if section.settings.show_badge_sale and product.tags contains 'sale' %}
                     <span
@@ -54,7 +55,7 @@
                 </span>
                 <span class="fs-12 medium-weight" style="color: #8D979E">(68)</span>
               </div>
-              <div class="flex align-center gap-6 mb-2">
+              <div class="flex align-center gap-5 mb-2">
                 <span
                   class="semibold fs-18"
                   style="color: {{ price_color }}; font-size: {{ section.settings.price_font_size | default: '16px' }}; font-weight: {{ section.settings.price_font_weight | default: '700' }}; text-align: {{ section.settings.price_alignment | default: 'left' }};"
@@ -80,7 +81,9 @@
                         <path d="M10.252 0.251953L4.25 6.25391L1.74805 3.75195C1.62956 3.64258 1.48828 3.58789 1.32422 3.58789C1.16927 3.58789 1.03711 3.64258 0.927734 3.75195C0.809245 3.87044 0.75 4.01172 0.75 4.17578C0.75 4.33073 0.809245 4.46289 0.927734 4.57227L3.83984 7.49805C3.94922 7.60742 4.08594 7.66211 4.25 7.66211C4.41406 7.66211 4.55078 7.60742 4.66016 7.49805L11.0723 1.07227C11.1908 0.962891 11.25 0.830729 11.25 0.675781C11.25 0.511719 11.1908 0.370443 11.0723 0.251953C10.9629 0.142578 10.8262 0.0878906 10.6621 0.0878906C10.5072 0.0878906 10.3704 0.142578 10.252 0.251953Z" fill="#008A00"/>
                       </svg>
 
-                      In stock:</span> <strong>{{ first_variant.inventory_quantity }}</strong> <span class="color: #515D66">products</span>
+                      In stock:</span
+                    >
+                    <strong>{{ first_variant.inventory_quantity }}</strong> <span class="color: #515D66">products</span>
                   </span>
                 {% else %}
                   <span
@@ -130,6 +133,7 @@
                         width="386"
                         height="386"
                         class="rounded-8 mx-auto"
+                        style="{{ settings.product_hover_effect }}"
                       >
                     </a>
                     <div class="todays-offer-badge pt-20 flex align-center justify-between w-full absolute top-0">
@@ -222,6 +226,7 @@
                 width="386"
                 height="386"
                 class="rounded-8 mx-auto"
+                style="{{ settings.product_hover_effect }}"
               >
             </a>
             <div class="todays-offer-badge pt-20 flex align-center justify-between w-full absolute top-0">
@@ -319,6 +324,7 @@
                     loading="lazy"
                     width="240px"
                     height="240px"
+                    style="{{ settings.product_hover_effect }}"
                   >
                   {% if section.settings.show_badge_sale and product.tags contains 'sale' %}
                     <span
@@ -345,7 +351,7 @@
                 </span>
                 <span class="fs-12 medium-weight" style="color: #8D979E">(68)</span>
               </div>
-              <div class="flex align-center gap-6 mb-2" style="padding-bottom: 6px;">
+              <div class="flex align-center gap-5 mb-2" style="padding-bottom: 6px;">
                 <span
                   class="semibold fs-18"
                   style="color: {{ price_color }}; font-size: {{ section.settings.price_font_size | default: '16px' }}; font-weight: {{ section.settings.price_font_weight | default: '700' }}; text-align: {{ section.settings.price_alignment | default: 'left' }};"
@@ -370,7 +376,8 @@
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.252 0.251953L4.25 6.25391L1.74805 3.75195C1.62956 3.64258 1.48828 3.58789 1.32422 3.58789C1.16927 3.58789 1.03711 3.64258 0.927734 3.75195C0.809245 3.87044 0.75 4.01172 0.75 4.17578C0.75 4.33073 0.809245 4.46289 0.927734 4.57227L3.83984 7.49805C3.94922 7.60742 4.08594 7.66211 4.25 7.66211C4.41406 7.66211 4.55078 7.60742 4.66016 7.49805L11.0723 1.07227C11.1908 0.962891 11.25 0.830729 11.25 0.675781C11.25 0.511719 11.1908 0.370443 11.0723 0.251953C10.9629 0.142578 10.8262 0.0878906 10.6621 0.0878906C10.5072 0.0878906 10.3704 0.142578 10.252 0.251953Z" fill="#008A00"/>
                     </svg>
-                    In stock: <strong>{{ first_variant.inventory_quantity }}</strong> <span style="color: #515D66">products</span>
+                    In stock: <strong>{{ first_variant.inventory_quantity }}</strong>
+                    <span style="color: #515D66">products</span>
                   </span>
                 {% else %}
                   <span
@@ -586,159 +593,161 @@
 {% endschema %}
 
 <style>
-      .todays-offer-section.container-fluid {
-        max-width: 100vw;
-        background: {{ section.settings.background_color }};
-        color: {{ section.settings.text_color }};
-        padding-top: {{ section.settings.section_padding_top }}px;
-        padding-bottom: {{ section.settings.section_padding_bottom }}px;
-      }
-      .todays-offer-grid {
-        width: 100%;
-        gap: 5px;
-        align-items: stretch;
-        justify-content: space-between;
-      }
+    .todays-offer-section.container-fluid {
+      max-width: 100vw;
+      background: {{ section.settings.background_color }};
+      color: {{ section.settings.text_color }};
+      padding-top: {{ section.settings.section_padding_top }}px;
+      padding-bottom: {{ section.settings.section_padding_bottom }}px;
+    }
+    .todays-offer-grid {
+      width: 100%;
+      gap: 5px;
+      align-items: stretch;
+      justify-content: space-between;
+    }
+    .todays-offer-side {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: {{ section.settings.grid_gap }}px;
+      max-width: 480px;
+      min-width: 320px;
+    }
+    .todays-offer-side-item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      position: relative;
+    }
+    .offer-badge {
+      width: 55px;
+      height: 25px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: #e53935;
+      color: #fff;
+      letter-spacing: 0.5px;
+      z-index: 2;
+      box-shadow: 0 2px 8px rgba(229, 57, 53, 0.08);
+    }
+    .todays-offer-main {
+      background: #fff;
+      border: 2px solid #DC323C;
+      box-shadow: none;
+      max-width: 520px;
+      min-width: 340px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    .todays-offer-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .stock-check-icon {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 4px;
+    }
+    @media (max-width: 1200px) {
       .todays-offer-side {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: {{ section.settings.grid_gap }}px;
-        max-width: 480px;
-        min-width: 320px;
-      }
-      .todays-offer-side-item {
-        background: #fff;
-        border-radius: 8px;
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        position: relative;
-      }
-      .offer-badge {
-        font-size: 13px;
-        font-weight: 700;
-        padding: 2px 8px;
-        border-radius: 4px;
-        background: #e53935;
-        color: #fff;
-        letter-spacing: 0.5px;
-        z-index: 2;
-        box-shadow: 0 2px 8px rgba(229, 57, 53, 0.08);
+        max-width: 320px;
       }
       .todays-offer-main {
-        background: #fff;
-        border: 2px solid #DC323C;
-        box-shadow: none;
-        max-width: 520px;
-        min-width: 340px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
+        max-width: 400px;
+        padding: 24px;
       }
-      .todays-offer-image img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
-      .stock-check-icon {
-        display: inline-flex;
-        align-items: center;
-        margin-left: 4px;
-      }
-      @media (max-width: 1200px) {
-        .todays-offer-side {
-          max-width: 320px;
-        }
-        .todays-offer-main {
-          max-width: 400px;
-          padding: 24px;
-        }
-      }
-      @media (max-width: 900px) {
-        .todays-offer-grid {
-          flex-direction: column;
-          align-items: center;
-          gap: 5px;
-          column-gap: 0;
-        }
-        .todays-offer-side {
-          max-width: 100%;
-          min-width: 0;
-          grid-template-columns: 1fr 1fr;
-          column-gap: 16px;
-          row-gap: 16px;
-        }
-        .todays-offer-main {
-          margin: 20px 0;
-          min-width: 0;
-          max-width: 100%;
-          padding: 20px;
-        }
-      }
-      @media (max-width: 600px) {
-        .todays-offer-side {
-          grid-template-columns: 1fr;
-          gap: 12px;
-          column-gap: 0;
-          row-gap: 12px;
-        }
-        .todays-offer-main {
-          padding: 10px;
-          margin-left: 0;
-          margin-right: 0;
-        }
-      }
-      .main-progress-bar {
-        height: 10px;
-        background: #eee;
-        border-radius: 10px;
-        width: 420px;
-        max-width: 100%;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
     }
-      .countdown-flex {
-        display: flex;
+    @media (max-width: 900px) {
+      .todays-offer-grid {
+        flex-direction: column;
         align-items: center;
-        gap: 6px;
+        gap: 5px;
+        column-gap: 0;
       }
-      .countdown-box {
-        background: #e53935;
-        color: #fff;
-        border-radius: 8px;
-        padding: 6px 14px;
-        font-size: 22px;
-        font-weight: 700;
-        letter-spacing: 2px;
-        min-width: 36px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .todays-offer-side {
+        max-width: 100%;
+        min-width: 0;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+        row-gap: 16px;
       }
-      .countdown-sep {
-        color: #e53935;
-        font-size: 22px;
-        font-weight: 700;
-        padding: 0 2px;
+      .todays-offer-main {
+        margin: 20px 0;
+        min-width: 0;
+        max-width: 100%;
+        padding: 20px;
       }
+    }
+    @media (max-width: 600px) {
+      .todays-offer-side {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        column-gap: 0;
+        row-gap: 12px;
+      }
+      .todays-offer-main {
+        padding: 10px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    .main-progress-bar {
+      height: 10px;
+      background: #eee;
+      border-radius: 10px;
+      width: 420px;
+      max-width: 100%;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+  }
+    .countdown-flex {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .countdown-box {
+      background: #e53935;
+      color: #fff;
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      min-width: 36px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .countdown-sep {
+      color: #e53935;
+      font-size: 22px;
+      font-weight: 700;
+      padding: 0 2px;
+    }
 
-      .td-gift {
-        width: 32px;
-        height: 32px;
-      }
+    .td-gift {
+      width: 32px;
+      height: 32px;
+    }
 
-      .countdown--container {
-        background-color: #DC323C;
-        font-size: 1.4rem;
-        font-weight: 700;
-        padding: 1.6rem;
-        border-radius: 3px;
-        color: #fff;
-      }
+    .countdown--container {
+      background-color: #DC323C;
+      font-size: 1.4rem;
+      font-weight: 700;
+      padding: 1.6rem;
+      border-radius: 3px;
+      color: #fff;
+    }
 </style>
