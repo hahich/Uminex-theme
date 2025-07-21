@@ -77,7 +77,7 @@
                     style="font-size: {{ section.settings.stock_font_size | default: '13px' }}; font-weight: {{ section.settings.stock_font_weight | default: '600' }}; text-align: {{ section.settings.stock_alignment | default: 'left' }};"
                     ><span style="color: #008A00;">
                       <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.252 0.251953L4.25 6.25391L1.74805 3.75195C1.62956 3.64258 1.48828 3.58789 1.32422 3.58789C1.16927 3.58789 1.03711 3.64258 0.927734 3.75195C0.809245 3.87044 0.75 4.01172 0.75 4.17578C0.75 4.33073 0.809245 4.46289 0.927734 4.57227L3.83984 7.49805C3.94922 7.60742 4.08594 7.66211 4.25 7.66211C4.41406 7.66211 4.55078 7.60742 4.66016 7.49805L11.0723 1.07227C11.1908 0.962891 11.25 0.830729 11.25 0.675781C11.25 0.511719 11.1908 0.370443 11.0723 0.251953C10.9629 0.142578 10.8262 0.0878906 10.6621 0.0878906C10.5072 0.0878906 10.3704 0.142578 10.252 0.251953Z" fill="#EF262C"/>
+                        <path d="M10.252 0.251953L4.25 6.25391L1.74805 3.75195C1.62956 3.64258 1.48828 3.58789 1.32422 3.58789C1.16927 3.58789 1.03711 3.64258 0.927734 3.75195C0.809245 3.87044 0.75 4.01172 0.75 4.17578C0.75 4.33073 0.809245 4.46289 0.927734 4.57227L3.83984 7.49805C3.94922 7.60742 4.08594 7.66211 4.25 7.66211C4.41406 7.66211 4.55078 7.60742 4.66016 7.49805L11.0723 1.07227C11.1908 0.962891 11.25 0.830729 11.25 0.675781C11.25 0.511719 11.1908 0.370443 11.0723 0.251953C10.9629 0.142578 10.8262 0.0878906 10.6621 0.0878906C10.5072 0.0878906 10.3704 0.142578 10.252 0.251953Z" fill="#008A00"/>
                       </svg>
 
                       In stock:</span
@@ -120,10 +120,10 @@
                   class="todays-offer-main px-40 flex-2 bg-white"
                   style="max-width: 466px; min-width: 340px; color: {{ settings.color_text | default: section.settings.text_color | default: '#222' }};"
                 >
-                  <div class="todays-offer-title pb-10 fs-16 bold">
+                  <div class="todays-offer-title pb-10 fs-16 bold border-bottom">
                     {{ section.settings.main_title }}
                   </div>
-                  <div class="todays-offer-badge pt-20 flex align-center justify-between border-top w-full">
+                  <div class="todays-offer-badge pt-20 flex align-center justify-between w-full">
                     <span
                       class="offer-badge badge badge-danger fs-12 semibold"
                       style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
@@ -212,10 +212,10 @@
           class="todays-offer-main px-40 flex-2 bg-white px-40"
           style="max-width: 520px; min-width: 340px; color: {{ section.settings.color_text | default: section.settings.text_color | default: '#222' }};"
         >
-          <div class="todays-offer-title fs-16 bold pb-10">
+          <div class="todays-offer-title fs-16 bold pb-10 border-bottm">
             {{ section.settings.main_title }}
           </div>
-          <div class="todays-offer-badge pt-20 flex align-center justify-between border-top w-full">
+          <div class="todays-offer-badge pt-20 flex align-center justify-between w-full">
             <span
               class="offer-badge badge badge-danger fs-12 semibold rounded-2"
               style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
@@ -370,7 +370,7 @@
                     style="color: #008A00; font-size: {{ section.settings.stock_font_size | default: '13px' }}; font-weight: {{ section.settings.stock_font_weight | default: '600' }}; text-align: {{ section.settings.stock_alignment | default: 'left' }};"
                   >
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.252 0.251953L4.25 6.25391L1.74805 3.75195C1.62956 3.64258 1.48828 3.58789 1.32422 3.58789C1.16927 3.58789 1.03711 3.64258 0.927734 3.75195C0.809245 3.87044 0.75 4.01172 0.75 4.17578C0.75 4.33073 0.809245 4.46289 0.927734 4.57227L3.83984 7.49805C3.94922 7.60742 4.08594 7.66211 4.25 7.66211C4.41406 7.66211 4.55078 7.60742 4.66016 7.49805L11.0723 1.07227C11.1908 0.962891 11.25 0.830729 11.25 0.675781C11.25 0.511719 11.1908 0.370443 11.0723 0.251953C10.9629 0.142578 10.8262 0.0878906 10.6621 0.0878906C10.5072 0.0878906 10.3704 0.142578 10.252 0.251953Z" fill="#EF262C"/>
+                      <path d="M10.252 0.251953L4.25 6.25391L1.74805 3.75195C1.62956 3.64258 1.48828 3.58789 1.32422 3.58789C1.16927 3.58789 1.03711 3.64258 0.927734 3.75195C0.809245 3.87044 0.75 4.01172 0.75 4.17578C0.75 4.33073 0.809245 4.46289 0.927734 4.57227L3.83984 7.49805C3.94922 7.60742 4.08594 7.66211 4.25 7.66211C4.41406 7.66211 4.55078 7.60742 4.66016 7.49805L11.0723 1.07227C11.1908 0.962891 11.25 0.830729 11.25 0.675781C11.25 0.511719 11.1908 0.370443 11.0723 0.251953C10.9629 0.142578 10.8262 0.0878906 10.6621 0.0878906C10.5072 0.0878906 10.3704 0.142578 10.252 0.251953Z" fill="#008A00"/>
                     </svg>
                     In stock: {{ first_variant.inventory_quantity -}}
                   </span>
@@ -735,11 +735,12 @@
       height: 32px;
     }
 
-    .count-timer {
+    .countdown--container {
       background-color: #DC323C;
       font-size: 1.4rem;
       font-weight: 700;
       padding: 1.6rem;
       border-radius: 3px;
+      color: #fff;
     }
 </style>
