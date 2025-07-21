@@ -112,9 +112,9 @@
                     {{ section.settings.main_title }}
                   </div>
                   <div class="todays-offer-badge mb-10 flex align-center justify-between border-top w-full px-40">
-                    <span
-                      class="badge badge-danger"
-                      style="background:{{ settings.badge_color | default: '#e53935' }}; color: {{ settings.badge_text_color |  default: #fff}}">-20%</span>
+                    <span class="badge badge-danger" style="background:{{ settings.badge_color | default: '#e53935' }}; color: {{ settings.badge_text_color |  default: #fff}}"
+                      >-20%</span
+                    >
                     <span class="border rounded-50">
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.53125 8.53125C1.22921 8.53125 0.984375 8.77609 0.984375 9.07812V11.2656C0.984375 12.7734 2.21102 14 3.71875 14H10.2812C11.789 14 13.0156 12.7734 13.0156 11.2656V9.07812C13.0156 8.77609 12.7708 8.53125 12.4688 8.53125C12.1667 8.53125 11.9219 8.77609 11.9219 9.07812V11.2656C11.9219 12.1703 11.1859 12.9062 10.2812 12.9062H3.71875C2.81411 12.9062 2.07812 12.1703 2.07812 11.2656V9.07812C2.07812 8.77609 1.83329 8.53125 1.53125 8.53125Z" fill="#1AB4D1"/>
@@ -202,9 +202,7 @@
             {{ section.settings.main_title }}
           </div>
           <div class="todays-offer-badge mb-10 flex align-center justify-between border-top w-full px-40">
-            <span
-              class="badge badge-danger"
-              style="background:{{ settings.badge_color | default: '#e53935' }}; color: {{ settings.badge_text_color |  default: #fff}}"
+            <span class="badge badge-danger" style="background:{{ settings.badge_color | default: '#e53935' }}; color: {{ settings.badge_text_color |  default: #fff}}"
               >-20%</span
             >
             <span class="border rounded-50">
@@ -403,12 +401,6 @@
       "id": "badge_color",
       "label": "Badge background color",
       "default": "#e53935"
-    },
-    {
-      "type": "color",
-      "id": "badge_text_color",
-      "label": "Badge text color",
-      "default": "#fff"
     },
     {
       "type": "range",
