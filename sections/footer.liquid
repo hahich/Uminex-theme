@@ -354,7 +354,7 @@
         {% endif %}
         {%- if section_st.payment_enable or section_st.policy_menu -%}
           <div class="footer__payment flex grow-1 gap-10 justify-center flex-md-end align-center max-w-100 align-md-end" style="align-items: center !important;">
-            <p>Payment Method: </p>
+            <p class="fs-14">Payment Method: </p>
             {%- if section_st.payment_image != blank -%}
               <div class="footer_payment_image fs-0 max-w-100" style="width: {{ section_st.payment_width }}px;">
                 {%- assign sizes = section_st.payment_width | append: 'px' -%}
