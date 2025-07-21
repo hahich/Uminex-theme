@@ -124,7 +124,7 @@
                     {{ section.settings.main_title }}
                   </div>
 
-                  <div class="todays-offer-image mb-20" style="padding-bottom: 10px;">
+                  <div class="todays-offer-image mb-20 form-floating">
                     <a href="{{ section.settings.main_product.url }}">
                       <img
                         src="{{ section.settings.main_product.featured_image | img_url: '480x' }}"
@@ -134,7 +134,7 @@
                         class="rounded-8 mx-auto"
                       >
                     </a>
-                    <div class="todays-offer-badge pt-20 flex align-center justify-between w-full">
+                    <div class="todays-offer-badge pt-20 flex align-center justify-between w-full absolute top-0">
                       <span
                         class="offer-badge badge badge-danger fs-12 semibold"
                         style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
@@ -743,12 +743,4 @@
         border-radius: 3px;
         color: #fff;
       }
-
-    .countdown--container:not(:last-child) .count-timer::after {
-    content: ":";
-    color: #111111;
-    margin: 0 4px;
-    font-size: 22px;
-    font-weight: 700;
-  }
 </style>
