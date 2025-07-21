@@ -133,7 +133,7 @@
                       >
                     </a>
                   </div>
-                  <div class="todays-offer-product-title mb-5 fw-600 fs-14 text-center" style="padding-bottom: 6px;">
+                  <div class="todays-offer-product-title mb-5 semibold fs-14" style="padding-bottom: 6px;">
                     <a href="{{ section.settings.main_product.url }}">{{ section.settings.main_product.title }}</a>
                   </div>
                   <div
@@ -183,8 +183,8 @@
                         style="width: {{ section.settings.progress_percent }}%; background: #e53935; height: 100%; border-radius: 10px;"
                       ></div>
                     </div>
-                    <div class="fs-13 mt-2 text-center" style="width: 100%;">
-                      Sold: {{ section.settings.sold }}/{{ section.settings.total }}
+                    <div class="fs-12 medium-weight mt-2 w-full">
+                      Sold: <strong>620/896</strong> products
                     </div>
                   </div>
                 </div>
@@ -201,7 +201,7 @@
           <div class="todays-offer-title fs-16 fw-700">
             {{ section.settings.main_title }}
           </div>
-          <div class="todays-offer-badge mb-10 flex align-center justify-between border-top">
+          <div class="todays-offer-badge mb-10 flex align-center justify-between border-top w-full">
             <span class="badge badge-danger rounded-2" style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
               >-20%</span
             >
@@ -275,7 +275,7 @@
               ></div>
             </div>
             <div class="fs-13 mt-2 text-center" style="width: 100%;">
-              Sold: {{ section.settings.sold }}/{{ section.settings.total }}
+              Sold: 620/896
             </div>
           </div>
         </div>
@@ -606,7 +606,6 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     position: relative;
   }
