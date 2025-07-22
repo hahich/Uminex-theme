@@ -15,6 +15,7 @@
     "desktop_logo_width": 142,
     "page_width": 1200,
     "fluid_container_width": 1410,
+    "rounded_corner": 5,
     "spacing_desktop": 0,
     "space_mobile": 50,
     "font_type_body": "google",
