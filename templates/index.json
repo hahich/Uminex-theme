@@ -16,6 +16,7 @@
           "type": "slider_item",
           "settings": {
             "image": "shopify://shop_images/c413a9e34bbaf774781f5af27b874e3b36322afe_1.png",
+            "image_mobile": "shopify://shop_images/bg_2.png",
             "overlay_opacity": 0,
             "slider_effect": "effect_fadeinup",
             "subheading": "GAMEPAD CONSOLE",
@@ -39,10 +40,11 @@
             "content_alignment_mobile": "center"
           }
         },
-        "slider_item_A7TXzB": {
+        "slider_item_iENNzw": {
           "type": "slider_item",
           "settings": {
             "image": "shopify://shop_images/c413a9e34bbaf774781f5af27b874e3b36322afe_1.png",
+            "image_mobile": "shopify://shop_images/bg_2.png",
             "overlay_opacity": 0,
             "slider_effect": "effect_fadeinup",
             "subheading": "GAMEPAD CONSOLE",
@@ -66,10 +68,11 @@
             "content_alignment_mobile": "center"
           }
         },
-        "slider_item_U8RGVe": {
+        "slider_item_KLmzfV": {
           "type": "slider_item",
           "settings": {
             "image": "shopify://shop_images/c413a9e34bbaf774781f5af27b874e3b36322afe_1.png",
+            "image_mobile": "shopify://shop_images/bg_2.png",
             "overlay_opacity": 0,
             "slider_effect": "effect_fadeinup",
             "subheading": "GAMEPAD CONSOLE",
@@ -96,8 +99,8 @@
       },
       "block_order": [
         "slider_item_YipJd4",
-        "slider_item_A7TXzB",
-        "slider_item_U8RGVe"
+        "slider_item_iENNzw",
+        "slider_item_KLmzfV"
       ],
       "custom_css": [
         ".h-full_screen {--height-topbar: 41px;}"
