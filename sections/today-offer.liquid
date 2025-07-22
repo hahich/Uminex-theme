@@ -899,7 +899,7 @@
         leftSide.innerHTML = '';
         leftSide.appendChild(leftSlider);
         leftSide.classList.add('swiper-initialized');
-        new Swiper(leftSlider, { direction: 'horizontal', slidesPerView: 3, spaceBetween: 8, navigation: true });
+        new Swiper(leftSlider, { direction: 'horizontal', slidesPerView: 1, spaceBetween: 8, navigation: true });
       }
       var rightSide = document.querySelector('.todays-offer-side.right');
       if (rightSide && !rightSide.classList.contains('swiper-initialized')) {
@@ -918,7 +918,7 @@
         rightSide.innerHTML = '';
         rightSide.appendChild(rightSlider);
         rightSide.classList.add('swiper-initialized');
-        new Swiper(rightSlider, { direction: 'horizontal', slidesPerView: 3, spaceBetween: 8, navigation: true });
+        new Swiper(rightSlider, { direction: 'horizontal', slidesPerView: 1, spaceBetween: 8, navigation: true });
       }
       // Main slider: 2 sản phẩm/slide (nếu có logic riêng)
       var mainSlider = document.querySelector('.todays-offer-main')?.closest('.swiper');
