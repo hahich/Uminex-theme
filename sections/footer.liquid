@@ -337,12 +337,12 @@
   {% endif %}
   <div class="footer__bottom">
     <div class="{{ container }}">
-      <div class="footer_bottom-inner justify-center justify-md-end flex flex-wrap flex-md-nowrap align-center border-top gap-20 gap-xl-30 pt-10">
+      <div class="footer_bottom-inner justify-center justify-md-end flex flex-wrap flex-md-nowrap align-center border-top gap-5 gap-xl-30 pt-10">
         {%- if section_st.enable_country_selector
           or section_st.enable_language_selector
           or section_st.copyright_text
         -%}
-          <div class="flex gap-10 justify-center justify-md-start align-center-768">
+          <div class="flex gap-10 justify-center justify-md-start align-center-768 order-sm-2">
             {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
               <div class="footer__column footer__localization lang__currency-desktop flex flex-nowrap align-center gap-10">
                 {%- if section_st.enable_country_selector -%}
@@ -354,16 +354,16 @@
               </div>
             {% endif %}
             {%- if section_st.copyright_text %}
-              <div class="footer__copyright fs-small" style="">{{ section_st.copyright_text }}</div>
+              <div class="footer__copyright fs-small p-0" style="">{{ section_st.copyright_text }}</div>
             {% endif %}
           </div>
         {% endif %}
         {%- if section_st.payment_enable or section_st.policy_menu -%}
           <div
-            class="footer__payment flex grow-1 gap-10 justify-center flex-md-end align-center max-w-100 align-md-end"
+            class="footer__payment flex grow-1 gap-10 justify-center flex-md-end align-center max-w-100 align-md-end order-sm-1"
             style="align-items: center !important;"
           >
-            <p class="fs-14" style="font-family: 'Bai Jamjuree', sans-serif;">Payment Method:</p>
+            <p class="fs-14 hidden-sm-767" style="font-family: 'Bai Jamjuree', sans-serif;">Payment Method:</p>
             {%- if section_st.payment_image != blank -%}
               <div class="footer_payment_image fs-0 max-w-100" style="width: {{ section_st.payment_width }}px;">
                 {%- assign sizes = section_st.payment_width | append: 'px' -%}

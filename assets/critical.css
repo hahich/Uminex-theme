@@ -605,10 +605,27 @@ strong {
   .align-center-768 {
     align-items: center;
   }
-
   .px-sm-20 {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
+  }
+  .fs-sm-13 {
+    font-size: 1.3rem;
+  }
+  .order-sm-1 {
+    order: 1;
+  }
+  .order-sm-2 {
+    order: 2;
+  }
+  .order-sm-3 {
+    order: 3;
+  }
+  .order-sm-4 {
+    order: 4;
+  }
+  .hidden-sm-767 {
+    display: none;
   }
 }
 .relative {

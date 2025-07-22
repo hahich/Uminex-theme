@@ -102,15 +102,29 @@
   .search-bar-btn:hover {
     background: #0039cb;
   }
+  @media (max-width: 991px) {
+    .header_search {
+      width: 100%;
+      margin-top: 10px;
+      display: block;
+    }
+    .custom-search-bar {
+      max-width: 100% !important;
+      width: 100%;
+      margin: 0 !important;
+    }
+    .custom-search-bar .search-bar-flex {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
   @media (max-width: 767px) {
     .custom-search-bar .search-bar-flex {
       height: 44px;
       border-radius: 8px;
     }
     .search-bar-select {
-      min-width: 100px;
-      font-size: 14px;
-      padding: 0 10px;
+      display: none !important;
     }
     .search-bar-input {
       font-size: 14px;
