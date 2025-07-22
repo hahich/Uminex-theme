@@ -29,7 +29,7 @@
         "link_list_JTq77M": {
           "type": "link_list",
           "settings": {
-            "heading": "INFORMATION",
+            "heading": "INFOMATION",
             "menu": "footer-information",
             "content_width": "16%"
           }
@@ -76,7 +76,7 @@
         "payment_image": "shopify://shop_images/payment.png",
         "payment_width": 340,
         "policy_menu": false,
-        "copyright_text": "Copyright © <strong style=\"color: #2B38D1;\">Uminex</strong> all rights reserved. Powered by <strong style=\"color: #2B38D1;\">Blueskytechco.</strong>",
+        "copyright_text": "<p style=\"font-family: \" bai jamjuree sans-serif>Copyright © <strong style=\"color: #2B38D1;\">Uminex</strong> all rights reserved. Powered by <strong style=\"color: #2B38D1;\">Blueskytechco.</strong></p>",
         "footer_heading_size": 16,
         "padding_top": 60,
         "padding_bottom": 45,
