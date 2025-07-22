@@ -20,117 +20,106 @@
 {% endif %}
 <div class="header_search {% if type == 'header_mega' %}header_search-mega{% endif %}">
   <div class="block block-quick-search block-search predictive_search_suggest search_{{ search_type }}{% if search_type == 'default' %} search-type-default me-md-10{% endif %}">
-    {%- if search_type == 'default' -%}
-      <div class="block-search-full search-layout-form">
-        <div class="search-modal search-full">
-          <div class="search-modal__content">
-            <form
-              action="{{ routes.search_url }}"
-              id="search_mini_form"
-              method="get"
-              role="search"
-              class="search search-modal__form"
+    <div class="search-modal search-full">
+      <div class="search-modal__content">
+        <form
+          method="get"
+          action="/search"
+          class="custom-search-bar"
+          role="search"
+          style="max-width:800px;margin:auto;"
+        >
+          <div class="search-bar-flex">
+            <select name="collection" id="collection-select" class="search-bar-select">
+              <option value="">All Categories</option>
+              {%- for collection in collections -%}
+                <option value="{{ collection.handle }}">{{ collection.title }}</option>
+              {%- endfor -%}
+            </select>
+            <input
+              type="search"
+              name="q"
+              class="search-bar-input"
+              placeholder="Search in 200+ products..."
+              aria-label="Search"
+              required
             >
-              <input type="hidden" name="type" value="product">
-              <div class="field flex relative btn-rounded">
-                <button
-                  id="button_search_default"
-                  class="search__button field__button{% if search_type == 'default' %} light-dark-grey{% else %} header-color{% endif %} hover-heading-color btn-reset w-44 content-center absolute-md left-5 inset-y-0 pointer"
-                  aria-label="{{ 'general.search.search' | t }}"
-                >
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="transition">
-                    <use href="#icon-search" />
-                  </svg>
-                </button>
-                <button
-                  type="button"
-                  class="btn-reset top-search-toggle header-icon header-color w-44 h-44 inline-flex content-center header-color pointer transition"
-                  aria-label="{{ 'templates.search.tooltip' | t }}"
-                >
-                  <svg width="17" height="17" viewBox="0 0 17 17" fill="currentColor">
-                    <use href="#icon-search" />
-                  </svg>
-                </button>
-                <input
-                  class="search__input field__input flex-1 max-w-custom hidden block-md"
-                  type="search"
-                  name="q"
-                  id="search-template"
-                  value="{{ search.terms | escape }}"
-                  placeholder="{{ 'general.search.search' | t }}"
-                  maxlength="128"
-                  role="combobox"
-                  aria-expanded="false"
-                  aria-owns="predictive-search-results"
-                  aria-controls="predictive-search-results"
-                  aria-haspopup="listbox"
-                  aria-autocomplete="list"
-                  autocorrect="off"
-                  autocomplete="off"
-                  autocapitalize="off"
-                  spellcheck="false"
-                  style="--input-padding: 1rem 1rem 1rem 4.5rem; --input-height: 4rem; --max-width: 200px;"
-                >
-                <label class="field__label visually-hidden" for="search-template">
-                  {{- 'general.search.search' | t -}}
-                </label>
-                <input type="hidden" name="options[unavailable_products]" value="last">
-                <input type="hidden" name="options[prefix]" value="last">
-                <input type="hidden" name="options[fields]" value="title,vendor,product_type,variants.title">
-                <input type="hidden" name="type" value="{{ search_result }}">
-                <span class="loading-icon absolute inline-flex align-center inset-y-0 invisible{% if enable_rtl %} left-45{% else %} right-15{% endif %}">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="spin">
-                    <use href="#icon-load"></use>
-                  </svg>
-                </span>
-              </div>
-            </form>
+            <button type="submit" class="search-bar-btn">Search</button>
           </div>
-        </div>
+        </form>
       </div>
-    {%- else -%}
-      {% comment %}
-        <div class="dropdown-toggle">
-          <button
-            class="btn-reset top-search-toggle header-icon header-color w-44 h-44 inline-flex content-center header-color overlay pointer transition"
-            aria-label="{{ 'templates.search.tooltip' | t }}"
-          >
-            <svg width="17" height="17" viewBox="0 0 17 17" fill="currentColor">
-              <use href="#icon-search" />
-            </svg>
-          </button>
-        </div>
-      {% endcomment %}
-
-      <div class="search-modal search-full">
-        <div class="search-modal__content">
-          <form
-            method="get"
-            action="/search"
-            class="custom-search-bar"
-            role="search"
-            style="max-width:800px;margin:auto;"
-          >
-            <div class="search-bar-flex">
-              <select name="collection" id="collection-select" class="search-bar-select">
-                <option value="">All Categories</option>
-                {%- for collection in collections -%}
-                  <option value="{{ collection.handle }}">{{ collection.title }}</option>
-                {%- endfor -%}
-              </select>
-              <input
-                type="search"
-                name="q"
-                class="search-bar-input"
-                placeholder="Search in 200+ products..."
-                aria-label="Search"
-                required
-              >
-              <button type="submit" class="search-bar-btn">Search</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    {%- endif -%}
+    </div>
   </div>
 </div>
+<style>
+  .custom-search-bar .search-bar-flex {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E5E8EC;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    height: 52px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    max-width: 800px;
+  }
+  .search-bar-select {
+    border: none;
+    background: transparent;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 16px;
+    height: 100%;
+    min-width: 160px;
+    cursor: pointer;
+    outline: none;
+    color: #222;
+    -webkit-appearance: auto !important;
+  }
+  .search-bar-input {
+    flex: 1;
+    border: none !important;
+    outline: none;
+    font-size: 16px;
+    padding: 0 20px;
+    background: transparent;
+    height: 100%;
+    color: #222;
+  }
+  .search-bar-btn {
+    background: #2949ff;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0 36px;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 0 12px 12px 0;
+    transition: background 0.2s;
+    box-shadow: none;
+  }
+  .search-bar-btn:hover {
+    background: #0039cb;
+  }
+  @media (max-width: 767px) {
+    .custom-search-bar .search-bar-flex {
+      height: 44px;
+      border-radius: 8px;
+    }
+    .search-bar-select {
+      min-width: 100px;
+      font-size: 14px;
+      padding: 0 10px;
+    }
+    .search-bar-input {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+    .search-bar-btn {
+      font-size: 14px;
+      padding: 0 18px;
+      border-radius: 0 8px 8px 0;
+    }
+  }
+</style>

@@ -7491,9 +7491,9 @@ class CountdownTimer extends HTMLElement {
           isoDate =
             dateParts[2] +
             '-' +
-            dateParts[0].padStart(2, '0') +
+            dateParts[0].padStart(3, '0') +
             '-' +
-            dateParts[1].padStart(2, '0') +
+            dateParts[1].padStart(3, '0') +
             'T00:00:00Z';
           this.mainFunction(isoDate, minutesLeft);
         } 

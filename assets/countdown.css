@@ -38,7 +38,7 @@
     var(--countdown-padding, 4px);
   align-self: center;
   color: var(--countdown-color, inherit);
-  font-weight: var(--body-weight);
+  font-weight: var(--heading-weight);
 }
 .default .countdown--container {
   display: inline-flex;
