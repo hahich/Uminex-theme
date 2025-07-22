@@ -16,20 +16,22 @@
               {% assign price_color = '#DC323C' %}
             {% endif %}
             <div
-              class="todays-offer-side-item bg-white rounded-8 p-16 flex flex-col justify-between shadow-sm"
+              class="todays-offer-side-item bg-white rounded-8 p-16 flex flex-col justify-between shadow-sm {{ settings.product_hover_effect }}"
               style="color: {{ settings.color_text | default: section.settings.text_color | default: '#222' }};"
             >
-              <div class="relative">
+              <div class="relative {{ settings.product_hover_effect }}">
                 <a href="{{ product.url }}" class="block">
-                  <img
-                    src="{{ product.featured_image | img_url: '240x' }}"
-                    alt="{{ product.title }}"
-                    class="w-full rounded-6"
-                    loading="lazy"
-                    width="240px"
-                    height="240px"
-                    style="{{ settings.product_hover_effect }}"
-                  >
+                  <div class="hover-effect">
+                    <img
+                      src="{{ product.featured_image | img_url: '240x' }}"
+                      alt="{{ product.title }}"
+                      class="w-full rounded-6"
+                      loading="lazy"
+                      width="240px"
+                      height="240px"
+                      style="{{ settings.product_hover_effect }}"
+                    >
+                  </div>
                   {% if section.settings.show_badge_sale and product.tags contains 'sale' %}
                     <span
                       class="offer-badge fs-12 semibold border rounded-2 badge badge-danger header__layout-3 absolute top-0 left-0"
@@ -127,16 +129,18 @@
                       {{ section.settings.main_title }}
                     </div>
 
-                    <div class="todays-offer-image relative pt-15">
+                    <div class="todays-offer-image relative pt-15 {{ settings.product_hover_effect }}">
                       <a href="{{ product.url }}">
-                        <img
-                          src="{{ product.featured_image | img_url: '480x' }}"
-                          alt="{{ product.title }}"
-                          width="386"
-                          height="386"
-                          class="rounded-8 mx-auto"
-                          style="{{ settings.product_hover_effect }}"
-                        >
+                        <div class="hover-effect">
+                          <img
+                            src="{{ product.featured_image | img_url: '480x' }}"
+                            alt="{{ product.title }}"
+                            width="386"
+                            height="386"
+                            class="rounded-8 mx-auto"
+                            style="{{ settings.product_hover_effect }}"
+                          >
+                        </div>
                       </a>
                       <div class="todays-offer-badge pt-20 flex align-center justify-between w-full absolute top-0">
                         <span
@@ -226,7 +230,7 @@
         {% else %}
           {% assign product = main_collection.products.first %}
           <div
-            class="todays-offer-main px-40 flex-1 bg-white px-sm-20"
+            class="todays-offer-main px-40 flex-1 bg-white px-sm-20 {{ settings.product_hover_effect }}"
             style="color: {{ section.settings.color_text | default: section.settings.text_color | default: '#222' }};"
           >
             <div class="todays-offer-title fs-16 bold pb-10 border-bottom">
@@ -234,14 +238,16 @@
             </div>
             <div class="todays-offer-image text-center relative">
               <a href="{{ product.url }}">
-                <img
-                  src="{{ product.featured_image | img_url: '480x' }}"
-                  alt="{{ product.title }}"
-                  width="386"
-                  height="386"
-                  class="rounded-8 mx-auto"
-                  style="{{ settings.product_hover_effect }}"
-                >
+                <div class="hover-effect">
+                  <img
+                    src="{{ product.featured_image | img_url: '480x' }}"
+                    alt="{{ product.title }}"
+                    width="386"
+                    height="386"
+                    class="rounded-8 mx-auto"
+                    style="{{ settings.product_hover_effect }}"
+                  >
+                </div>
               </a>
               <div class="todays-offer-badge pt-20 flex align-center justify-between w-full absolute top-0">
                 <span
@@ -334,17 +340,19 @@
               class="todays-offer-side-item bg-white rounded-8 p-16 flex flex-col justify-between shadow-sm"
               style="color: {{ settings.color_text | default: section.settings.text_color | default: '#222' }};"
             >
-              <div class="relative">
+              <div class="relative {{ settings.product_hover_effect }}">
                 <a href="{{ product.url }}" class="block">
-                  <img
-                    src="{{ product.featured_image | img_url: '240x' }}"
-                    alt="{{ product.title }}"
-                    class="w-full rounded-6"
-                    loading="lazy"
-                    width="240px"
-                    height="240px"
-                    style="{{ settings.product_hover_effect }}"
-                  >
+                  <div class="hover-effect">
+                    <img
+                      src="{{ product.featured_image | img_url: '240x' }}"
+                      alt="{{ product.title }}"
+                      class="w-full rounded-6"
+                      loading="lazy"
+                      width="240px"
+                      height="240px"
+                      style="{{ settings.product_hover_effect }}"
+                    >
+                  </div>
                   {% if section.settings.show_badge_sale and product.tags contains 'sale' %}
                     <span
                       class="offer-badge badge badge-danger absolute top-0 left-0 fs-12 semibold"
