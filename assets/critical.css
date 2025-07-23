@@ -3123,6 +3123,7 @@ nav.mobile {
   height: 100%;
   pointer-events: none;
   background-color: var(--color-background);
+  border-top: 1px solid var(--color-border);
   opacity: var(--header-background-opacity);
   transition: opacity var(--animation-nav) var(--animation-nav-delay);
 }
