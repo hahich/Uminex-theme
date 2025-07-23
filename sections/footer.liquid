@@ -72,7 +72,7 @@
               -%}
           {%- endcase -%}
         {%- endfor -%}
-        <div class="footer__blocks flex flex-col-custom flex-wrap">
+        <div class="footer__blocks flex flex-col-custom flex-wrap fs-14">
           {%- for block in section.blocks -%}
             {%- liquid
               assign block_st = block.settings
@@ -354,7 +354,7 @@
               </div>
             {% endif %}
             {%- if section_st.copyright_text %}
-              <div class="footer__copyright fs-small p-0 text-sm-center text-md-left" style="">{{ section_st.copyright_text }}</div>
+              <div class="footer__copyright fs-small p-0 text-sm-center text-md-left fs-14" style="">{{ section_st.copyright_text }}</div>
             {% endif %}
           </div>
         {% endif %}
