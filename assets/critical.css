@@ -3135,7 +3135,7 @@ nav.mobile {
 }
 
 .header__layout-3 .fluid_container .col-logo{
-  max-width: 10rem;
+  /* max-width: 10rem; */
 }
 @media only screen and (min-width: 1025px) {
   .header__layout-3 .col-logo {
