@@ -2492,6 +2492,9 @@ header.active li.visible .submenu:not(.submenu-vertical) {
   .row-gap-mb-0 {
     row-gap: 0;
   }
+  .text-sm-center {
+    text-align: center;
+  }
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
