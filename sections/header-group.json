@@ -112,7 +112,7 @@
         "show_language": true,
         "show_recently_viewed": true,
         "padding_top": 25,
-        "padding_bottom": 25
+        "padding_bottom": 10
       }
     }
   },
