@@ -19,7 +19,7 @@
           "settings": {
             "image_width": 70,
             "store_heading": "ABOUT THE STORE",
-            "store_description": "",
+            "store_description": "<p>Got Question? Call us 24/7</p>",
             "store_address": true,
             "store_phone": true,
             "store_email": true,
