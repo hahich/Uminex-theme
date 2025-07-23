@@ -106,7 +106,7 @@
         ".h-full_screen {--height-topbar: 41px;}"
       ],
       "settings": {
-        "section_width": "fluid_container",
+        "section_width": "stretch_width",
         "slide_height": "custom",
         "desktop_height": 410,
         "mobile_height": 300,
