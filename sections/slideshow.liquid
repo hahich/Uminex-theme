@@ -214,8 +214,8 @@
                                 href="{{ block_st.first_button_link | default: "#" }}"
                               {% endif %}
                               aria-label="{{ block_st.first_button_label }}"
-                              class="inline-flex no-underline{% if block_st.first_button_style %} btn-outline btn-outline-slideshow{% else %} btn-primary btn-primary-slideshow{% endif %}"
-                              style="--py-btn-slideshow: {{ section_st.py_btn_slideshow }}; --px-btn-slideshow: {{ section_st.px_btn_slideshow }}; --fs-btn-slideshow: {{ section_st.fs_btn_slideshow }}; --fw-btn-slideshow: {{ section_st.fw_btn_slideshow }};"
+                              class="inline-flex fs-12 bold no-underline{% if block_st.first_button_style %} btn-outline btn-outline-slideshow{% else %} btn-primary btn-primary-slideshow{% endif %}"
+                              style="--py-btn-slideshow: {{ section_st.py_btn_slideshow }}; --px-btn-slideshow: {{ section_st.px_btn_slideshow }}; --fs-btn-slideshow: {{ section_st.fs_btn_slideshow }}; --fw-btn-slideshow: {{ section_st.fw_btn_slideshow }}; padding: 15px 44px;"
                             >
                               {{ block_st.first_button_label }}
                             </a>

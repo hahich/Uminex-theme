@@ -246,7 +246,7 @@
                 >
                   {%- if block_st.store_heading != blank -%}
                     <h3
-                      class="footer__block-heading fs-custom my-0 py-20 mb-md-5"
+                      class="footer__block-heading fs-14 bold my-0 py-20 mb-md-5 pb-10"
                       style="--font-size: {{ section_st.footer_heading_size }}"
                     >
                       {{ block_st.store_heading | escape }}
@@ -279,7 +279,7 @@
                     {%- if block_st.store_address != blank or block_st.store_address or block_st.store_email %}
                       <div class="footer_store-infor">
                         {%- if block_st.store_phone != blank and theme_st.store_phone != blank -%}
-                          <div class="footer__store-info mb-20">
+                          <div class="footer__store-info mb-10">
                             <a
                               href="tel:{{ settings.store_phone }}"
                               class="heading-color no-underline medium-weight"
