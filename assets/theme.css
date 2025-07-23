@@ -1,8 +1,4 @@
 /* Some css class in defined in critical css */
-body::-webkit-scrollbar {
-  display: none;           
-}
-
 .bg-gray {
   background-color: #F1F5F6 !important;
 }
