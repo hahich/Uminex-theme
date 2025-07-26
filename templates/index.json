@@ -311,11 +311,143 @@
         "stock_font_weight": "500",
         "stock_alignment": "left"
       }
+    },
+    "faq_rzRRUg": {
+      "type": "faq",
+      "blocks": {
+        "faq_items_yBqreB": {
+          "type": "faq-items",
+          "settings": {
+            "faq_title": "Frequently Asked Questions?",
+            "faq_content": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+          }
+        },
+        "faq_items_9FfRfY": {
+          "type": "faq-items",
+          "settings": {
+            "faq_title": "Frequently Asked Questions?",
+            "faq_content": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+          }
+        },
+        "faq_items_KDr8Jp": {
+          "type": "faq-items",
+          "settings": {
+            "faq_title": "Frequently Asked Questions?",
+            "faq_content": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+          }
+        }
+      },
+      "block_order": [
+        "faq_items_yBqreB",
+        "faq_items_9FfRfY",
+        "faq_items_KDr8Jp"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "section_width": "container",
+        "color_scheme": "default",
+        "heading": "FAQ",
+        "description": "",
+        "header_size": "large",
+        "header_alignment": "center",
+        "padding_top": 100,
+        "padding_bottom": 0,
+        "reset_spacing": true
+      }
+    },
+    "product_testimonials_xkGTbF": {
+      "type": "product-testimonials",
+      "blocks": {
+        "testimonials_items_kbVNVn": {
+          "type": "testimonials_items",
+          "settings": {
+            "author_rating": 5,
+            "author_text": "<p>You can add text content from press comments, reviews, or testimonials here.</p>",
+            "select_product": "",
+            "author_name": "Author's name"
+          }
+        },
+        "testimonials_items_WwbkTt": {
+          "type": "testimonials_items",
+          "settings": {
+            "author_rating": 5,
+            "author_text": "<p>You can add text content from press comments, reviews, or testimonials here.</p>",
+            "select_product": "",
+            "author_name": "Author's name"
+          }
+        },
+        "testimonials_items_B8EnRH": {
+          "type": "testimonials_items",
+          "settings": {
+            "author_rating": 5,
+            "author_text": "<p>You can add text content from press comments, reviews, or testimonials here.</p>",
+            "select_product": "",
+            "author_name": "Author's name"
+          }
+        },
+        "testimonials_items_bYACMJ": {
+          "type": "testimonials_items",
+          "settings": {
+            "author_rating": 5,
+            "author_text": "<p>You can add text content from press comments, reviews, or testimonials here.</p>",
+            "select_product": "",
+            "author_name": "Author's name"
+          }
+        },
+        "testimonials_items_AMJheV": {
+          "type": "testimonials_items",
+          "settings": {
+            "author_rating": 5,
+            "author_text": "<p>You can add text content from press comments, reviews, or testimonials here.</p>",
+            "select_product": "",
+            "author_name": "Author's name"
+          }
+        }
+      },
+      "block_order": [
+        "testimonials_items_kbVNVn",
+        "testimonials_items_WwbkTt",
+        "testimonials_items_B8EnRH",
+        "testimonials_items_bYACMJ",
+        "testimonials_items_AMJheV"
+      ],
+      "name": "t:sections.testimonials_product.presets.name",
+      "settings": {
+        "section_width": "fluid_container",
+        "color_scheme": "",
+        "heading": "Testimonials",
+        "description": "",
+        "header_alignment": "center",
+        "header_size": "medium",
+        "design": "default",
+        "show_image": true,
+        "show_verified_buyer": true,
+        "img_position": "left",
+        "image_ratio": "square",
+        "custom_ratio": "",
+        "img_width": 30,
+        "framed": true,
+        "rate_color": "#FF9C05",
+        "items_per_row": 2,
+        "column_gap": 30,
+        "show_arrow": false,
+        "carousel_pagination": "disable",
+        "infinite": false,
+        "autoplay": false,
+        "autorotate_speed": 5,
+        "reveal": false,
+        "items_per_row_mobile": 1,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
     }
   },
   "order": [
     "slideshow_8KKtNU",
     "multi_content_L3t9hY",
-    "today_offer_r9RCww"
+    "today_offer_r9RCww",
+    "faq_rzRRUg",
+    "product_testimonials_xkGTbF"
   ]
 }
