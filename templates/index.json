@@ -427,7 +427,7 @@
         "custom_ratio": "",
         "img_width": 30,
         "framed": true,
-        "rate_color": "#FF9C05",
+        "rate_color": "#ff9c05",
         "items_per_row": 2,
         "column_gap": 30,
         "show_arrow": false,
@@ -441,6 +441,65 @@
         "padding_bottom": 0,
         "reset_spacing": false
       }
+    },
+    "image_comparison_HJdKbE": {
+      "type": "image-comparison",
+      "blocks": {
+        "heading_8LHfrF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "font_size": 36,
+            "font_weight": "heading_weight",
+            "uppercase": false,
+            "spacing_bottom": 24
+          }
+        },
+        "description_tkcKct": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "font_size": 14,
+            "font_weight": "body_weight",
+            "spacing_bottom": 30
+          }
+        },
+        "button_fETbUt": {
+          "type": "button",
+          "settings": {
+            "first_button_label": "Button label",
+            "first_button_link": "",
+            "first_button_type": "primary",
+            "second_button_label": "",
+            "second_button_link": "",
+            "second_button_type": "primary",
+            "spacing_bottom": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_8LHfrF",
+        "description_tkcKct",
+        "button_fETbUt"
+      ],
+      "name": "t:sections.image-comparison-slider.name",
+      "settings": {
+        "section_width": "stretch_width",
+        "color_scheme": "",
+        "heading": "",
+        "description": "",
+        "header_size": "medium",
+        "header_alignment": "center",
+        "width": "50%",
+        "position": "left",
+        "show_after_before_text": true,
+        "image_ratio": "adapt",
+        "custom_ratio": "",
+        "vertical_align": "start",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
     }
   },
   "order": [
@@ -448,6 +507,7 @@
     "multi_content_L3t9hY",
     "today_offer_r9RCww",
     "faq_rzRRUg",
-    "product_testimonials_xkGTbF"
+    "product_testimonials_xkGTbF",
+    "image_comparison_HJdKbE"
   ]
 }
