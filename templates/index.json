@@ -443,32 +443,12 @@
             "select_product": "",
             "author_name": "Author's name"
           }
-        },
-        "testimonials_items_bYACMJ": {
-          "type": "testimonials_items",
-          "settings": {
-            "author_rating": 5,
-            "author_text": "<p>You can add text content from press comments, reviews, or testimonials here.</p>",
-            "select_product": "",
-            "author_name": "Author's name"
-          }
-        },
-        "testimonials_items_AMJheV": {
-          "type": "testimonials_items",
-          "settings": {
-            "author_rating": 5,
-            "author_text": "<p>You can add text content from press comments, reviews, or testimonials here.</p>",
-            "select_product": "",
-            "author_name": "Author's name"
-          }
         }
       },
       "block_order": [
         "testimonials_items_kbVNVn",
         "testimonials_items_WwbkTt",
-        "testimonials_items_B8EnRH",
-        "testimonials_items_bYACMJ",
-        "testimonials_items_AMJheV"
+        "testimonials_items_B8EnRH"
       ],
       "name": "t:sections.testimonials_product.presets.name",
       "settings": {
@@ -491,7 +471,7 @@
         "column_gap": 30,
         "show_arrow": true,
         "carousel_pagination": "disable",
-        "infinite": false,
+        "infinite": true,
         "autoplay": false,
         "autorotate_speed": 5,
         "reveal": false,
