@@ -489,7 +489,7 @@
         "rate_color": "#ff9c05",
         "items_per_row": 2,
         "column_gap": 30,
-        "show_arrow": false,
+        "show_arrow": true,
         "carousel_pagination": "disable",
         "infinite": false,
         "autoplay": false,
