@@ -345,12 +345,20 @@
             "second_button_type": "primary",
             "spacing_bottom": 10
           }
+        },
+        "product_nQ6ryq": {
+          "type": "product",
+          "settings": {
+            "select_product": "",
+            "spacing_bottom": 10
+          }
         }
       },
       "block_order": [
         "heading_Aht4cM",
         "description_GLc7yF",
-        "button_hd3edV"
+        "button_hd3edV",
+        "product_nQ6ryq"
       ],
       "name": "t:sections.image-comparison-slider.name",
       "settings": {
