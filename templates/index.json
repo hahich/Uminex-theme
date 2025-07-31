@@ -500,7 +500,7 @@
       ],
       "name": "t:sections.image-comparison-slider.name",
       "settings": {
-        "section_width": "stretch_width",
+        "section_width": "full_width",
         "color_scheme": "",
         "heading": "",
         "description": "",
