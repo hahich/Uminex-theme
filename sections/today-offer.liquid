@@ -1,5 +1,5 @@
 {{ 'countdown.css' | asset_url | stylesheet_tag }}
-<div class="todays-offer-section container-fluid {{ settings.scroll_animation }}">
+<div class="todays-offer-section container-fluid color-{{ section_st.color_scheme }} {{ settings.scroll_animation }}">
   <div class="{{ section.settings.section_width }}">
     <div
       class="todays-offer-grid flex flex-wrap justify-center align-items-stretch"
@@ -443,6 +443,12 @@
         { "value": "stretch_width", "label": "Stretch width" },
         { "value": "full_width", "label": "Full width" }
       ]
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label",
+      "default": "default-color-scheme"
     },
     {
       "type": "color",
