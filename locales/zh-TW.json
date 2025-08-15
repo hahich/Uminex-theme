@@ -788,5 +788,23 @@
     "purchased": "已購買",
     "time_minutes": "分鐘前",
     "product_name": "Blueskytechco 的 Glozin"
+  },
+  "shopify": {
+    "checkout": {
+      "payment_errors": {
+        "shop_pay_wallet_not_available": "本次結帳無法使用 Shop Pay。",
+        "market_manager_blocks_wallet_payments": "您所在的國家/地區不支援付款方式。"
+      }
+    }
+  },
+  "customer_accounts": {
+    "navigation_and_structure": {
+      "loading_policy_content_accessibility_label": "正在載入政策內容"
+    },
+    "announcement_bar": {
+      "expand_label": "展開公告欄",
+      "collapse_label": "折疊公告欄",
+      "close_label": "關閉公告欄"
+    }
   }
 }
