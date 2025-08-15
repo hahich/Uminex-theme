@@ -25,7 +25,18 @@
       "delete": "Xóa bỏ",
       "delete_confirm": "Bạn có chắc chắn muốn xóa địa chỉ này không?",
       "name": "Tên",
-      "email": "E-mail"
+      "email": "E-mail",
+      "title": "Địa chỉ",
+      "default": "Địa chỉ mặc định",
+      "add_new": "Thêm địa chỉ mới",
+      "edit_address": "Chỉnh sửa địa chỉ",
+      "first_name": "Tên",
+      "last_name": "Họ",
+      "company": "Công ty",
+      "address1": "Địa chỉ 1",
+      "address2": "Địa chỉ 2",
+      "city": "Thành phố",
+      "country": "Quốc gia/khu vực"
     },
     "log_in": "Đăng nhập",
     "log_out": "Đăng xuất",
@@ -107,6 +118,29 @@
       "password": "Mật khẩu",
       "password_confirm": "Xác nhận mật khẩu",
       "submit": "Đặt lại mật khẩu"
+    },
+    "account": {
+      "my_account": "Tài khoản của tôi",
+      "title": "Tài khoản",
+      "dashboard": "Bảng điều khiển",
+      "details": "Chi tiết tài khoản",
+      "view_addresses": "Xem địa chỉ",
+      "your_addresses": "Địa chỉ của bạn",
+      "your_wishlist": "Danh sách mong muốn của bạn",
+      "return": "Quay lại chi tiết Tài khoản",
+      "welcome": "Chào mừng",
+      "no": "Không?",
+      "required": "* là trường bắt buộc"
+    },
+    "account_fallback": "Tài khoản",
+    "activate_account": {
+      "title": "Kích hoạt tài khoản",
+      "subtext": "Tạo mật khẩu để kích hoạt tài khoản của bạn.",
+      "password": "Mật khẩu",
+      "password_confirm": "Xác nhận mật khẩu",
+      "submit": "Kích hoạt tài khoản",
+      "cancel": "Từ chối lời mời",
+      "or": "hoặc"
     }
   },
   "gift_cards": {
@@ -339,5 +373,121 @@
     "purchased": "đã mua",
     "time_minutes": "phút trước",
     "product_name": "Glozin của Blueskytechco"
+  },
+  "collections": {
+    "sidebar": {
+      "clear": "Thông thoáng",
+      "apply": "Áp dụng"
+    },
+    "pagination": {
+      "load_more": "Tải thêm",
+      "load_more_amount": "Hiển thị {{ amount }} trong tổng số {{ count }} sản phẩm"
+    },
+    "toolbar": {
+      "filter": "Lọc",
+      "progress_bar": {
+        "list": "Danh sách",
+        "grid": "Lưới",
+        "columns": "Cột {{ amount }}"
+      }
+    }
+  },
+  "subscribe": {
+    "label": "Nhập email của bạn",
+    "success": "Cảm ơn bạn đã đăng ký",
+    "button_label": "Đặt mua",
+    "first_name": "Tên",
+    "last_name": "Họ"
+  },
+  "newsletter": {
+    "label": "E-mail",
+    "success": "Cảm ơn bạn đã đăng ký",
+    "error": "Email không hợp lệ hoặc đã đăng ký",
+    "button_label": "Đặt mua"
+  },
+  "templates": {
+    "search": {
+      "no_results": "Không tìm thấy kết quả nào cho “ {{ terms }} ”. Hãy kiểm tra chính tả hoặc sử dụng một từ hoặc cụm từ khác.",
+      "page": "Trang",
+      "products": "Các sản phẩm",
+      "tooltip": "Tìm kiếm",
+      "no_products_found": "Không tìm thấy sản phẩm nào",
+      "use_fewer_filters_html": "Sử dụng ít bộ lọc hơn hoặc <a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">xóa tất cả</a>",
+      "results_with_count": {
+        "one": "{{ count }} kết quả",
+        "other": "{{ count }} kết quả"
+      },
+      "results_with_count_and_term": {
+        "none": "Không tìm thấy kết quả nào cho “ {{ terms }} ”",
+        "one": "{{ count }} kết quả được tìm thấy cho “ {{ terms }} ”",
+        "other": "{{ count }} kết quả được tìm thấy cho “ {{ terms }} ”"
+      },
+      "title_no_search": "Tìm kiếm",
+      "title": "Tìm kiếm trang web của chúng tôi",
+      "search_for_html": "Tìm kiếm “ <span class=\"heading-color\">{{ terms }}</span> ”",
+      "search_empty_html": "Không có gì khớp với tìm kiếm của bạn “ <span>{{ terms }}</span> ”",
+      "suggestions": "Gợi ý",
+      "pages": "Trang",
+      "article": "Bài báo"
+    },
+    "rvp": {
+      "title": "Đã xem gần đây",
+      "rvp": "Giảm giá 20 đô la cho đơn hàng đầu tiên của bạn.",
+      "no_product": "Không có sản phẩm nào trong trang đã xem gần đây.",
+      "redirect": "Quay lại Mua sắm"
+    },
+    "wishlist": {
+      "wishlist": "Danh sách mong muốn",
+      "no_product": "Danh sách mong muốn của bạn đang trống",
+      "empty_des": "Không có sản phẩm nào được thêm vào trang danh sách mong muốn.",
+      "redirect": "Quay lại Mua sắm",
+      "title_remove": "Thêm vào danh sách mong muốn trước khi xóa?",
+      "action_yes": "Đúng",
+      "action_no": "KHÔNG"
+    },
+    "compare": {
+      "no_product": "So sánh của bạn đang trống",
+      "empty_des": "Không có sản phẩm nào được thêm vào trang so sánh.",
+      "redirect": "Quay lại Mua sắm"
+    },
+    "recently_viewed": {
+      "recently_viewed_products": "Sản phẩm đã xem gần đây"
+    },
+    "contact": {
+      "form": {
+        "title": "Biểu mẫu liên hệ",
+        "name": "Tên của bạn*",
+        "email": "Email của bạn *",
+        "phone": "Số điện thoại của bạn",
+        "comment": "Tin nhắn của bạn*",
+        "send": "Nộp ngay",
+        "note": "* Những trường bắt buộc không được để trống.",
+        "send_contact": "Gửi tin nhắn của bạn",
+        "post_success": "Cảm ơn bạn đã liên hệ với chúng tôi. Chúng tôi sẽ liên hệ lại với bạn sớm nhất có thể.",
+        "error_heading": "Vui lòng điều chỉnh những điều sau:"
+      }
+    }
+  },
+  "main_menu": {
+    "horizontal": {
+      "close": "Đóng",
+      "title": "Thực đơn"
+    },
+    "vertical": {
+      "title": "Thể loại",
+      "close": "Đóng",
+      "more": "Tất cả các danh mục",
+      "hide": "Ẩn danh mục"
+    },
+    "categories": {
+      "close": "Đóng",
+      "title": "Thể loại"
+    },
+    "currency": {
+      "title": "Tiền tệ"
+    },
+    "language": {
+      "title": "Ngôn ngữ"
+    }
   }
 }
