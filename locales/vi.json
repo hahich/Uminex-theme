@@ -9,7 +9,8 @@
  */
 {
   "rich_text": {
-    "see_all": "Xem tất cả thông tin"
+    "see_all": "Xem tất cả thông tin",
+    "hide_less": "Ẩn ít thông tin hơn"
   },
   "customer": {
     "addresses": {
@@ -278,7 +279,65 @@
       "add_to_cart": "Thêm vào giỏ hàng",
       "fake_sold": "{{ sold }} đã bán trong {{ hours }} giờ qua",
       "xr_button": "Xem trong không gian của bạn",
-      "xr_button_label": "Xem trong không gian của bạn, tải mục trong cửa sổ thực tế tăng cường"
+      "xr_button_label": "Xem trong không gian của bạn, tải mục trong cửa sổ thực tế tăng cường",
+      "product_title": "Sản phẩm",
+      "product_compare": "Các sản phẩm",
+      "back_to_product": "Quay lại sản phẩm",
+      "availability": "Khả dụng",
+      "available": "Có sẵn",
+      "vendor": "Người bán",
+      "tags": "Thẻ",
+      "review": "Ôn tập",
+      "sku": "Mã sản phẩm",
+      "type": "Kiểu",
+      "collections": "Bộ sưu tập",
+      "size": "Kích cỡ",
+      "color": "Màu sắc"
+    },
+    "facets": {
+      "product_count": {
+        "one": "{{ product_count }} trong tổng số {{ count }} sản phẩm",
+        "other": "{{ product_count }} trong số {{ count }} sản phẩm"
+      },
+      "product_count_simple": {
+        "one": "Tổng cộng có {{ count }} kết quả",
+        "other": "Tổng cộng có {{ count }} kết quả"
+      },
+      "sort_by_label": "Sắp xếp theo:"
     }
+  },
+  "section": {
+    "google_map": {
+      "no_iframe": "Cung cấp mã bản đồ iframe để sử dụng phần này."
+    }
+  },
+  "blog_post": {
+    "view_all": "Xem tất cả",
+    "category": "Tin tức",
+    "title": "Mùa hè mới",
+    "short_content": "Đây là những người giúp cuộc sống của bạn dễ dàng hơn. Những viên gạch lớn được xếp trên mặt bàn bếp gần cửa sổ phòng khách, chúng được nối với nhà bếp...",
+    "date": "Ngày 13 tháng 10 năm 2022",
+    "post_by": "Bài đăng của",
+    "read_more": "Đọc thêm"
+  },
+  "popup": {
+    "do_not": "Không, cảm ơn! Đừng hiển thị nữa",
+    "copy": "Sao chép mã phiếu giảm giá",
+    "copied": "Đã sao chép"
+  },
+  "newsletter_popup": {
+    "do_not_show_again": "Không, cảm ơn! Đừng hiển thị nữa"
+  },
+  "mobile_navbar": {
+    "shop": "Cửa hàng",
+    "homepage": "Trang chủ",
+    "account": "Tài khoản",
+    "cart": "Xe đẩy",
+    "wishlist": "Danh sách mong muốn"
+  },
+  "fake_order": {
+    "purchased": "đã mua",
+    "time_minutes": "phút trước",
+    "product_name": "Glozin của Blueskytechco"
   }
 }
