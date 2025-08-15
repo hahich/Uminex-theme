@@ -134,7 +134,151 @@
   "products": {
     "price": {
       "from_price_html": "Từ {{ price }}",
-      "regular_price": "Giá thông thường"
+      "regular_price": "Giá thông thường",
+      "sale_price": "Giá bán",
+      "unit_price": "Đơn giá"
+    },
+    "product": {
+      "label_set": "Kiểu # {{ index }}",
+      "review_app": "Đánh giá của khách hàng",
+      "shop_now": "Mua ngay",
+      "addSuccess": "Cập nhật giỏ hàng thành công",
+      "addGiftCard": "Thêm thẻ quà tặng thành công",
+      "removeCartItem": "Xóa mục thành công",
+      "loading": "đang tải",
+      "label": {
+        "sale_label": "Doanh thu",
+        "new_label": "Mới",
+        "subscription": "Đăng ký"
+      },
+      "price": {
+        "from_price_html": "Từ {{ price }}",
+        "regular_price": "Giá thông thường",
+        "sale_price": "Giá bán",
+        "unit_price": "Đơn giá",
+        "unit_price_separator": "mỗi"
+      },
+      "actions": {
+        "quickview": {
+          "label": "Xem nhanh"
+        },
+        "select_options": {
+          "label": "Chọn Tùy chọn"
+        },
+        "wishlist": {
+          "add": "Thêm vào danh sách mong muốn",
+          "remove": "Xóa khỏi danh sách mong muốn",
+          "redirect": "Duyệt danh sách mong muốn"
+        },
+        "compare": {
+          "add": "So sánh",
+          "remove": "Xóa khỏi so sánh",
+          "redirect": "Duyệt so sánh"
+        },
+        "add_to_cart": {
+          "default": {
+            "label": "Thêm vào giỏ hàng"
+          },
+          "sold_out": {
+            "label": "Hết hàng"
+          }
+        },
+        "add_to_bundle": {
+          "label_bundle": "Thêm vào gói",
+          "label_bundle_added": "Đã thêm vào Gói",
+          "label_add_all": "Thêm tất cả vào Giỏ hàng"
+        },
+        "property": {
+          "custom_text": "Văn bản tùy chỉnh",
+          "custom_image": "Hình ảnh tùy chỉnh"
+        }
+      },
+      "bought_together": {
+        "add_cart": "Thêm tất cả vào giỏ hàng",
+        "text": "Thường được mua cùng nhau",
+        "total": "Tổng giá",
+        "save": "Bạn đang tiết kiệm"
+      },
+      "general": {
+        "sku": "Mã sản phẩm",
+        "available": "Có sẵn",
+        "collections": "Bộ sưu tập",
+        "tags": "Thẻ",
+        "vendor": "Người bán",
+        "type": "Kiểu",
+        "view_full_details": "Xem chi tiết đầy đủ",
+        "instock": "Còn hàng",
+        "outstock": "Hết hàng",
+        "pre_order": "Đặt hàng trước",
+        "add_to_cart": "Thêm vào giỏ hàng"
+      },
+      "quantity": {
+        "label": "Số lượng",
+        "input_label": "Số lượng cho {{ product }}",
+        "increase": "Tăng số lượng cho {{ product }}",
+        "decrease": "Giảm số lượng cho {{ product }}",
+        "minimum_of": "Tối thiểu là {{ quantity }}",
+        "maximum_of": "Tối đa {{ quantity }}",
+        "multiples_of": "Tăng dần {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> trong giỏ hàng"
+      },
+      "countdown": {
+        "days": "ngày",
+        "hours": "giờ",
+        "mins": "phút",
+        "secs": "giây"
+      },
+      "addons": {
+        "compare_colors": "So sánh màu sắc",
+        "ask_question": "Đặt một câu hỏi",
+        "share": {
+          "share": "Chia sẻ",
+          "share_popup": "Chia sẻ:",
+          "copy_link": "Sao chép liên kết"
+        },
+        "compare_colors_header": "So sánh màu sắc",
+        "ask_question_header": "Đặt câu hỏi"
+      },
+      "pickup_availability": {
+        "view_store_info": "Xem thông tin cửa hàng",
+        "check_other_stores": "Kiểm tra tình trạng còn hàng tại các cửa hàng khác",
+        "pick_up_available": "Có thể đón",
+        "pick_up_available_at_html": "Có thể nhận hàng tại <span class=\"color-foreground bold heading-color\">{{ location_name }} .</span>",
+        "pick_up_unavailable_at_html": "Hiện không thể nhận hàng tại <span class=\"color-foreground bold heading-color\">{{ location_name }} .</span>",
+        "unavailable": "Không thể tải thông tin về khả năng đón khách",
+        "refresh": "Làm cho khỏe lại",
+        "pickup_location": "Hiển thị trên bản đồ Google",
+        "address": "Địa chỉ",
+        "city": "Thành phố",
+        "country": "Quốc gia/khu vực",
+        "phone": "Điện thoại"
+      },
+      "model_size_title": {
+        "model_size": "Người mẫu đang mặc:",
+        "model_height": "Chiều cao:",
+        "model_weight": "Cân nặng:",
+        "model_shoulder_width": "Chiều rộng vai:",
+        "model_bust_waist_hips": "Ngực/eo/hông:"
+      },
+      "inventory_status": {
+        "incoming": "Hàng đang vận chuyển",
+        "incoming_with_date": "Hàng sẽ về vào ngày {{ date }}"
+      },
+      "add_cart_error_qty": "Vui lòng chọn số lượng sản phẩm!",
+      "buy_it_now": "Mua ngay",
+      "barcode": "Mã vạch",
+      "instock": "Còn hàng",
+      "outstock": "Hết hàng",
+      "save": "Cứu",
+      "sale": "Giảm giá {{discount}} %",
+      "value_unavailable": "{{ option_value }} - Không khả dụng",
+      "sold_out": "Hết hàng",
+      "pre_order": "Đặt hàng trước",
+      "unavailable": "Không có sẵn",
+      "add_to_cart": "Thêm vào giỏ hàng",
+      "fake_sold": "{{ sold }} đã bán trong {{ hours }} giờ qua",
+      "xr_button": "Xem trong không gian của bạn",
+      "xr_button_label": "Xem trong không gian của bạn, tải mục trong cửa sổ thực tế tăng cường"
     }
   }
 }
