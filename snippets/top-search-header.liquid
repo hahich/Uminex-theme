@@ -31,7 +31,7 @@
         >
           <div class="search-bar-flex">
             <select name="collection" id="collection-select" class="search-bar-select">
-              <option value="">All Categories</option>
+              <option value="">{{ 'general.search.all_categories' | t }}</option>
               {%- for collection in collections -%}
                 <option value="{{ collection.handle }}">{{ collection.title }}</option>
               {%- endfor -%}
@@ -40,16 +40,17 @@
               type="search"
               name="q"
               class="search-bar-input"
-              placeholder="Search in 200+ products..."
-              aria-label="Search"
+              placeholder="{{ 'general.search.search' | t }}"
+              aria-label="{{ 'templates.search.tooltip' | t }}"
               required
             >
-            <button type="submit" class="search-bar-btn">Search</button>
+            <button type="submit" class="search-bar-btn">{{ 'templates.search.tooltip' | t }}</button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+
 
 
