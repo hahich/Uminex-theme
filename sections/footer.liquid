@@ -363,7 +363,7 @@
             class="footer__payment flex grow-1 gap-10 justify-center flex-md-end align-center max-w-100 align-md-end order-sm-1"
             style="align-items: center !important;"
           >
-            <p class="fs-14 hidden-sm-767" style="font-family: 'Bai Jamjuree', sans-serif;">Payment Method:</p>
+            <p class="fs-14 hidden-sm-767" style="font-family: 'Bai Jamjuree', sans-serif;">{{ 'sections.footer.settings.payment_method' | t }}</p>
             {%- if section_st.payment_image != blank -%}
               <div class="footer_payment_image fs-0 max-w-100" style="width: {{ section_st.payment_width }}px;">
                 {%- assign sizes = section_st.payment_width | append: 'px' -%}

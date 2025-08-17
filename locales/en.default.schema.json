@@ -4698,6 +4698,104 @@
           }
         }
       }
+    },
+    "today_offer": {
+      "name": "Today's Offer",
+      "settings": {
+        "background_color": {
+          "label": "Section background color"
+        },
+        "text_color": {
+          "label": "Section text color"
+        },
+        "badge_color": {
+          "label": "Badge background color"
+        },
+        "grid_gap": {
+          "label": "Column gap"
+        },
+        "main_collection": {
+          "label": "Main product collection"
+        },
+        "main_title": {
+          "label": "Offer title"
+        },
+        "td_notifycation": {
+          "label": "Notification countdown"
+        },
+        "countdown_endtime": {
+          "label": "Countdown end time (YYYY-MM-DDTHH:MM:SSZ)"
+        },
+        "enable_main_slide": {
+          "label": "Enable main product slider"
+        },
+        "main_slide_autoplay": {
+          "label": "Main product slide autoplay (seconds)"
+        },
+        "progress_percent": {
+          "label": "Progress Bar"
+        },
+        "show_badge_new": {
+          "label": "Show 'New' badge"
+        },
+        "show_badge_sale": {
+          "label": "Show 'Sale' badge"
+        },
+        "side_collection_left": {
+          "label": "Left side collection"
+        },
+        "side_collection_right": {
+          "label": "Right side collection"
+        },
+        "price_font_size": {
+          "label": "Price font size (px)"
+        },
+        "price_font_weight": {
+          "label": "Price font weight",
+          "normal": {
+            "label": "Normal"
+          },
+          "medium": {
+            "label": "Medium"
+          },
+          "semi_bold": {
+            "label": "Semi Bold"
+          },
+          "bold": {
+            "label": "Bold"
+          }
+        },
+        "price_alignment": {
+          "label": "Price alignment",
+          "left": {
+            "label": "Left"
+          },
+          "center": {
+            "label": "Center"
+          },
+          "right": {
+            "label": "Right"
+          }
+        },
+        "stock_font_size": {
+          "label": "Stock font size (px)"
+        },
+        "stock_font_weight": {
+          "label": "Stock font weight"
+        },
+        "stock_alignment": {
+          "label": "Stock alignment",
+          "left": {
+            "label": "Left"
+          },
+          "center": {
+            "label": "Center"
+          },
+          "right": {
+            "label": "Right"
+          }
+        }
+      }
     }
   },
   "page": {}

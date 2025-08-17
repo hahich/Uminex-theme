@@ -1,10 +1,10 @@
 <div class="stock-section" style="text-align:center; padding: 30px 0;">
   {% if section.settings.product %}
     {% assign product = section.settings.product %}
-    {% assign first_variant = product.variants.first %}
+    {% assign variant = product.selected_or_first_available_variant %}
     <script>
       console.log('Product object:', {{ product | json }});
-      console.log('First variant object:', {{ first_variant | json }});
+      console.log('Selected/first available variant object:', {{ variant | json }});
     </script>
     <div
       class="stock-product-card"
@@ -31,7 +31,11 @@
         </div>
       {% endif %}
       <div style="font-size:16px; margin-top:16px;">
-        <strong>In stock:</strong> {{ first_variant.inventory_quantity | default: 0 }}
+        {% if variant.inventory_management != null %}
+          <strong>{{ 'products.product.general.instock' | t }}:</strong> {{ variant.inventory_quantity }}
+        {% else %}
+          <strong>{{ 'products.product.general.instock' | t }}</strong>
+        {% endif %}
       </div>
     </div>
   {% else %}
