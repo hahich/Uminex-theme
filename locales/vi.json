@@ -12,6 +12,44 @@
     "see_all": "Xem tất cả thông tin",
     "hide_less": "Ẩn ít thông tin hơn"
   },
+  "footer": {
+    "settings": {
+      "payment_method": "Phương thức thanh toán:"
+    }
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "tags": "Thẻ",
+      "by": "Bởi {{ author }}",
+      "read_more_title": "Đọc thêm: {{ title }}",
+      "comments": {
+        "one": "{{ count }} bình luận",
+        "other": "{{ count }} bình luận"
+      },
+      "sharing": {
+        "share": "Chia sẻ",
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest"
+      },
+      "previous_post": "Bài trước",
+      "next_post": "Bài sau",
+      "moderated": "Lưu ý: bình luận cần được duyệt trước khi hiển thị.",
+      "comment_form_title": "Để lại bình luận",
+      "info": "Địa chỉ email của bạn sẽ không được công bố. Các trường bắt buộc được đánh dấu *",
+      "name": "Tên của bạn*",
+      "email": "Email của bạn*",
+      "message": "Bình luận của bạn*",
+      "post": "Gửi bình luận",
+      "back_to_blog": "Quay lại blog",
+      "share": "Chia sẻ bài viết này",
+      "empty": "Chúng tôi không tìm thấy bài viết phù hợp.",
+      "success": "Bình luận của bạn đã được gửi. Nó sẽ hiển thị sau khi chủ shop chấp nhận!",
+      "success_moderated": "Bình luận của bạn đã được gửi thành công. Chúng tôi sẽ xuất bản trong thời gian ngắn vì blog được kiểm duyệt.",
+      "label_all": "Tất cả"
+    }
+  },
   "customer": {
     "addresses": {
       "province": "Tỉnh",
@@ -568,6 +606,16 @@
     },
     "video_with_text_overlay": {
       "alt": "Video có lớp phủ văn bản"
+    },
+    "today_offer": {
+      "name": "Ưu đãi hôm nay",
+      "badge_sale": "-20%",
+      "badge_new": "Mới",
+      "reviews_count": "{{ count }} đánh giá",
+      "in_stock": "Còn hàng",
+      "products": "sản phẩm",
+      "only_left_in_stock": "Chỉ còn {{ count }} sản phẩm",
+      "sold_text": "Đã bán: {{ sold }}/{{ total }} sản phẩm"
     }
   },
   "accessibility": {
