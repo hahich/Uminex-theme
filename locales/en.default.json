@@ -47,8 +47,8 @@
       "discount_code_already": "Discount code already applied"
     },
     "outfit-idea": {
-         "view_products" : "View Products",
-         "shop_the_look" : "Shop the Look"
+      "view_products": "View Products",
+      "shop_the_look": "Shop the Look"
     },
     "password_page": {
       "login_form_heading": "Enter store using password:",
@@ -564,7 +564,7 @@
           "label_bundle_added": "Added to Bundle",
           "label_add_all": "Add all to Cart"
         },
-        "property" : {
+        "property": {
           "custom_text": "Custom text",
           "custom_image": "Custom image"
         }
@@ -639,8 +639,7 @@
         "model_weight": "Weight:",
         "model_shoulder_width": "Shoulder width:",
         "model_bust_waist_hips": "Bust/waist/hips:"
-      }
-      ,
+      },
       "inventory_status": {
         "incoming": "Stock in transit",
         "incoming_with_date": "The stock will arrive on {{ date }}"
@@ -752,109 +751,124 @@
     },
     "today_offer": {
       "name": "Today's Offer",
+      "badge_sale": "-20%",
+      "badge_new": "New",
+      "reviews_count": "{{ count }} reviews",
+      "in_stock": "In stock",
+      "products": "products",
+      "only_left_in_stock": "Only {{ count }} left in stock",
+      "sold_text": "Sold: {{ sold }}/{{ total }} products",
       "settings": {
-        "background_color": {
-          "label": "Section background color"
+        
+        "badge_sale": "-20%",
+        "badge_new": "New",
+        "reviews_count": "{{ count }} reviews",
+        "in_stock": "In stock", 
+        "products": "products",
+        "only_left_in_stock": "Only {{ count }} left in stock",
+        "sold_text": "Sold: {{ sold }}/{{ total }} products"
+      },
+      "background_color": {
+        "label": "Section background color"
+      },
+      "text_color": {
+        "label": "Section text color"
+      },
+      "badge_color": {
+        "label": "Badge background color"
+      },
+      "grid_gap": {
+        "label": "Column gap"
+      },
+      "main_collection": {
+        "label": "Main product collection"
+      },
+      "main_title": {
+        "label": "Offer title"
+      },
+      "td_notifycation": {
+        "label": "Notification countdown"
+      },
+      "countdown_endtime": {
+        "label": "Countdown end time (YYYY-MM-DDTHH:MM:SSZ)"
+      },
+      "enable_main_slide": {
+        "label": "Enable main product slider"
+      },
+      "main_slide_autoplay": {
+        "label": "Main product slide autoplay (seconds)"
+      },
+      "progress_percent": {
+        "label": "Progress Bar"
+      },
+      "show_badge_new": {
+        "label": "Show 'New' badge"
+      },
+      "show_badge_sale": {
+        "label": "Show 'Sale' badge"
+      },
+      "side_collection_left": {
+        "label": "Left side collection"
+      },
+      "side_collection_right": {
+        "label": "Right side collection"
+      },
+      "price_font_size": {
+        "label": "Price font size (px)"
+      },
+      "price_font_weight": {
+        "label": "Price font weight",
+        "normal": {
+          "label": "Normal"
         },
-        "text_color": {
-          "label": "Section text color"
+        "medium": {
+          "label": "Medium"
         },
-        "badge_color": {
-          "label": "Badge background color"
+        "semi_bold": {
+          "label": "Semi Bold"
         },
-        "grid_gap": {
-          "label": "Column gap"
-        },
-        "main_collection": {
-          "label": "Main product collection"
-        },
-        "main_title": {
-          "label": "Offer title"
-        },
-        "td_notifycation": {
-          "label": "Notification countdown"
-        },
-        "countdown_endtime": {
-          "label": "Countdown end time (YYYY-MM-DDTHH:MM:SSZ)"
-        },
-        "enable_main_slide": {
-          "label": "Enable main product slider"
-        },
-        "main_slide_autoplay": {
-          "label": "Main product slide autoplay (seconds)"
-        },
-        "progress_percent": {
-          "label": "Progress Bar"
-        },
-        "show_badge_new": {
-          "label": "Show 'New' badge"
-        },
-        "show_badge_sale": {
-          "label": "Show 'Sale' badge"
-        },
-        "side_collection_left": {
-          "label": "Left side collection"
-        },
-        "side_collection_right": {
-          "label": "Right side collection"
-        },
-        "price_font_size": {
-          "label": "Price font size (px)"
-        },
-        "price_font_weight": {
-          "label": "Price font weight",
-          "normal": {
-            "label": "Normal"
-          },
-          "medium": {
-            "label": "Medium"
-          },
-          "semi_bold": {
-            "label": "Semi Bold"
-          },
-          "bold": {
-            "label": "Bold"
-          }
-        },
-        "price_alignment": {
-          "label": "Price alignment",
-          "left": {
-            "label": "Left"
-          },
-          "center": {
-            "label": "Center"
-          },
-          "right": {
-            "label": "Right"
-          }
-        },
-        "stock_font_size": {
-          "label": "Stock font size (px)"
-        },
-        "stock_font_weight": {
-          "label": "Stock font weight"
-        },
-        "stock_alignment": {
-          "label": "Stock alignment",
-          "left": {
-            "label": "Left"
-          },
-          "center": {
-            "label": "Center"
-          },
-          "right": {
-            "label": "Right"
-          }
+        "bold": {
+          "label": "Bold"
         }
       },
-      "presets": {
-        "name": "Today's Offer"
+      "price_alignment": {
+        "label": "Price alignment",
+        "left": {
+          "label": "Left"
+        },
+        "center": {
+          "label": "Center"
+        },
+        "right": {
+          "label": "Right"
+        }
+      },
+      "stock_font_size": {
+        "label": "Stock font size (px)"
+      },
+      "stock_font_weight": {
+        "label": "Stock font weight"
+      },
+      "stock_alignment": {
+        "label": "Stock alignment",
+        "left": {
+          "label": "Left"
+        },
+        "center": {
+          "label": "Center"
+        },
+        "right": {
+          "label": "Right"
+        }
       }
     },
-    "footer": {
-      "settings": {
-        "payment_method": "Payment Method:"
-      }
+    "presets": {
+      "name": "Today's Offer"
+    }
+  },
+  "footer": {
+    "settings": {
+      "payment_method": "Payment Method:"
     }
   },
   "section": {
