@@ -712,6 +712,11 @@
       "before": "before",
       "after": "after"
     },
+    "footer": {
+      "settings": {
+        "payment_method": "Payment Method:"
+      }
+    },
     "cart": {
       "cart_error": "There was an error while updating your cart. Please try again.",
       "no_shipping": "We do not ship to this address.",

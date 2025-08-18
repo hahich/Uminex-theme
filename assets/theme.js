@@ -1655,7 +1655,7 @@ class HeaderSearch extends HTMLElement {
           'popup'
         );
         if (button_search_default) {
-          button_search_default.classList.add('top-search-toggle');
+        button_search_default.classList.add('top-search-toggle');
         }
       }
       let width = window.innerWidth;
@@ -1665,21 +1665,21 @@ class HeaderSearch extends HTMLElement {
         if (newWidth <= 767 && width > 767) {
           const overlay_search = document.querySelector('.overlay_search');
           if (overlay_search) {
-            overlay_search.style.visibility = 'hidden';
-            overlay_search.style.opacity = 0;
-            overlay_search.classList.remove('open');
+          overlay_search.style.visibility = 'hidden';
+          overlay_search.style.opacity = 0;
+          overlay_search.classList.remove('open');
           }
           _this.fetchUrl(
             `${window.location.pathname}?section_id=${sectionId}&type=popup&ajax=1`,
             'popup'
           );
           if (button_search_default) {
-            button_search_default.classList.add('top-search-toggle');
+          button_search_default.classList.add('top-search-toggle');
           }
         }
         if (newWidth > 767 && width <= 767) {
           if (button_search_default) {
-            button_search_default.classList.remove('top-search-toggle');
+          button_search_default.classList.remove('top-search-toggle');
           }
           _this.fetchUrl(
             `${window.location.pathname}?section_id=${sectionId}&type=default&ajax=1`
@@ -1730,10 +1730,10 @@ class HeaderSearch extends HTMLElement {
   fetchUrl(url, type = 'default') {
     var input = document.querySelector('.search__input');
     if (input) {
-      if (type == 'default') {
-        input.setAttribute('type', 'search');
-      } else {
-        input.removeAttribute('type');
+    if (type == 'default') {
+      input.setAttribute('type', 'search');
+    } else {
+      input.removeAttribute('type');
       }
     }
     fetch(url)

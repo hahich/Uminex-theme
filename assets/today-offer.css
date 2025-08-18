@@ -5,6 +5,7 @@
     --color-green: #008A00;
     --color-quantity: #EF262C;
     --color-sold_out: #515D66;
+    --color-price: #2B38D1;
 }
 
 .color-gray {
@@ -19,8 +20,8 @@
 
 .todays-offer-section.container-fluid {
     max-width: 100%;
-    background: var(--color-white);
-    color: var(--color-dark);
+    background: var(--color-background, var(--color-white));
+    color: var(--color-text, var(--color-dark));
     padding-top: var(--td-pt, 40px);
     padding-bottom: var(--td-pb, 40px);
 }
@@ -54,6 +55,19 @@
     color: var(--color-gray);
 }
 
+.price--normal {
+    color: var(--color-price);
+}
+
+/* Main price style (for central product) */
+.td-price {
+    font-size: var(--price-fs, 16px);
+    font-weight: var(--price-fw, 700);
+    text-align: var(--price-align, left);
+}
+.td-price.price--sale { color: var(--color-red); }
+.td-price.price--normal { color: var(--color-price); }
+
 .todays-offer-side-item .stock-info {
     padding-bottom: 2px;
 }
@@ -77,8 +91,14 @@
     width: 55px;
     height: 25px;
     z-index: 2;
-    background: var(--td-badge-bg, #e53935);
+    background: var(--color-countdown);
     border: none;
+}
+
+/* Scope badge color to this section to avoid global override */
+.todays-offer-section .badge-danger {
+    background: var(--td-badge-bg, var(--color-countdown));
+    color: var(--color-white);
 }
 
 .badge-new {
@@ -90,6 +110,7 @@
     border: 2px solid var(--color-red);
     box-shadow: none;
     max-width: 100%;
+    color: var(--color-text, var(--color-dark));
 }
 
 .todays-offer-image img {
@@ -157,21 +178,19 @@
     color: var(--color-quantity);
 }
 
-.td-progess {
+.td-progress {
     background-color: var(--color-quantity);
     border-radius: 10px 0 0 10px;
+    width: var(--progress, 70%);
 }
 
 .td-notifycation {
     color: var(--color-sold_out);
 }
+.stock-ok {
+    color: var(--color-green);
+}
 @media (max-width: 991px) and (min-width: 768px) {
-    .todays-offer-grid {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        justify-content: space-between;
-    }
 
     .todays-offer-side {
         display: block !important;
