@@ -1,16 +1,28 @@
-.todays-offer-section.container-fluid {
-    max-width: 100vw;
-    background: var(--td-bg, #fff);
-    color: var(--td-text, #222);
-    padding-top: var(--td-pt, 40px);
-    padding-bottom: var(--td-pb, 40px);
+:root {
+    --color-red: #DC323C;
+    --color-countdown: #e53935;
+    --color-gray: #8D979E;
+    --color-green: #008A00;
+    --color-quantity: #EF262C;
+    --color-sold_out: #515D66;
 }
 
-.todays-offer-grid {
-    width: 100%;
-    gap: 5px;
-    align-items: stretch;
-    justify-content: space-between;
+.color-gray {
+    color: var(--color-gray)
+}
+.color-sold_out {
+    color: var(--color-sold_out);
+}
+.pb-2 {
+    padding-bottom: 0.2rem;
+}
+
+.todays-offer-section.container-fluid {
+    max-width: 100%;
+    background: var(--color-white);
+    color: var(--color-dark);
+    padding-top: var(--td-pt, 40px);
+    padding-bottom: var(--td-pb, 40px);
 }
 
 .todays-offer-side {
@@ -20,46 +32,67 @@
 }
 
 .todays-offer-side-item {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    border-radius: 8px;
-    padding: 18px;
-    justify-content: space-between;
+    background-color: var(--color-white);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    position: relative;
+}
+
+.todays-offer-side-item .text-muted {
+    color: var(--color-gray);
+}
+
+.todays-offer-side-item .price-value {
+    font-size: var(--price-fs, 16px);
+    font-weight: var(--price-fw, 700);
+    text-align: var(--price-align, left);
+}
+
+.todays-offer-side-item .price-value.price--sale {
+    color: var(--color-red);
+}
+
+.todays-offer-side-item .price-compare {
+    color: var(--color-gray);
+}
+
+.todays-offer-side-item .stock-info {
+    padding-bottom: 2px;
+}
+
+.todays-offer-side-item .stock-ok {
+    color: var(--color-green);
+}
+
+.todays-offer-side-item .stock-low {
+    color: #EF262C;
+}
+
+.fake-rating-stars {
+    display:inline-block;
+    vertical-align:middle;
 }
 
 .offer-badge {
+    position: absolute;
+    top: 0;
     width: 55px;
     height: 25px;
     z-index: 2;
     background: var(--td-badge-bg, #e53935);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: none;
-    position: absolute;
-    color: #ffffff;
+}
+
+.badge-new {
+    background-color: var(--color-green);
+    color: var(--color-white);
 }
 
 .todays-offer-main {
-    background: #fff;
-    border: 2px solid #DC323C;
+    border: 2px solid var(--color-red);
     box-shadow: none;
     max-width: 100%;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    height: 100%;
 }
 
 .todays-offer-image img {
-    max-width: 100%;
-    height: auto;
     border-radius: 8px;
 }
 
@@ -75,19 +108,15 @@
     border-radius: 10px;
     width: 100%;
     margin: 0 auto;
-    position: relative;
-    overflow: hidden;
 }
 
 .countdown-flex {
-    display: flex;
-    align-items: center;
     gap: 6px;
 }
 
 .countdown-box {
-    background: #e53935;
-    color: #fff;
+    background: var(--color-countdown);
+    color: var(--color-white);
     border-radius: 8px;
     padding: 6px 14px;
     font-size: 22px;
@@ -100,22 +129,15 @@
     justify-content: center;
 }
 
-.countdown-sep {
-    color: #e53935;
-    font-size: 22px;
-    font-weight: 700;
-    padding: 0 2px;
-}
-
 .td-gift {
     width: 32px;
     height: 32px;
 }
 
 .count-timer {
-    background: #DC323C;
+    background: var(--color-red);
+    color: var(--color-white);
     border-radius: 3px;
-    color: #fff;
     font-weight: 700;
     font-size: 1.4rem;
     display: inline-flex;
@@ -131,6 +153,18 @@
     display: flex;
 }
 
+.td-quantity {
+    color: var(--color-quantity);
+}
+
+.td-progess {
+    background-color: var(--color-quantity);
+    border-radius: 10px 0 0 10px;
+}
+
+.td-notifycation {
+    color: var(--color-sold_out);
+}
 @media (max-width: 991px) and (min-width: 768px) {
     .todays-offer-grid {
         display: flex;
