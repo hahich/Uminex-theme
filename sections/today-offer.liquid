@@ -1,6 +1,9 @@
 {{ 'countdown.css' | asset_url | stylesheet_tag }}
 {{ 'today-offer.css' | asset_url | stylesheet_tag }}
-<div class="todays-offer-section container-fluid color-{{ section_st.color_scheme }} {{ settings.scroll_animation }}" style="--td-bg: {{ section.settings.background_color }}; --td-text: {{ section.settings.text_color }}; --td-pt: {{ section.settings.section_padding_top }}px; --td-pb: {{ section.settings.section_padding_bottom }}px; --td-grid-gap: {{ section.settings.grid_gap }}px; --td-badge-bg: {{ section.settings.badge_color | default: '#DC323C' }};">
+<div
+  class="todays-offer-section container-fluid color-{{ section_st.color_scheme }} {{ settings.scroll_animation }}"
+  style="--td-bg: {{ section.settings.background_color }}; --td-text: {{ section.settings.text_color }}; --td-pt: {{ section.settings.section_padding_top }}px; --td-pb: {{ section.settings.section_padding_bottom }}px; --td-grid-gap: {{ section.settings.grid_gap }}px; --td-badge-bg: {{ section.settings.badge_color | default: '#DC323C' }};"
+>
   <div class="{{ section.settings.section_width }}">
     <div
       class="todays-offer-grid flex flex-wrap justify-center align-items-stretch"
@@ -149,7 +152,7 @@
                       </a>
                       <div class="todays-offer-badge pt-20 flex align-center justify-between w-full absolute top-0">
                         <span
-                          class="offer-badge badge badge-danger fs-12 semibold"
+                          class="offer-badge badge badge-danger fs-12 semibold top-search-toggle absolute"
                           style="background:{{ section.settings.badge_color | default: '#e53935' }}; color: {{ section.settings.badge_text_color |  default: '#fff'}}"
                           >-20%</span
                         >
@@ -425,7 +428,7 @@
                       <path d="M10.252 0.251953L4.25 6.25391L1.74805 3.75195C1.62956 3.64258 1.48828 3.58789 1.32422 3.58789C1.16927 3.58789 1.03711 3.64258 0.927734 3.75195C0.809245 3.87044 0.75 4.01172 0.75 4.17578C0.75 4.33073 0.809245 4.46289 0.927734 4.57227L3.83984 7.49805C3.94922 7.60742 4.08594 7.66211 4.25 7.66211C4.41406 7.66211 4.55078 7.60742 4.66016 7.49805L11.0723 1.07227C11.1908 0.962891 11.25 0.830729 11.25 0.675781C11.25 0.511719 11.1908 0.370443 11.0723 0.251953C10.9629 0.142578 10.8262 0.0878906 10.6621 0.0878906C10.5072 0.0878906 10.3704 0.142578 10.252 0.251953Z" fill="#EF262C"/>
                     </svg>
 
-                    {{ 'sections.today_offer.only_left_in_stock' | t: count: first_variant.inventory_quantity -}}
+                    {{- 'sections.today_offer.only_left_in_stock' | t: count: first_variant.inventory_quantity -}}
                   </span>
                 {% endif %}
               </div>
@@ -641,5 +644,3 @@
   ]
 }
 {% endschema %}
-
- 

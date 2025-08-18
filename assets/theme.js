@@ -1617,16 +1617,16 @@ var BlsSearchShopify = (function () {
       }
       const selected = document.querySelector('[aria-selected="true"]');
       if (selected) selected.setAttribute('aria-selected', false);
-      document
-        .querySelector('input[type="search"]')
-        .setAttribute('aria-activedescendant', '');
-      document
-        .querySelector('input[type="search"]')
-        .setAttribute('aria-expanded', false);
+      const searchInputEl = document.querySelector('input[type="search"]');
+      if (searchInputEl) {
+        searchInputEl.setAttribute('aria-activedescendant', '');
+        searchInputEl.setAttribute('aria-expanded', false);
+      }
       this.resultsMaxHeight = false;
-      document
-        .querySelector('[data-predictive-search]')
-        .removeAttribute('style');
+      const predictive = document.querySelector('[data-predictive-search]');
+      if (predictive) {
+        predictive.removeAttribute('style');
+      }
       this.isOpen = false;
     },
   };
@@ -1644,6 +1644,7 @@ class HeaderSearch extends HTMLElement {
       '#button_search_default'
     );
     if (
+      header &&
       header.classList.contains('popup-search-mobile') &&
       this.classList.contains('search_type_default')
     ) {
@@ -1653,7 +1654,9 @@ class HeaderSearch extends HTMLElement {
           `${window.location.pathname}?section_id=${sectionId}&type=popup&ajax=1`,
           'popup'
         );
-        button_search_default.classList.add('top-search-toggle');
+        if (button_search_default) {
+          button_search_default.classList.add('top-search-toggle');
+        }
       }
       let width = window.innerWidth;
       window.addEventListener('resize', function () {
@@ -1661,17 +1664,23 @@ class HeaderSearch extends HTMLElement {
 
         if (newWidth <= 767 && width > 767) {
           const overlay_search = document.querySelector('.overlay_search');
-          overlay_search.style.visibility = 'hidden';
-          overlay_search.style.opacity = 0;
-          overlay_search.classList.remove('open');
+          if (overlay_search) {
+            overlay_search.style.visibility = 'hidden';
+            overlay_search.style.opacity = 0;
+            overlay_search.classList.remove('open');
+          }
           _this.fetchUrl(
             `${window.location.pathname}?section_id=${sectionId}&type=popup&ajax=1`,
             'popup'
           );
-          button_search_default.classList.add('top-search-toggle');
+          if (button_search_default) {
+            button_search_default.classList.add('top-search-toggle');
+          }
         }
         if (newWidth > 767 && width <= 767) {
-          button_search_default.classList.remove('top-search-toggle');
+          if (button_search_default) {
+            button_search_default.classList.remove('top-search-toggle');
+          }
           _this.fetchUrl(
             `${window.location.pathname}?section_id=${sectionId}&type=default&ajax=1`
           );
@@ -1720,18 +1729,25 @@ class HeaderSearch extends HTMLElement {
   }
   fetchUrl(url, type = 'default') {
     var input = document.querySelector('.search__input');
-    if (type == 'default') {
-      input.setAttribute('type', 'search');
-    } else {
-      input.removeAttribute('type');
+    if (input) {
+      if (type == 'default') {
+        input.setAttribute('type', 'search');
+      } else {
+        input.removeAttribute('type');
+      }
     }
     fetch(url)
       .then((response) => response.text())
       .then((responseText) => {
-        const newSection = new DOMParser()
-          .parseFromString(responseText, 'text/html')
-          .querySelector('header-search').innerHTML;
-        document.querySelector('header-search').innerHTML = newSection;
+        const parsed = new DOMParser().parseFromString(
+          responseText,
+          'text/html'
+        );
+        const source = parsed.querySelector('header-search');
+        const target = document.querySelector('header-search');
+        if (source && target) {
+          target.innerHTML = source.innerHTML;
+        }
       })
       .catch((e) => {
         throw e;
