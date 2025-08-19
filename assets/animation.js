@@ -176,5 +176,10 @@ class AnimationsModule {
   if (typeof window !== 'undefined') {
     window.AnimationsModule = AnimationsModule;
     window.animationsModule = animationsModule;
+    // Backward compatibility shim for existing theme references
+    window.BlsAnimations = window.BlsAnimations || {
+      innit: () => animationsModule.bindAnimationEndMarkers(),
+      animates: () => animationsModule.bindAnimationEndMarkers(),
+    };
   }
 })();
