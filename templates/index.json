@@ -363,7 +363,7 @@
       ],
       "name": "t:sections.image-comparison-slider.name",
       "settings": {
-        "section_width": "stretch_width",
+        "section_width": "fluid_container",
         "color_scheme": "",
         "heading": "",
         "description": "",
