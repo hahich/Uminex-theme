@@ -312,81 +312,11 @@
         "stock_font_weight": "500",
         "stock_alignment": "left"
       }
-    },
-    "image_comparison_MUTdAH": {
-      "type": "image-comparison",
-      "blocks": {
-        "heading_XBNtAd": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "font_size": 36,
-            "font_weight": "heading_weight",
-            "uppercase": false,
-            "spacing_bottom": 24
-          }
-        },
-        "description_Hyg8Qw": {
-          "type": "description",
-          "settings": {
-            "description": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-            "font_size": 14,
-            "font_weight": "body_weight",
-            "spacing_bottom": 30
-          }
-        },
-        "button_bmbmKy": {
-          "type": "button",
-          "settings": {
-            "first_button_label": "Button label",
-            "first_button_link": "",
-            "first_button_type": "primary",
-            "second_button_label": "",
-            "second_button_link": "",
-            "second_button_type": "primary",
-            "spacing_bottom": 10
-          }
-        },
-        "product_9Rtd7B": {
-          "type": "product",
-          "settings": {
-            "select_product": "apple-iphone-12-pro-max-128gb-unlocked",
-            "spacing_bottom": 10
-          }
-        }
-      },
-      "block_order": [
-        "heading_XBNtAd",
-        "description_Hyg8Qw",
-        "button_bmbmKy",
-        "product_9Rtd7B"
-      ],
-      "name": "t:sections.image-comparison-slider.name",
-      "settings": {
-        "section_width": "fluid_container",
-        "color_scheme": "",
-        "heading": "",
-        "description": "",
-        "header_size": "medium",
-        "header_alignment": "center",
-        "before_image": "shopify://shop_images/review_1-1.webp",
-        "after_image": "shopify://shop_images/review_1-2.webp",
-        "width": "50%",
-        "position": "left",
-        "show_after_before_text": true,
-        "image_ratio": "adapt",
-        "custom_ratio": "",
-        "vertical_align": "start",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
     }
   },
   "order": [
     "slideshow_8KKtNU",
     "multi_content_L3t9hY",
-    "today_offer_r9RCww",
-    "image_comparison_MUTdAH"
+    "today_offer_r9RCww"
   ]
 }
