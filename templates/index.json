@@ -312,11 +312,55 @@
         "stock_font_weight": "500",
         "stock_alignment": "left"
       }
+    },
+    "faq_VAmDgk": {
+      "type": "faq",
+      "blocks": {
+        "faq_items_AW3jRP": {
+          "type": "faq-items",
+          "settings": {
+            "faq_title": "Frequently Asked Questions?",
+            "faq_content": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+          }
+        },
+        "faq_items_JmKm7L": {
+          "type": "faq-items",
+          "settings": {
+            "faq_title": "Frequently Asked Questions?",
+            "faq_content": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+          }
+        },
+        "faq_items_FnM8Dn": {
+          "type": "faq-items",
+          "settings": {
+            "faq_title": "Frequently Asked Questions?",
+            "faq_content": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+          }
+        }
+      },
+      "block_order": [
+        "faq_items_AW3jRP",
+        "faq_items_JmKm7L",
+        "faq_items_FnM8Dn"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "section_width": "container",
+        "color_scheme": "",
+        "heading": "FAQ",
+        "description": "",
+        "header_size": "medium",
+        "header_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
     }
   },
   "order": [
     "slideshow_8KKtNU",
     "multi_content_L3t9hY",
-    "today_offer_r9RCww"
+    "today_offer_r9RCww",
+    "faq_VAmDgk"
   ]
 }
