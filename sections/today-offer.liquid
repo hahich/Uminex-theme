@@ -1,14 +1,26 @@
 {{ 'countdown.css' | asset_url | stylesheet_tag }}
 {{ 'today-offer.css' | asset_url | stylesheet_tag }}
 <div
-  class="todays-offer-section container-fluid color-{{ section_st.color_scheme }} {{ settings.scroll_animation }} max-w-100"
+  class="todays-offer-section container-fluid color-{{ section_st.color_scheme }} max-w-100"
 >
   <div class="{{ section.settings.section_width }}">
     <div
       class="todays-offer-grid flex flex-wrap w-full gap-5 justify-center align-stretch"
     >
       <!-- Left side products -->
-      <div class="todays-offer-side left grid grid-cols-2 flex-1">
+      <motion-element
+        data-motion="fade-up-lg"
+        data-motion-delay="50"
+        {% if scroll_animation != 'slide_in' %}
+          hold
+        {% endif %}
+        class="todays-offer-side left grid grid-cols-2 flex-1"
+        style="
+          {% if scroll_animation != 'none' and scroll_animation != null %}
+            scroll-trigger {{ scroll_animation }}
+          {% endif %}
+        "
+      >
         {% assign left_collection = collections[section.settings.side_collection_left] %}
         {% if left_collection %}
           {% for product in left_collection.products limit: 4 %}
@@ -49,7 +61,8 @@
                 </a>
               </div>
               <div class="semibold fs-14 fs-sm-13 lh-1p2 ">
-                <a href="{{ product.url }}" class="no-underline">{{ product.title }}</a></div>
+                <a href="{{ product.url }}" class="no-underline">{{ product.title }}</a>
+              </div>
               <div class="flex align-center gap-5">
                 <span class="fake-rating-stars">
                   <svg width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +111,7 @@
             </div>
           {% endfor %}
         {% endif %}
-      </div>
+      </motion-element>
       <!-- Main featured product -->
       {% assign main_collection = collections[section.settings.main_collection] %}
       {% if main_collection.products.size > 0 %}
@@ -113,7 +126,19 @@
             data-autoplay="true"
             data-autoplay-speed="{{ section.settings.main_slide_autoplay | times: 1000 }}"
           >
-            <div class="swiper-wrapper">
+            <motion-element
+              data-motion="fade-up-lg"
+              data-motion-delay="150"
+              {% if scroll_animation != 'slide_in' %}
+                hold
+              {% endif %}
+              class="swiper-wrapper {% if scroll_animation != 'none' %} scroll-trigger {{ scroll_animation }}{% endif %}"
+              style="
+                {%- if scroll_animation != 'none' -%}
+                  --animation-order: 0;
+                {% endif %}
+              "
+            >
               {% for product in main_collection.products limit: 10 %}
                 <div class="swiper-slide rounded-style">
                   <div
@@ -215,7 +240,7 @@
                   </div>
                 </div>
               {% endfor %}
-            </div>
+            </motion-element>
           </slide-section>
         {% else %}
           {% assign product = main_collection.products.first %}
@@ -322,7 +347,12 @@
             {% if product.price < 20000 %}
               {% assign price_color = '#DC323C' %}
             {% endif %}
-            <div
+            <motion-element
+              data-motion="fade-up-lg"
+              data-motion-delay="250"
+              {% if scroll_animation != 'slide_in' %}
+                hold
+              {% endif %}
               class="todays-offer-side-item flex h-full justify-between relative flex-column p-20 rounded-10"
             >
               <div class="relative {{ settings.product_hover_effect }}">
@@ -401,7 +431,7 @@
                   </span>
                 {% endif %}
               </div>
-            </div>
+            </motion-element>
           {% endfor %}
         {% endif %}
       </div>
