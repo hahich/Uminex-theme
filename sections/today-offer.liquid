@@ -11,9 +11,6 @@
       <motion-element
         data-motion="fade-up-lg"
         data-motion-delay="50"
-        {% if scroll_animation != 'slide_in' %}
-          hold
-        {% endif %}
         class="todays-offer-side left grid grid-cols-2 flex-1"
         style="
           {% if scroll_animation != 'none' and scroll_animation != null %}
@@ -129,9 +126,6 @@
             <motion-element
               data-motion="fade-up-lg"
               data-motion-delay="150"
-              {% if scroll_animation != 'slide_in' %}
-                hold
-              {% endif %}
               class="swiper-wrapper {% if scroll_animation != 'none' %} scroll-trigger {{ scroll_animation }}{% endif %}"
               style="
                 {%- if scroll_animation != 'none' -%}
@@ -350,9 +344,6 @@
             <motion-element
               data-motion="fade-up-lg"
               data-motion-delay="250"
-              {% if scroll_animation != 'slide_in' %}
-                hold
-              {% endif %}
               class="todays-offer-side-item flex h-full justify-between relative flex-column p-20 rounded-10"
             >
               <div class="relative {{ settings.product_hover_effect }}">
